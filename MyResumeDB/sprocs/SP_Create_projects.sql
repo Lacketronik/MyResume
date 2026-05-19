@@ -15,18 +15,22 @@ BEGIN
         p.github_url AS githubUrl,
         
         (
-            SELECT v.video_id AS [video_id]
+            SELECT v.file_id AS [file_id]
             FROM dbo.project_videos v
             WHERE v.project_id = p.project_id
-            FOR JSON PATH
         ) AS videoBlobIDs,
 
         (
-            SELECT img.image_id AS [blob_id]
+            SELECT img.file_id AS [file_id]
             FROM dbo.project_images img
             WHERE img.project_id = p.project_id
-            FOR JSON PATH
-        ) AS imageBlobIDs
+        ) AS imageBlobIDs,
+
+        (
+            SELECT pf.file_id AS [file_id]
+            FROM dbo.project_files pf
+            WHERE pf.project_id = p.project_id
+        ) AS projectFileIDs
 
     FROM dbo.projects p;
 END;
