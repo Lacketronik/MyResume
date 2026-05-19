@@ -7,69 +7,48 @@ import type { EducationProps } from "../types/EducationProps";
 import type { CertificationProps } from "../types/CertificationProps";
 import type { InformationProps } from "../types/InformationProps";
 import { Tabs, Tab } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import ExperienceService from "../services/ExperienceService";
+import EducationService from "../services/EducationService";
+import CertificationService from "../services/CertificationService";
 
 function MainPage({ information }: { information: InformationProps }) {
-    // sample data for testing
-    const experienceData: ExperienceProps[] = [
-        {
-            position: "Software Engineer",
-            company: "Tech Company",
-            startDate: new Date("2020-01-01"),
-            endDate: new Date("2022-12-31"),
-            responsibilities: [
-                "Developed and maintained web applications using React and Node.js.",
-                "Collaborated with cross-functional teams to design and implement new features.",
-                "Optimized application performance and scalability."
-            ]
-        },
-        {
-            position: "DevOps Engineer",
-            company: "Cloud Solutions Inc.",
-            startDate: new Date("2023-01-01"),
-            endDate: new Date("Present"),
-            responsibilities: [
-                "Managed cloud infrastructure using AWS and Azure.",
-                "Implemented CI/CD pipelines to automate deployment processes.",
-                "Monitored and optimized system performance and reliability."
-            ]
-        }
-    ];
+    const [experienceData, setExperienceData] = useState<ExperienceProps[]>([]);
+    const [educationData, setEducationData] = useState<EducationProps[]>([]);
+    const [certificationData, setCertificationData] = useState<CertificationProps[]>([]);
 
-    const educationData: EducationProps[] = [
-        {
-            institution: "University of Technology",
-            degree: "Bachelor of Science in Computer Science",
-            graduationDate: new Date("2019-06-30")
-        },
-        {
-            institution: "Online University",
-            degree: "Master of Science in Software Engineering",
-            graduationDate: new Date("2022-12-31")
-        }
-    ];
+    useEffect(() => {
+        const fetchExperiences = async () => {
+            try {
+                const experiences = await ExperienceService.getExperiences();
+                setExperienceData(experiences);
+            } catch (error) {
+                console.error("Error fetching experiences:", error);
+            }
+        };
 
-    const certificationData: CertificationProps[] = [
-        {
-            id: 1,
-            title: "Certified React Developer",
-            provider: "React Certification Board",
-            examCode: "CRD-2021",
-            issueDate: new Date("2021-05-15"),
-            expirationDate: new Date("2024-05-15"),
-            status: 'Active' as 'Active',
-            verificationLink: "https://example.com/verify-cert"
-        },
-        {
-            id: 2,
-            title: "AWS Certified Solutions Architect",
-            provider: "Amazon Web Services",
-            examCode: "AWS-CSA-2022",
-            issueDate: new Date("2022-03-10"),
-            expirationDate: new Date("2025-03-10"),
-            status: 'Active' as 'Active',
-            verificationLink: "https://example.com/verify-cert"
-        }
-    ];
+        const fetchEducation = async () => {
+            try {
+                const educations = await EducationService.getEducation();
+                setEducationData(educations);
+            } catch (error) {
+                console.error("Error fetching education:", error);
+            }
+        };
+
+        const fetchCertifications = async () => {
+            try {
+                const certifications = await CertificationService.getCertifications();
+                setCertificationData(certifications);
+            } catch (error) {
+                console.error("Error fetching certifications:", error);
+            }
+        };
+
+        fetchExperiences();
+        fetchEducation();
+        fetchCertifications();
+    }, []);
 
   return (
     <div className="MainPage">

@@ -3,9 +3,15 @@ import { Card } from "react-bootstrap";
 import { formatDate } from "../../helpers/dates";
 
 function Experience({ experiences }: { experiences: ExperienceProps[] }) {
+    const sorted = [...experiences].sort((a, b) => {
+        const aDate = a.endDate ? new Date(a.endDate).valueOf() : new Date(a.startDate).valueOf();
+        const bDate = b.endDate ? new Date(b.endDate).valueOf() : new Date(b.startDate).valueOf();
+        return bDate - aDate; // descending
+    });
+
     return (
         <div className="experience-section">
-            {experiences.map((exp, index) => (
+            {sorted.map((exp, index) => (
                 <Card style={{ width: '70%' }} key={index} className="mx-auto mb-3">
                     <Card.Body>
                         <Card.Title style={{ fontSize: '1.5rem' }}>{exp.position} at {exp.company}</Card.Title>
