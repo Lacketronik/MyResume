@@ -7,9 +7,11 @@ function Introduction({ information }: { information: InformationProps }) {
     <div className="Introduction">
       <h1>{information.name}</h1>
       <h2>{information.role.join(" | ")}</h2>
-      <Button variant="outline-primary" href={information.linkedin} target="_blank" rel="noopener noreferrer" size="sm">
-        LinkedIn Profile
-      </Button>
+      {information.linkedin && (
+        <Button variant="outline-primary" href={information.linkedin} target="_blank" rel="noopener noreferrer" size="sm">
+          LinkedIn Profile
+        </Button>
+      )}
       {information.resumeFileID && (
         <Button variant="outline-success" href={`https://example.com/uc?id=${information.resumeFileID}`} target="_blank" rel="noopener noreferrer" size="sm" className="ms-2">
           Download Resume
