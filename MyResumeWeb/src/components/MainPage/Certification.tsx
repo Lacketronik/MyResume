@@ -1,6 +1,7 @@
 import type { CertificationProps } from "../../types/CertificationProps";
 import { Card } from "react-bootstrap";
 import { formatDate } from "../../helpers/dates";
+import { Button } from "react-bootstrap";
 
 function Certification({ certs }: { certs: CertificationProps[] }) {
     return (
@@ -36,11 +37,24 @@ function Certification({ certs }: { certs: CertificationProps[] }) {
                             </div>
                             <div className="mb-2">
                                 <strong className="text-secondary me-2" style={{ fontSize: '1.25rem' }}>Verification URL:</strong>
-                                <span className="text-light" style={{ fontSize: '1.1rem' }}>{cert.verificationLink}</span>
+                                <Button variant="outline-primary" href={cert.verificationLink} target="_blank" style={{ fontSize: '1.1rem', padding: '0.25rem 0.75rem' }}>
+                                    Show Credential
+                                </Button>
                             </div>
                             <div className="mb-2">
                                 <strong className="text-secondary me-2" style={{ fontSize: '1.25rem' }}>Status:</strong>
-                                <span className="text-light" style={{ fontSize: '1.1rem' }}>{cert.status}</span>
+                                <span
+                                    style={{
+                                        fontSize: '1.1rem',
+                                        color: cert.status.toLowerCase() === 'active'
+                                            ? '#28a745'
+                                            : cert.status.toLowerCase() === 'expired'
+                                                ? '#dc3545'
+                                                : undefined,
+                                    }}
+                                >
+                                    {cert.status}
+                                </span>
                             </div>
                         </Card.Text>
                     </Card.Body>
