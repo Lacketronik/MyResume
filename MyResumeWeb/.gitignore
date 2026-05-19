@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#Frontend environment files
+.env
+.env.development
+.env.production

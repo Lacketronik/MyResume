@@ -1,10 +1,15 @@
 using Microsoft.OpenApi.Models;
+using MyResumeBackend.Services;
+using MyResumeBackend.Services.UnitOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IInformationService, InformationService>();
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 // builder.Services.AddOpenApi();
 
