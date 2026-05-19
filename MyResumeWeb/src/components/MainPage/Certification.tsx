@@ -9,7 +9,7 @@ function Certification({ certs }: { certs: CertificationProps[] }) {
                 <Card style={{ width: '70%' }} key={cert.id} className="mx-auto mb-3">
                     <Card.Body>
                         <Card.Title style={{ fontSize: '1.5rem' }}>{cert.title}</Card.Title>
-                        <Card.Text className="text-start">
+                        <Card.Text as="div" className="text-start">
                             <div className="mb-2">
                                 <strong className="text-secondary me-2" style={{ fontSize: '1.25rem' }}>Certificate ID:</strong>
                                 <span className="text-light" style={{ fontSize: '1.1rem' }}>{cert.id}</span>
