@@ -10,6 +10,11 @@ namespace MyResumeBackend.Services.UnitOfWork
         private IDbTransaction _transaction;
 
         public IInformationRepository infos { get; }
+        public IExperienceRepository exps { get; }
+        public IEducationRepository edus { get; }
+        public ICertificationRepository certs { get; }
+        public IProjectRepository projs { get; }
+        public IFileRepository files { get; }
 
 
         public UnitOfWork(IConfiguration config)
@@ -18,6 +23,11 @@ namespace MyResumeBackend.Services.UnitOfWork
             _connection.Open();
 
             infos = new InformationRepository(_connection, () => _transaction);
+            exps = new ExperienceRepository(_connection, () => _transaction);
+            edus = new EducationRepository(_connection, () => _transaction);
+            certs = new CertificationRepository(_connection, () => _transaction);
+            projs = new ProjectRepository(_connection, () => _transaction);
+            files = new FileRepository(_connection, () => _transaction);
         }
 
         public IDbTransaction BeginTransaction()

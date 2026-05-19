@@ -1,12 +1,69 @@
-﻿namespace MyResumeBackend.DTOs
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
+
+namespace MyResumeBackend.DTOs
 {
     public class ProjectDTO
     {
         public string name { get; set; }
         public string description { get; set; }
-        public Guid[]? videoBlobIDs { get; set; }
-        public Guid[]? imageBlobIDs { get; set; }
+        [JsonIgnore]
+        public string? rawVideoBlobIDs { get; set; }
+        [JsonIgnore]
+        public string? rawImageBlobIDs { get; set; }
         public string? githubUrl { get; set; }
-        public Guid[]? ProjectFileID { get; set; }
+        [JsonIgnore]
+        public string? rawProjectFileIDs { get; set; }
+        public string[] videoBlobIDs
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(rawVideoBlobIDs)) return Array.Empty<string>();
+                using var doc = JsonDocument.Parse(rawVideoBlobIDs);
+                var list = new List<string>();
+                foreach (var element in doc.RootElement.EnumerateArray())
+                {
+                    if (element.TryGetProperty("file_id", out var prop))
+                    {
+                        list.Add(prop.GetString());
+                    }
+                }
+                return list.ToArray();
+            }
+        }
+        public string[] imageBlobIDs
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(rawImageBlobIDs)) return Array.Empty<string>();
+                using var doc = JsonDocument.Parse(rawImageBlobIDs);
+                var list = new List<string>();
+                foreach (var element in doc.RootElement.EnumerateArray())
+                {
+                    if (element.TryGetProperty("file_id", out var prop))
+                    {
+                        list.Add(prop.GetString());
+                    }
+                }
+                return list.ToArray();
+            }
+        }
+        public string[] projectFileIDs
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(rawProjectFileIDs)) return Array.Empty<string>();
+                using var doc = JsonDocument.Parse(rawProjectFileIDs);
+                var list = new List<string>();
+                foreach (var element in doc.RootElement.EnumerateArray())
+                {
+                    if (element.TryGetProperty("file_id", out var prop))
+                    {
+                        list.Add(prop.GetString());
+                    }
+                }
+                return list.ToArray();
+            }
+        }
     }
 }
