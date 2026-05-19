@@ -12,7 +12,7 @@ function Experience({ experiences }: { experiences: ExperienceProps[] }) {
                         <Card.Text style={{fontSize: '0.9rem', fontStyle: 'italic'}} className="text-start text-muted">
                             {formatDate(exp.startDate)} - {formatDate(exp.endDate)}
                         </Card.Text>
-                        <Card.Text className="text-start">
+                        <Card.Text as="div" className="text-start">
                             <strong className="d-block mb-1 text-secondary" style={{fontSize: '1.25rem'}}>Responsibilities:</strong>
                             <ul className="list-unstyled ps-0">
                                 {exp.responsibilities.map((resp, index) => (
