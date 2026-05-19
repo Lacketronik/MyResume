@@ -7,16 +7,18 @@ function ProjectPage() {
         {
             name: "Personal Portfolio Website",
             description: "A personal portfolio website to showcase my projects and experience.",
-            videoBlobUrl: "https://example.com/project-video.mp4",
-            imageBlobUrl: ["https://example.com/project-image1.png", "https://example.com/project-image2.png"],
-            githubUrl: "https://github.com/example/portfolio"
+            videoBlobIDs: ["https://example.com/project-video.mp4", "https://example.com/project-demo.mp4"], 
+            imageBlobIDs: ["https://example.com/project-image1.png", "https://example.com/project-image2.png"],
+            githubUrl: "https://github.com/example/portfolio",
+            projectFileIDs: ["file1.pdf", "file2.pdf"]
         },
         {
             name: "E-commerce Platform",
             description: "An e-commerce platform built with React and Node.js.",
-            videoBlobUrl: "https://example.com/ecommerce-video.mp4",
-            imageBlobUrl: ["https://example.com/ecommerce-image1.png", "https://example.com/ecommerce-image2.png"],
-            githubUrl: "https://github.com/example/ecommerce"
+            videoBlobIDs: ["https://example.com/ecommerce-video.mp4", "https://example.com/ecommerce-demo.mp4"],
+            imageBlobIDs: ["https://example.com/ecommerce-image1.png", "https://example.com/ecommerce-image2.png"],
+            githubUrl: "https://github.com/example/ecommerce",
+            projectFileIDs: ["file3.pdf", "file4.pdf"]
         }
     ];
     
