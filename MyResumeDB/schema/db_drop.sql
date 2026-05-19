@@ -1,0 +1,9 @@
+USE master;
+GO
+
+ALTER DATABASE [my_resume_db]
+SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+GO
+
+DROP DATABASE [my_resume_db];
+GO
