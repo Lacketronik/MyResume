@@ -81,7 +81,7 @@ CREATE TABLE projects (
 )
 
 CREATE TABLE project_videos (
-	video_id UNIQUEIDENTIFIER NOT NULL,
+	video_id INT IDENTITY(1,1) NOT NULL,
 	project_id INT NOT NULL,
 	file_id UNIQUEIDENTIFIER NOT NULL,
 	PRIMARY KEY (video_id),
@@ -90,7 +90,7 @@ CREATE TABLE project_videos (
 )
 
 CREATE TABLE project_images (
-	image_id UNIQUEIDENTIFIER NOT NULL,
+	image_id INT IDENTITY(1,1) NOT NULL,
 	project_id INT NOT NULL,
 	file_id UNIQUEIDENTIFIER NOT NULL,
 	PRIMARY KEY (image_id),
@@ -99,7 +99,7 @@ CREATE TABLE project_images (
 )
 
 CREATE TABLE project_files (
-	project_file_id UNIQUEIDENTIFIER NOT NULL,
+	project_file_id INT IDENTITY(1,1) NOT NULL,
 	project_id INT NOT NULL,
 	file_id UNIQUEIDENTIFIER NOT NULL,
 	PRIMARY KEY (file_id),
