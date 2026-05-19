@@ -13,6 +13,7 @@ CREATE TABLE files (
 CREATE TABLE informations (
 	information_id INT IDENTITY(1,1) NOT NULL,
 	information_name VARCHAR(255) NOT NULL,
+	linkedin VARCHAR(255) NULL,
 	resume_file_id UNIQUEIDENTIFIER NULL,
 	PRIMARY KEY (information_id),
 	FOREIGN KEY (resume_file_id) REFERENCES files (file_id)
@@ -75,7 +76,6 @@ CREATE TABLE certifications (
 CREATE TABLE projects (
 	project_id INT IDENTITY(1,1) NOT NULL,
 	project_description VARCHAR(4000) NOT NULL,
-	video_blob_id UNIQUEIDENTIFIER NULL,
 	github_url VARCHAR(255) NULL,
 	PRIMARY KEY (project_id)
 )
