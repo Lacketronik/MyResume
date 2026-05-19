@@ -4,29 +4,37 @@ import ProjectPage from './pages/ProjectPage.tsx'
 import NavigationBar from './components/NavigationBar.tsx'
 import { Routes, Route } from 'react-router-dom'
 import type { InformationProps } from './types/InformationProps';
+import InformationService from './services/InformationService';
+import { useEffect, useState } from 'react'
 
 function App() {
 
-  //sample information data for testing
-  const information: InformationProps = {
-    name: "Faliq",
-    linkedin: "https://www.linkedin.com/in/m-faliq-b-alhakim/",
-    introduction: [
-      "Hello! I'm Faliq, and I build for the web. I get genuinely excited about clean architecture and code, and everything that happens from the first line of code to the final deployment.",
-      "I'm also really leaning into cloud computing. I enjoy configuring and managing cloud infrastructure to build scalable and reliable solutions."
-    ],
-    role: [
-      "Full-Stack Developer",
-      "DevOps Enthusiast"
-    ],
-    resumeFileID: "1a2b3c4d5e6f7g8h9i0j"
-  };
+  const [information, setInformation] = useState<InformationProps>({
+    name: "",
+    linkedin: "",
+    introduction: [],
+    role: [],
+    resumeFileID: ""
+  });
+
+  useEffect(() => {
+    const fetchInformation = async () => {
+      try {
+        const info = await InformationService.getInformation();
+        setInformation(info);
+      } catch (error) {
+        console.error("Error fetching information:", error);
+      }
+    };
+
+    fetchInformation();
+  }, []);
 
   return (
     <>
-      <NavigationBar information={information} />
+      {information && <NavigationBar information={information} />}
       <Routes>
-        <Route path="/" element={<MainPage information={information} />} />
+        <Route path="/" element={<MainPage information={information as InformationProps} />} />
         <Route path="/projects" element={<ProjectPage />} />
       </Routes>
     </>

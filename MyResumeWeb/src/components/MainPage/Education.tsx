@@ -3,9 +3,15 @@ import { Card } from "react-bootstrap";
 import { formatDate } from "../../helpers/dates";
 
 function Education({ educations }: { educations: EducationProps[] }) {
+    const sorted = [...educations].sort((a, b) => {
+        const aDate = a.graduationDate ? new Date(a.graduationDate).valueOf() : 0;
+        const bDate = b.graduationDate ? new Date(b.graduationDate).valueOf() : 0;
+        return bDate - aDate; // descending
+    });
+
     return (
         <div className="education-section">
-            {educations.map((edu, index) => (
+            {sorted.map((edu, index) => (
                 <Card style={{ width: '70%' }} key={index} className="mx-auto mb-3">
                     <Card.Body>
                         <Card.Title style={{ fontSize: '1.5rem' }}>{edu.degree}</Card.Title>
