@@ -4,7 +4,7 @@ import type { FileProps } from "../types/FileProps";
 export class FileService {
     static async getFile(fileID: string): Promise<FileProps> {
         try {
-            const response = await api.get(`/files/${fileID}`);
+            const response = await api.get('File/id?id=' + fileID);
             return response.data as FileProps;
         } catch (error) {
             console.error("Error fetching file:", error);
@@ -14,7 +14,7 @@ export class FileService {
 
     static async downloadFile(fileID: string): Promise<void> {
         try {
-            const response = await api.get(`/files/${fileID}/download`, {
+            const response = await api.get('File/${fileID}/download', {
                 responseType: 'blob',
             });
             const url = window.URL.createObjectURL(new Blob([response.data]));
