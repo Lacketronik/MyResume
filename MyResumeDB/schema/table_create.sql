@@ -75,6 +75,7 @@ CREATE TABLE certifications (
 
 CREATE TABLE projects (
 	project_id INT IDENTITY(1,1) NOT NULL,
+	project_name VARCHAR(255) NOT NULL UNIQUE,
 	project_description VARCHAR(4000) NOT NULL,
 	github_url VARCHAR(255) NULL,
 	PRIMARY KEY (project_id)
