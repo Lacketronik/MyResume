@@ -65,3 +65,7 @@ rcf/
 
 # Mac
 .DS_Store
+
+# Backend environment files
+appsettings.Development.json
+appsettings.Production.json

@@ -23,10 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Backend environment files
-appsettings.Development.json
-appsettings.Production.json
-
 #Frontend environment files
 .env
 .env.development
