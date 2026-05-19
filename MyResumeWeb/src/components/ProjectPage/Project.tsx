@@ -1,9 +1,50 @@
+import { useEffect, useState } from "react";
 import type { ProjectProps } from "../../types/ProjectProps";
-import type { FileProps } from "../../types/FileProps";
 import FileService from "../../services/FileService";
 import { Button } from "react-bootstrap";
 
 function Project({ projects }: { projects: ProjectProps[] }) {
+    const [fileNames, setFileNames] = useState<Record<string, string>>({});
+
+    useEffect(() => {
+        let mounted = true;
+
+        const fileIDs = Array.from(
+            new Set(
+                projects.flatMap((proj) => proj.projectFileIDs ?? [])
+            )
+        );
+
+        if (fileIDs.length === 0) {
+            if (mounted) setFileNames({});
+            return () => {
+                mounted = false;
+            };
+        }
+
+        Promise.all(
+            fileIDs.map(async (id) => {
+                try {
+                    const file = await FileService.getFile(id);
+                    return { id, name: file.name };
+                } catch {
+                    return { id, name: `File ${id}` };
+                }
+            })
+        ).then((entries) => {
+            if (!mounted) return;
+            const nextNames: Record<string, string> = {};
+            entries.forEach(({ id, name }) => {
+                nextNames[id] = name;
+            });
+            setFileNames(nextNames);
+        });
+
+        return () => {
+            mounted = false;
+        };
+    }, [projects]);
+
     return (
         <div className="project-section">
             <h2>Projects</h2>
@@ -26,7 +67,7 @@ function Project({ projects }: { projects: ProjectProps[] }) {
                                 console.error("Error downloading file:", error);
                             }
                         }}>
-                            Download {FileService.getFile(id).then((file: FileProps) => file.name).catch(() => `File ${id}`)}
+                            Download {fileNames[id] ?? `File ${id}`}
                         </Button>
                     ))}
                 </div>
