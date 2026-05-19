@@ -20,7 +20,7 @@ BEGIN
             FROM dbo.responsibilities r 
             WHERE r.experience_id = e.experience_id
             FOR JSON PATH
-        ) AS responsibilities
+        ) AS rawResponsibilities
     FROM dbo.experiences e;
 END;
 GO

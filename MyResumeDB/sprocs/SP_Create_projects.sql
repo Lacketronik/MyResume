@@ -19,21 +19,21 @@ BEGIN
             FROM dbo.project_videos v
             WHERE v.project_id = p.project_id
             FOR JSON PATH
-        ) AS videoBlobIDs,
+        ) AS rawVideoBlobIDs,
 
         (
             SELECT img.file_id AS [file_id]
             FROM dbo.project_images img
             WHERE img.project_id = p.project_id
             FOR JSON PATH
-        ) AS imageBlobIDs,
+        ) AS rawImageBlobIDs,
 
         (
             SELECT pf.file_id AS [file_id]
             FROM dbo.project_files pf
             WHERE pf.project_id = p.project_id
             FOR JSON PATH
-        ) AS projectFileIDs
+        ) AS rawProjectFileIDs
 
     FROM dbo.projects p;
 END;
