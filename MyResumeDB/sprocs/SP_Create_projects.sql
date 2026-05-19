@@ -11,6 +11,7 @@ BEGIN
 
     SELECT 
         p.project_id AS projectId,
+        p.project_name AS name,
         p.project_description AS [description],
         p.github_url AS githubUrl,
         
