@@ -15,7 +15,7 @@ namespace MyResumeBackend.DTOs
         public DateTime projectDate { get; set; }
         [JsonIgnore]
         public string? rawProjectFileIDs { get; set; }
-        public string[] videoBlobIDs
+        public string[] videoLinks
         {
             get
             {
