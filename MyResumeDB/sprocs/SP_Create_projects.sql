@@ -11,15 +11,17 @@ BEGIN
 
     SELECT 
         p.project_id AS projectId,
+        p.project_name AS name,
         p.project_description AS [description],
         p.github_url AS githubUrl,
+        p.project_date AS projectDate,
         
         (
-            SELECT v.file_id AS [file_id]
+            SELECT v.video_link AS [video_link]
             FROM dbo.project_videos v
             WHERE v.project_id = p.project_id
             FOR JSON PATH
-        ) AS rawVideoBlobIDs,
+        ) AS rawVideoLinks,
 
         (
             SELECT img.file_id AS [file_id]
