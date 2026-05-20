@@ -7,7 +7,7 @@ function Certification({ certs }: { certs: CertificationProps[] }) {
     return (
         <div className="certification-section">
             {certs.map((cert) => (
-                <Card style={{ width: '70%' }} key={cert.id} className="mx-auto mb-3">
+                <Card style={{ width: '90%', borderLeft: '5px solid #FFA500' }} key={cert.id} className="mx-auto mb-3">
                     <Card.Body>
                         <Card.Title style={{ fontSize: '1.5rem' }}>{cert.title}</Card.Title>
                         <Card.Text as="div" className="text-start">
