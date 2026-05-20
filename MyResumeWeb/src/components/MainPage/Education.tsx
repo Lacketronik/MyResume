@@ -12,7 +12,7 @@ function Education({ educations }: { educations: EducationProps[] }) {
     return (
         <div className="education-section">
             {sorted.map((edu, index) => (
-                <Card style={{ width: '70%' }} key={index} className="mx-auto mb-3">
+                <Card style={{ width: '90%', borderLeft: '5px solid #FFA500' }} key={index} className="mx-auto mb-3">
                     <Card.Body>
                         <Card.Title style={{ fontSize: '1.5rem' }}>{edu.degree}</Card.Title>
                         <Card.Text as="div" className="text-start">

@@ -1,8 +1,9 @@
 export type ProjectProps = {
     name: string
     description: string
-    videoBlobIDs?: string[]
+    videoLinks?: string[]
     imageBlobIDs?: string[]
     githubUrl?: string
     projectFileIDs?: string[]
+    projectDate?: Date
 }
