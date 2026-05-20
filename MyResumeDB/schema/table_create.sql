@@ -15,8 +15,10 @@ CREATE TABLE informations (
 	information_name VARCHAR(255) NOT NULL,
 	linkedin VARCHAR(255) NULL,
 	resume_file_id UNIQUEIDENTIFIER NULL,
+	profile_image_id UNIQUEIDENTIFIER NULL,
 	PRIMARY KEY (information_id),
-	FOREIGN KEY (resume_file_id) REFERENCES files (file_id)
+	FOREIGN KEY (resume_file_id) REFERENCES files (file_id),
+	FOREIGN KEY (profile_image_id) REFERENCES files (file_id)
 )
 
 CREATE TABLE introductions (
