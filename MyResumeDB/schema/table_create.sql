@@ -77,6 +77,7 @@ CREATE TABLE projects (
 	project_id INT IDENTITY(1,1) NOT NULL,
 	project_name VARCHAR(255) NOT NULL UNIQUE,
 	project_description VARCHAR(4000) NOT NULL,
+	project_date DATETIME NULL,
 	github_url VARCHAR(255) NULL,
 	PRIMARY KEY (project_id)
 )
@@ -84,10 +85,9 @@ CREATE TABLE projects (
 CREATE TABLE project_videos (
 	video_id INT IDENTITY(1,1) NOT NULL,
 	project_id INT NOT NULL,
-	file_id UNIQUEIDENTIFIER NOT NULL,
+	video_link VARCHAR(255) NOT NULL,
 	PRIMARY KEY (video_id),
-	FOREIGN KEY (project_id) REFERENCES projects (project_id),
-	FOREIGN KEY (file_id) REFERENCES files (file_id)
+	FOREIGN KEY (project_id) REFERENCES projects (project_id)
 )
 
 CREATE TABLE project_images (
