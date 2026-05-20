@@ -8,22 +8,23 @@ namespace MyResumeBackend.DTOs
         public string name { get; set; }
         public string description { get; set; }
         [JsonIgnore]
-        public string? rawVideoBlobIDs { get; set; }
+        public string? rawVideoLinks { get; set; }
         [JsonIgnore]
         public string? rawImageBlobIDs { get; set; }
         public string? githubUrl { get; set; }
+        public DateTime projectDate { get; set; }
         [JsonIgnore]
         public string? rawProjectFileIDs { get; set; }
-        public string[] videoBlobIDs
+        public string[] videoLinks
         {
             get
             {
-                if (string.IsNullOrEmpty(rawVideoBlobIDs)) return Array.Empty<string>();
-                using var doc = JsonDocument.Parse(rawVideoBlobIDs);
+                if (string.IsNullOrEmpty(rawVideoLinks)) return Array.Empty<string>();
+                using var doc = JsonDocument.Parse(rawVideoLinks);
                 var list = new List<string>();
                 foreach (var element in doc.RootElement.EnumerateArray())
                 {
-                    if (element.TryGetProperty("file_id", out var prop))
+                    if (element.TryGetProperty("video_link", out var prop))
                     {
                         list.Add(prop.GetString());
                     }
