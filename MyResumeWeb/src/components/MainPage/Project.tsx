@@ -92,7 +92,7 @@ function Project({ projects }: { projects: ProjectProps[] }) {
                                 <Card className="flex-fill">
                                     <Card.Body>
                                         <Card.Title as="h5">Description</Card.Title>
-                                        <Card.Text className="mb-0">{proj.description}</Card.Text>
+                                        <Card.Text className="mb-0 text-start text-muted small">{proj.description}</Card.Text>
                                         {proj.githubUrl && (
                                             <div className="mt-3">
                                                 <Button variant="outline-secondary" href={proj.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -132,14 +132,11 @@ function Project({ projects }: { projects: ProjectProps[] }) {
                                                 {proj.projectFileIDs.map((id) => (
                                                     <Button
                                                         key={id}
+                                                        as="a"
                                                         variant="primary"
-                                                        onClick={async () => {
-                                                            try {
-                                                                await FileService.downloadFile(id);
-                                                            } catch (error) {
-                                                                console.error("Error downloading file:", error);
-                                                            }
-                                                        }}
+                                                        size="sm"
+                                                        href={`${getMetaPath(id)}/${id}_${getMetaName(id)}.pdf`}
+                                                        download={`${getMetaName(id)}.pdf`}
                                                     >
                                                         Download {getMetaName(id) ?? `File ${id}`}
                                                     </Button>

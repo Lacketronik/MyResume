@@ -73,6 +73,18 @@ function Introduction({ information }: { information: InformationProps }) {
     : undefined;
 
   const resumeFileID = information.resumeFileID;
+  const resumeFileSrc = resumeFileID
+    ? (() => {
+        const resumePath = getMetaPath(resumeFileID);
+        const resumeName = getMetaName(resumeFileID);
+
+        if (resumePath && resumeName) {
+          return `${resumePath}/${resumeFileID.toUpperCase()}_${resumeName}.pdf`;
+        }
+
+        return undefined;
+      })()
+    : undefined;
   
   return (
     <div className="Introduction" style={{ padding: '1.5rem' }}>
@@ -125,15 +137,12 @@ function Introduction({ information }: { information: InformationProps }) {
                     )}
                     {resumeFileID && (
                       <Button
+                        as="a"
                         variant="outline-success"
                         size="sm"
-                        onClick={async () => {
-                          try {
-                            await FileService.downloadFile(resumeFileID);
-                          } catch (error) {
-                            console.error("Error downloading resume:", error);
-                          }
-                        }}
+                        href={resumeFileSrc}
+                        disabled={!resumeFileSrc}
+                        download={information.name.replace(/\s+/g, '_') + '_Resume.pdf'}
                       >
                         Download {getMetaName(resumeFileID) ?? 'Resume'}
                       </Button>
