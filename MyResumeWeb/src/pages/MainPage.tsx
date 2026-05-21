@@ -14,6 +14,7 @@ import { ExperienceService } from "../services/ExperienceService";
 import { EducationService } from "../services/EducationService";
 import { CertificationService } from "../services/CertificationService";
 import { ProjectService } from "../services/ProjectService";
+import PersistentAlert from "../components/MainPage/Banner";
 
 function MainPage({ information }: { information: InformationProps }) {
     const [experienceData, setExperienceData] = useState<ExperienceProps[]>([]);
@@ -66,6 +67,7 @@ function MainPage({ information }: { information: InformationProps }) {
 
   return (
     <div className="MainPage">
+        <PersistentAlert />
       <Introduction information={information} />
         <Tabs defaultActiveKey="experience" id="main-page-tabs" className="justify-content-center mb-3 fs-2">
             <Tab eventKey="experience" title="Experience">
