@@ -27,7 +27,7 @@ namespace MyResumeBackend.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving experience. " + ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving education. " + ex);
             }
         }
     }
