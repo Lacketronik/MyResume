@@ -26,5 +26,21 @@ namespace MyResumeBackend.Services
                 throw;
             }
         }
+
+        public async Task<DTOs.ImageDTO> GetImageDetails(string imageID)
+        {
+            using var transaction = _unitOfWork.BeginTransaction();
+            try
+            {
+                var imageDetails = await _unitOfWork.projs.GetImageDetails(imageID);
+                transaction.Commit();
+                return imageDetails;
+            }
+            catch
+            {
+                transaction.Rollback();
+                throw;
+            }
+        }
     }
 }

@@ -23,5 +23,17 @@ namespace MyResumeBackend.Repositories
                 commandType: CommandType.StoredProcedure,
                 transaction: _transactionProvider());
         }
+
+        public async Task<ImageDTO> GetImageDetails(string imageID)
+        {
+            var param = new DynamicParameters();
+            param.Add("@ImageID", imageID);
+            return await SqlMapper.QueryFirstOrDefaultAsync<ImageDTO>(
+                _connection,
+                "GetImageDetails",
+                param,
+                commandType: CommandType.StoredProcedure,
+                transaction: _transactionProvider());
+        }
     }
 }
