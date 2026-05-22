@@ -31,7 +31,7 @@ namespace MyResumeBackend.Controllers
             }
         }
 
-        [HttpGet("id")]
+        [HttpGet("Image/id")]
         public async Task<IActionResult> GetImageDetails(string id)
         {
             try
@@ -41,6 +41,21 @@ namespace MyResumeBackend.Controllers
                     return NotFound();
                 return Ok(img);
 
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving image details. " + ex);
+            }
+        }
+
+        [HttpPost("Image/ids")]
+        public async Task<IActionResult> GetImageDetailsByIDs([FromBody] List<string> ids)
+        {
+            try
+            {
+                if (ids == null || ids.Count == 0) return Ok(new List<object>());
+                var imgs = await _projectService.GetImageDetailsByIDs(ids);
+                return Ok(imgs);
             }
             catch (Exception ex)
             {

@@ -12,20 +12,12 @@ export class FileService {
         }
     }
 
-    static async downloadFile(fileID: string): Promise<void> {
+    static async getFilesByIDs(fileIDs: string[]): Promise<FileProps[]> {
         try {
-            const response = await api.get('File/${fileID}/download', {
-                responseType: 'blob',
-            });
-            const url = window.URL.createObjectURL(new Blob([response.data]));
-            const link = document.createElement('a');
-            link.href = url;
-            link.setAttribute('download', `file_${fileID}`);
-            document.body.appendChild(link);
-            link.click();
-            link.remove();
+            const response = await api.post('File/ids', fileIDs);
+            return response.data as FileProps[];
         } catch (error) {
-            console.error("Error downloading file:", error);
+            console.error('Error fetching files batch:', error);
             throw error;
         }
     }

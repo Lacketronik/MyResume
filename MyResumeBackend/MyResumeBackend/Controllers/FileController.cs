@@ -30,5 +30,20 @@ namespace MyResumeBackend.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving file. " + ex);
             }
         }
+
+        [HttpPost("ids")]
+        public async Task<IActionResult> GetFilesByIDs([FromBody] List<string> ids)
+        {
+            try
+            {
+                if (ids == null || ids.Count == 0) return Ok(new List<object>());
+                var files = await _fileService.GetFilesByIDs(ids);
+                return Ok(files);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving files. " + ex);
+            }
+        }
     }
 }

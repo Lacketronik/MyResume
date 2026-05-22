@@ -1,5 +1,6 @@
 ﻿using MyResumeBackend.DTOs;
 using MyResumeBackend.Services.UnitOfWork;
+using System.Linq;
 
 namespace MyResumeBackend.Services
 {
@@ -14,18 +15,13 @@ namespace MyResumeBackend.Services
 
         public async Task<FileDTO?> GetFileByID(string id)
         {
-            using var transaction = _unitOfWork.BeginTransaction();
-            try
-            {
-                var file = await _unitOfWork.files.GetFileByID(id);
-                transaction.Commit();
-                return file;
-            }
-            catch
-            {
-                transaction.Rollback();
-                throw;
-            }
+            return await _unitOfWork.files.GetFileByID(id);
+        }
+
+        public async Task<IEnumerable<FileDTO>> GetFilesByIDs(IEnumerable<string> ids)
+        {
+            if (ids == null) return Enumerable.Empty<FileDTO>();
+            return await _unitOfWork.files.GetFilesByIDs(ids);
         }
     }
 }

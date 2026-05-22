@@ -6,5 +6,6 @@ namespace MyResumeBackend.Repositories
     {
         Task<IEnumerable<ProjectDTO>> GetProject();
         Task<ImageDTO> GetImageDetails(string imageID);
+        Task<IEnumerable<ImageDTO>> GetImageDetailsByIDs(IEnumerable<string> imageIDs);
     }
 }
