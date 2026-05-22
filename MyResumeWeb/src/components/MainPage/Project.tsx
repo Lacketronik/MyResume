@@ -123,7 +123,7 @@ function Project({ projects }: { projects: ProjectProps[] }) {
 
                                                     return `/api/blobs/${id}`;
                                                 }}
-                                                getImagePath={(id) => getMetaPath(id)}
+                                                //getImagePath={(id) => getMetaPath(id)}
                                             />
                                         </div>
 
