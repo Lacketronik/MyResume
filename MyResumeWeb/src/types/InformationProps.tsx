@@ -4,4 +4,5 @@ export type InformationProps = {
     introduction: string[]
     role: string[]
     resumeFileID?: string
+    profileImageID?: string
 }
