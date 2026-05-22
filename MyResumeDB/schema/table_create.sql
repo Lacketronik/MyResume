@@ -96,6 +96,7 @@ CREATE TABLE project_images (
 	image_id INT IDENTITY(1,1) NOT NULL,
 	project_id INT NOT NULL,
 	file_id UNIQUEIDENTIFIER NOT NULL,
+	image_set VARCHAR(255) NOT NULL DEFAULT 'NONE',
 	PRIMARY KEY (image_id),
 	FOREIGN KEY (project_id) REFERENCES projects (project_id),
 	FOREIGN KEY (file_id) REFERENCES files (file_id)
