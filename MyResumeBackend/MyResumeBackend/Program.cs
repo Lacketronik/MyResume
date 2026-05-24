@@ -8,12 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped<IInformationService, InformationService>();
-builder.Services.AddScoped<IExperienceService, ExperienceService>();
-builder.Services.AddScoped<IEducationService, EducationService>();
-builder.Services.AddScoped<ICertificationService, CertificationService>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
-builder.Services.AddScoped<IFileService, FileService>();
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 // builder.Services.AddOpenApi();
@@ -43,13 +38,13 @@ builder.Services.AddCors(options =>
         {
             policy.WithOrigins(corsOrigins)
                   .AllowCredentials()
-                  .AllowAnyHeader()
+                  .WithMethods("GET")
                   .AllowAnyMethod();
         }
         else
         {
             policy.AllowAnyOrigin()
-                  .AllowAnyHeader()
+                  .WithMethods("GET")
                   .AllowAnyMethod();
         }
     });
