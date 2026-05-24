@@ -168,11 +168,11 @@ function ProjectImageGallery({
                 onHide={() => setActiveIndex(null)}
                 centered
                 size="xl"
-                contentClassName="bg-dark text-light"
+                contentClassName="project-gallery-modal-content text-light"
                 dialogClassName="project-gallery-modal"
             >
                 <Modal.Body
-                    className="p-0 bg-black"
+                    className="p-0"
                     style={{
                         height: "70vh",
                         overflow: "hidden",

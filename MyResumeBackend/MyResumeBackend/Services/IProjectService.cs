@@ -5,7 +5,6 @@ namespace MyResumeBackend.Services
     public interface IProjectService
     {
         public Task<IEnumerable<ProjectDTO>> GetProject();
-        public Task<ImageDTO> GetImageDetails(string imageID);
-        public Task<IEnumerable<ImageDTO>> GetImageDetailsByIDs(IEnumerable<string> imageIDs);
+        public Task<PortfolioDTO> GetPortfolio();
     }
 }

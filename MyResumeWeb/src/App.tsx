@@ -1,37 +1,46 @@
 import './styles/App.css'
 import MainPage from './pages/MainPage.tsx'
 import { Routes, Route } from 'react-router-dom'
-import type { InformationProps } from './types/InformationProps';
-import InformationService from './services/InformationService';
+import type { PortfolioProps } from './types/PortfolioProps';
+import PortfolioService from './services/PortfolioService';
 import { useEffect, useState } from 'react'
 
-function App() {
-
-  const [information, setInformation] = useState<InformationProps>({
+const createEmptyPortfolio = (): PortfolioProps => ({
+  information: {
     name: "",
     linkedin: "",
     introduction: [],
     role: [],
-    resumeFileID: ""
-  });
+  },
+  experiences: [],
+  educations: [],
+  certifications: [],
+  projects: [],
+  files: [],
+  imageDetails: [],
+});
+
+function App() {
+
+  const [portfolio, setPortfolio] = useState<PortfolioProps>(createEmptyPortfolio());
 
   useEffect(() => {
-    const fetchInformation = async () => {
+    const fetchPortfolio = async () => {
       try {
-        const info = await InformationService.getInformation();
-        setInformation(info);
+        const portfolioData = await PortfolioService.getPortfolio();
+        setPortfolio(portfolioData);
       } catch (error) {
-        console.error("Error fetching information:", error);
+        console.error("Error fetching portfolio:", error);
       }
     };
 
-    fetchInformation();
+    fetchPortfolio();
   }, []);
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<MainPage information={information as InformationProps} />} />
+        <Route path="/" element={<MainPage portfolio={portfolio} />} />
       </Routes>
     </>
   )
