@@ -12,6 +12,11 @@ function Project({ projects }: { projects: ProjectProps[] }) {
     const [fileMetas, setFileMetas] = useState<Record<string, FileProps>>({});
     const [imageDetails, setImageDetails] = useState<Record<string, ImageProps>>({});
     const Player = ReactPlayer as any;
+    const sortedProjects = [...projects].sort((a, b) => {
+        const aDate = a.projectDate ? new Date(a.projectDate).valueOf() : 0;
+        const bDate = b.projectDate ? new Date(b.projectDate).valueOf() : 0;
+        return bDate - aDate;
+    });
 
     const getMetaName = (id: string) => fileMetas[id]?.name;
 
@@ -67,7 +72,7 @@ function Project({ projects }: { projects: ProjectProps[] }) {
 
     return (
         <div className="project-section">
-            {projects.map((proj, index) => (
+            {sortedProjects.map((proj, index) => (
                 <Card key={index} className="mx-auto mb-4 shadow-sm" style={{ width: '90%', borderLeft: '5px solid #FFA500' }}>
                     <Card.Body>
                         <Card.Title as="h3" className="mb-3">{proj.name}</Card.Title>
