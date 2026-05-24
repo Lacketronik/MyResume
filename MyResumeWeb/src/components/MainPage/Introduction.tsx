@@ -1,11 +1,9 @@
 import type { InformationProps } from "../../types/InformationProps";
 import type { FileProps } from "../../types/FileProps";
-import FileService from "../../services/FileService";
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
 
-function Introduction({ information }: { information: InformationProps }) {
-  const [fileMetas, setFileMetas] = useState<Record<string, FileProps>>({});
+function Introduction({ information, files }: { information: InformationProps; files: FileProps[] }) {
   const fallbackProfileImage =
     "data:image/svg+xml;charset=UTF-8," +
     encodeURIComponent(`
@@ -16,47 +14,16 @@ function Introduction({ information }: { information: InformationProps }) {
       </svg>
     `);
 
-  const getMetaName = (id: string) => fileMetas[id]?.name;
+  const fileMetas = useMemo(() => {
+    return files.reduce<Record<string, FileProps>>((lookup, file) => {
+      lookup[file.id.toUpperCase()] = file;
+      return lookup;
+    }, {});
+  }, [files]);
 
-  const getMetaPath = (id: string) => fileMetas[id]?.path;
+  const getMetaName = (id: string) => fileMetas[id.toUpperCase()]?.name;
 
-  useEffect(() => {
-    let mounted = true;
-
-    const fileIDs = [information.resumeFileID, information.profileImageID].filter(
-      (id): id is string => Boolean(id)
-    );
-
-    if (fileIDs.length === 0) {
-      if (mounted) setFileMetas({});
-      return () => {
-        mounted = false;
-      };
-    }
-
-    Promise.all(
-      fileIDs.map(async (id) => {
-        try {
-          const file = await FileService.getFile(id);
-          return { id, meta: file };
-        } catch {
-          return { id, meta: { id, name: `File ${id}`, path: "", extension: "", type: "" } };
-        }
-      })
-    ).then((entries) => {
-      if (!mounted) return;
-
-      const next: Record<string, FileProps> = {};
-      entries.forEach(({ id, meta }) => {
-        next[id] = meta;
-      });
-      setFileMetas(next);
-    });
-
-    return () => {
-      mounted = false;
-    };
-  }, [information.profileImageID, information.resumeFileID]);
+  const getMetaPath = (id: string) => fileMetas[id.toUpperCase()]?.path;
 
   const profileImageSrc = information.profileImageID
     ? (() => {
@@ -64,7 +31,6 @@ function Introduction({ information }: { information: InformationProps }) {
         const imageName = getMetaName(information.profileImageID);
 
         if (imagePath && imageName) {
-
           return `${imagePath}/${information.profileImageID.toUpperCase()}_${imageName}.webp`;
         }
 

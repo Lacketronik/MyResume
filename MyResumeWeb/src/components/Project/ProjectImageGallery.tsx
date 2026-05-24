@@ -26,6 +26,7 @@ function ProjectImageGallery({
 }: ProjectImageGalleryProps) {
     const [startIndex, setStartIndex] = useState(0);
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     const visibleImages = useMemo(() => {
         if (imageIDs.length <= 3) {
@@ -42,36 +43,28 @@ function ProjectImageGallery({
     const canCycle = imageIDs.length > 1;
 
     const moveLeft = () => {
-        if (!canCycle) {
-            return;
-        }
+        if (!canCycle) return;
         setStartIndex((current) => (current - 1 + imageIDs.length) % imageIDs.length);
     };
 
     const moveRight = () => {
-        if (!canCycle) {
-            return;
-        }
+        if (!canCycle) return;
         setStartIndex((current) => (current + 1) % imageIDs.length);
     };
 
     const moveModalLeft = () => {
-        if (activeIndex === null || imageIDs.length === 0) {
-            return;
-        }
-
+        if (activeIndex === null) return;
         setActiveIndex((current) => (current === null ? null : (current - 1 + imageIDs.length) % imageIDs.length));
     };
 
     const moveModalRight = () => {
-        if (activeIndex === null || imageIDs.length === 0) {
-            return;
-        }
-
+        if (activeIndex === null) return;
         setActiveIndex((current) => (current === null ? null : (current + 1) % imageIDs.length));
     };
 
     const activeImageID = activeIndex === null ? null : imageIDs[activeIndex];
+    const activeImageLabel = activeImageID ? getImageLabel(activeImageID, activeIndex ?? 0) : "";
+    const activeImageSrc = activeImageID ? getImageSrc(activeImageID) ?? fallbackImageSrc : fallbackImageSrc;
 
     return (
         <>
@@ -81,7 +74,7 @@ function ProjectImageGallery({
                     onClick={moveLeft}
                     disabled={!canCycle}
                     aria-label="Previous images"
-                    style={{ minWidth: 40 }}
+                    style={{ minWidth: 40, cursor: canCycle ? "pointer" : "not-allowed" }}
                 >
                     ‹
                 </Button>
@@ -97,14 +90,26 @@ function ProjectImageGallery({
                     {visibleImages.map((id, index) => {
                         const actualIndex = imageIDs.indexOf(id);
                         const label = getImageLabel(id, actualIndex);
+                        const isHovered = hoveredIndex === actualIndex;
 
                         return (
                             <button
                                 key={`${id}-${index}`}
                                 type="button"
                                 onClick={() => setActiveIndex(actualIndex)}
+                                onMouseEnter={() => setHoveredIndex(actualIndex)}
+                                onMouseLeave={() => setHoveredIndex((current) => (current === actualIndex ? null : current))}
                                 className="border-0 bg-transparent p-0 text-start"
-                                style={{ minWidth: 0, width: "100%" }}
+                                style={{
+                                    minWidth: 0,
+                                    width: "100%",
+                                    cursor: "pointer",
+                                    transition: "transform 160ms ease, box-shadow 160ms ease",
+                                    transform: isHovered ? "translateY(-4px) scale(1.04)" : "translateY(0) scale(1)",
+                                    position: "relative",
+                                    zIndex: isHovered ? 2 : 1,
+                                    boxShadow: isHovered ? "0 16px 30px rgba(0,0,0,0.26)" : "none",
+                                }}
                             >
                                 <div
                                     className="bg-body-tertiary rounded-3 overflow-hidden shadow-sm"
@@ -132,11 +137,14 @@ function ProjectImageGallery({
                                                 height: "100%",
                                                 objectFit: "cover",
                                                 display: "block",
+                                                cursor: "pointer",
                                             }}
                                         />
                                     </div>
                                     <div className="px-2 py-2" style={{ flex: "0 0 56px" }}>
-                                        <div className="text-truncate small fw-medium" title={label}>{label}</div>
+                                        <div className="text-truncate small fw-medium" title={label}>
+                                            {label}
+                                        </div>
                                     </div>
                                 </div>
                             </button>
@@ -149,7 +157,7 @@ function ProjectImageGallery({
                     onClick={moveRight}
                     disabled={!canCycle}
                     aria-label="Next images"
-                    style={{ minWidth: 40 }}
+                    style={{ minWidth: 40, cursor: canCycle ? "pointer" : "not-allowed" }}
                 >
                     ›
                 </Button>
@@ -175,7 +183,16 @@ function ProjectImageGallery({
                     }}
                 >
                     {activeImageID && (
-                        <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
+                        <div
+                            style={{
+                                width: "100%",
+                                height: "100%",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                position: "relative",
+                            }}
+                        >
                             <div
                                 style={{
                                     position: "absolute",
@@ -189,10 +206,9 @@ function ProjectImageGallery({
                                     maxWidth: "calc(100% - 24px)",
                                 }}
                             >
-                                <div className="fw-semibold text-truncate">
-                                    {getImageLabel(activeImageID, activeIndex ?? 0)}
-                                </div>
+                                <div className="fw-semibold text-truncate">{activeImageLabel}</div>
                             </div>
+
                             <Button
                                 variant="dark"
                                 onClick={moveModalLeft}
@@ -213,13 +229,15 @@ function ProjectImageGallery({
                                     backgroundColor: "rgba(17,24,39,0.72)",
                                     borderColor: "rgba(255,255,255,0.35)",
                                     boxShadow: "0 6px 18px rgba(0,0,0,0.45)",
+                                    cursor: canCycle ? "pointer" : "not-allowed",
                                 }}
                             >
                                 ‹
                             </Button>
+
                             <img
-                                src={getImageSrc(activeImageID) ?? fallbackImageSrc}
-                                alt={getImageLabel(activeImageID, activeIndex ?? 0)}
+                                src={activeImageSrc}
+                                alt={activeImageLabel}
                                 style={{
                                     display: "block",
                                     width: "100%",
@@ -230,6 +248,7 @@ function ProjectImageGallery({
                                     margin: "0 auto",
                                 }}
                             />
+
                             <Button
                                 variant="dark"
                                 onClick={moveModalRight}
@@ -250,6 +269,7 @@ function ProjectImageGallery({
                                     backgroundColor: "rgba(17,24,39,0.72)",
                                     borderColor: "rgba(255,255,255,0.35)",
                                     boxShadow: "0 6px 18px rgba(0,0,0,0.45)",
+                                    cursor: canCycle ? "pointer" : "not-allowed",
                                 }}
                             >
                                 ›

@@ -1,4 +1,5 @@
 ﻿using MyResumeBackend.Services.UnitOfWork;
+using System.Linq;
 
 namespace MyResumeBackend.Services
 {
@@ -13,34 +14,18 @@ namespace MyResumeBackend.Services
 
         public async Task<IEnumerable<DTOs.ProjectDTO>> GetProject()
         {
-            using var transaction = _unitOfWork.BeginTransaction();
-            try
-            {
-                var projs = await _unitOfWork.projs.GetProject();
-                transaction.Commit();
-                return projs;
-            }
-            catch
-            {
-                transaction.Rollback();
-                throw;
-            }
+            return await _unitOfWork.projs.GetProject();
         }
 
         public async Task<DTOs.ImageDTO> GetImageDetails(string imageID)
         {
-            using var transaction = _unitOfWork.BeginTransaction();
-            try
-            {
-                var imageDetails = await _unitOfWork.projs.GetImageDetails(imageID);
-                transaction.Commit();
-                return imageDetails;
-            }
-            catch
-            {
-                transaction.Rollback();
-                throw;
-            }
+            return await _unitOfWork.projs.GetImageDetails(imageID);
+        }
+
+        public async Task<IEnumerable<DTOs.ImageDTO>> GetImageDetailsByIDs(IEnumerable<string> imageIDs)
+        {
+            if (imageIDs == null) return Enumerable.Empty<DTOs.ImageDTO>();
+            return await _unitOfWork.projs.GetImageDetailsByIDs(imageIDs);
         }
     }
 }
