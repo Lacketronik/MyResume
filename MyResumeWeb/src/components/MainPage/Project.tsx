@@ -1,74 +1,40 @@
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import type { ProjectProps } from "../../types/ProjectProps";
 import type { FileProps } from "../../types/FileProps";
 import type { ImageProps } from "../../types/ImageProps";
-import FileService from "../../services/FileService";
-import { ProjectService } from "../../services/ProjectService";
 import { Button, Card, Col, Row } from "react-bootstrap";
 import ReactPlayer from "react-player";
 import ProjectImageGallery from "../Project/ProjectImageGallery.tsx";
 
-function Project({ projects }: { projects: ProjectProps[] }) {
-    const [fileMetas, setFileMetas] = useState<Record<string, FileProps>>({});
-    const [imageDetails, setImageDetails] = useState<Record<string, ImageProps>>({});
+function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; files: FileProps[]; imageDetails: ImageProps[] }) {
     const Player = ReactPlayer as any;
+    const fileMetas = useMemo(() => {
+        return files.reduce<Record<string, FileProps>>((lookup, file) => {
+            lookup[file.id.toUpperCase()] = file;
+            return lookup;
+        }, {});
+    }, [files]);
+
+    const imageMetaLookup = useMemo(() => {
+        return imageDetails.reduce<Record<string, ImageProps>>((lookup, image) => {
+            if (image.imageID) {
+                lookup[image.imageID.toUpperCase()] = image;
+            }
+            return lookup;
+        }, {});
+    }, [imageDetails]);
+
     const sortedProjects = [...projects].sort((a, b) => {
         const aDate = a.projectDate ? new Date(a.projectDate).valueOf() : 0;
         const bDate = b.projectDate ? new Date(b.projectDate).valueOf() : 0;
         return bDate - aDate;
     });
 
-    const getMetaName = (id: string) => fileMetas[id]?.name;
+    const getMetaName = (id: string) => fileMetas[id.toUpperCase()]?.name;
 
-    const getMetaPath = (id: string) => fileMetas[id]?.path;
+    const getMetaPath = (id: string) => fileMetas[id.toUpperCase()]?.path;
 
-    useEffect(() => {
-        let mounted = true;
-
-        const fileIDs = Array.from(
-            new Set(
-                projects.flatMap((proj) => [
-                    ...(proj.projectFileIDs ?? []),
-                    ...(proj.imageBlobIDs ?? []),
-                ])
-            )
-        );
-
-        const imageIDs = Array.from(
-            new Set(projects.flatMap((proj) => proj.imageBlobIDs ?? []))
-        );
-
-        const fileMetaPromise = fileIDs.length === 0
-            ? Promise.resolve([] as FileProps[])
-            : FileService.getFilesByIDs(fileIDs);
-
-        const imageDetailPromise = imageIDs.length === 0
-            ? Promise.resolve([] as ImageProps[])
-            : ProjectService.getImageDetailsByIDs(imageIDs);
-
-        Promise.all([fileMetaPromise, imageDetailPromise]).then(([fileEntries, imageEntries]) => {
-            if (!mounted) return;
-
-            const nextFiles: Record<string, FileProps> = {};
-            fileEntries.forEach((meta) => {
-                nextFiles[String(meta.id.toUpperCase())] = meta;
-            });
-            setFileMetas(nextFiles);
-
-            const nextImages: Record<string, ImageProps> = {};
-            imageEntries.forEach((meta, idx) => {
-                const id = (meta as any).imageID ?? imageIDs[idx];
-                nextImages[String(id.toUpperCase())] = meta;
-            });
-            setImageDetails(nextImages);
-        });
-
-        return () => {
-            mounted = false;
-        };
-    }, [projects]);
-
-    const getImageSetName = (id: string) => imageDetails[id]?.imageSet ?? 'NONE';
+    const getImageSetName = (id: string) => imageMetaLookup[id.toUpperCase()]?.imageSet ?? 'NONE';
 
     return (
         <div className="project-section">
@@ -176,7 +142,7 @@ function Project({ projects }: { projects: ProjectProps[] }) {
                                                         getImageSrc={(id) => {
                                                             const imagePath = getMetaPath(id.toUpperCase());
                                                             const imageName = getMetaName(id.toUpperCase());
-                                                            return `${imagePath}/${id.toUpperCase()}_${imageName}.webp`;
+                                                            return imagePath && imageName ? `${imagePath}/${id.toUpperCase()}_${imageName}.webp` : "";
                                                         }}
                                                     />
                                                 </div>
