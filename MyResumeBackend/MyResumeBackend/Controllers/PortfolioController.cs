@@ -6,29 +6,30 @@ namespace MyResumeBackend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProjectController : ControllerBase
+    public class PortfolioController : ControllerBase
     {
         private readonly IProjectService _projectService;
 
-        public ProjectController(IProjectService projectService)
+        public PortfolioController(IProjectService projectService)
         {
             _projectService = projectService;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProject()
+        public async Task<IActionResult> GetPortfolio()
         {
             try
             {
-                var projs = await _projectService.GetProject();
-                if (projs == null || !projs.Any())
+                var portfolio = await _projectService.GetPortfolio();
+                if (portfolio == null)
                     return NotFound();
-                return Ok(projs);
+                return Ok(portfolio);
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving experience. " + ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while retrieving portfolio. " + ex);
             }
         }
     }
 }
+

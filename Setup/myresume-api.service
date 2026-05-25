@@ -1,0 +1,23 @@
+[Unit]
+Description=MyResume .NET Core Backend API
+After=network.target
+
+[Service]
+WorkingDirectory=/home/azureuser/myresume-api
+ExecStart=/usr/bin/dotnet /home/azureuser/myresume-api/MyResumeBackend.dll --urls "http://0.0.0.0:5000"
+Restart=always
+# Restart service after 10 seconds if the dotnet service crashes:
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=myresume-api
+User=azureuser
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+Environment=ASPNETCORE_URLS=http://0.0.0.0:5000
+
+# Secure Environment Variables
+Environment=ConnectionStrings__DefaultConnection="Server=10.0.3.4;Database=my_resume_db;User Id=sa;Password=<Password>;TrustServerCertificate=True;"
+Environment=Cors__AllowedOrigins="<Public IP>, <domain.com>, <www.domain.com>"
+
+[Install]
+WantedBy=multi-user.target

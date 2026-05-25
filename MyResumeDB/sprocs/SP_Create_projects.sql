@@ -2,7 +2,7 @@ USE [my_resume_db];
 GO
 
 DROP PROCEDURE IF EXISTS dbo.GetProject;
-DROP PROCEDURE IF EXISTS dbo.GetImageDetails;
+DROP PROCEDURE IF EXISTS dbo.GetImages;
 GO
 
 CREATE PROCEDURE dbo.GetProject
@@ -42,13 +42,12 @@ BEGIN
 END;
 GO
 
-CREATE PROCEDURE dbo.GetImageDetails
-    @ImageID UNIQUEIDENTIFIER
+CREATE PROCEDURE dbo.GetImages
 AS
 BEGIN
-    SELECT  project_id as projectID,
-            image_set as imageSet
-    FROM project_images
-    WHERE file_id = @ImageID
+    SELECT file_id AS imageID,
+           project_id AS projectID,
+           image_set AS imageSet
+    FROM project_images;
 END;
 GO

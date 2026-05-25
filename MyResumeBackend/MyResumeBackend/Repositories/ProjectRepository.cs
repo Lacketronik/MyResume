@@ -23,5 +23,14 @@ namespace MyResumeBackend.Repositories
                 commandType: CommandType.StoredProcedure,
                 transaction: _transactionProvider());
         }
+
+        public async Task<IEnumerable<ImageDTO>> GetImages()
+        {
+            return await SqlMapper.QueryAsync<ImageDTO>(
+                _connection,
+                "GetImages",
+                commandType: CommandType.StoredProcedure,
+                transaction: _transactionProvider());
+        }
     }
 }

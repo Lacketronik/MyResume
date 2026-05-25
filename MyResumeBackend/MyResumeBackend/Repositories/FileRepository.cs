@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using MyResumeBackend.DTOs;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace MyResumeBackend.Repositories
 {
@@ -15,14 +16,11 @@ namespace MyResumeBackend.Repositories
             _transactionProvider = transactionProvider;
         }
 
-        public async Task<FileDTO?> GetFileByID(string id)
+        public async Task<IEnumerable<FileDTO>> GetFiles()
         {
-            var param = new DynamicParameters();
-            param.Add("FileID", id);
-            return await SqlMapper.QueryFirstOrDefaultAsync<FileDTO>(
+            return await SqlMapper.QueryAsync<FileDTO>(
                 _connection,
-                "GetFile",
-                param,
+                "GetFiles",
                 commandType: CommandType.StoredProcedure,
                 transaction: _transactionProvider());
         }

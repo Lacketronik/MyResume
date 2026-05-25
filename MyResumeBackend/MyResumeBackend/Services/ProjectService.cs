@@ -1,4 +1,6 @@
-﻿using MyResumeBackend.Services.UnitOfWork;
+﻿using MyResumeBackend.DTOs;
+using MyResumeBackend.Services.UnitOfWork;
+using System.Linq;
 
 namespace MyResumeBackend.Services
 {
@@ -13,18 +15,22 @@ namespace MyResumeBackend.Services
 
         public async Task<IEnumerable<DTOs.ProjectDTO>> GetProject()
         {
-            using var transaction = _unitOfWork.BeginTransaction();
-            try
+            return await _unitOfWork.projs.GetProject();
+        }
+
+        public async Task<DTOs.PortfolioDTO> GetPortfolio()
+        {
+            PortfolioDTO portfolio = new PortfolioDTO
             {
-                var projs = await _unitOfWork.projs.GetProject();
-                transaction.Commit();
-                return projs;
-            }
-            catch
-            {
-                transaction.Rollback();
-                throw;
-            }
+                information = await _unitOfWork.infos.GetInformation(),
+                experiences = await _unitOfWork.exps.GetExperience(),
+                educations = await _unitOfWork.edus.GetEducation(),
+                certifications = await _unitOfWork.certs.GetCertification(),
+                projects = await _unitOfWork.projs.GetProject(),
+                files = await _unitOfWork.files.GetFiles(),
+                imageDetails = await _unitOfWork.projs.GetImages()
+            };
+            return portfolio;
         }
     }
 }
