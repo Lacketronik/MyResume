@@ -1,6 +1,8 @@
+import type { ProjectDescriptionProps } from "./ProjectDescriptionProps"
+
 export type ProjectProps = {
     name: string
-    description: string
+    descriptions: ProjectDescriptionProps[]
     videoLinks?: string[]
     imageBlobIDs?: string[]
     githubUrl?: string

@@ -13,9 +13,16 @@ BEGIN
     SELECT 
         p.project_id AS projectId,
         p.project_name AS name,
-        p.project_description AS [description],
         p.github_url AS githubUrl,
         p.project_date AS projectDate,
+
+        (
+            SELECT d.description AS [description],
+                   d.type AS [type]
+            FROM dbo.project_descriptions d
+            WHERE d.project_id = p.project_id
+            FOR JSON PATH
+        ) AS rawDescriptions,
         
         (
             SELECT v.video_link AS [video_link]

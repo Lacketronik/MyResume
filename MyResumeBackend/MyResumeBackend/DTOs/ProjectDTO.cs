@@ -6,7 +6,8 @@ namespace MyResumeBackend.DTOs
     public class ProjectDTO
     {
         public string name { get; set; }
-        public string description { get; set; }
+        [JsonIgnore]
+        public string? rawDescriptions { get; set; }
         [JsonIgnore]
         public string? rawVideoLinks { get; set; }
         [JsonIgnore]
@@ -15,6 +16,29 @@ namespace MyResumeBackend.DTOs
         public DateTime projectDate { get; set; }
         [JsonIgnore]
         public string? rawProjectFileIDs { get; set; }
+        public IEnumerable<ProjectDescriptionDTO> descriptions
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(rawDescriptions)) return Array.Empty<ProjectDescriptionDTO>();
+                using var doc = JsonDocument.Parse(rawDescriptions);
+                var list = new List<ProjectDescriptionDTO>();
+                foreach (var element in doc.RootElement.EnumerateArray())
+                {
+                    var dto = new ProjectDescriptionDTO();
+                    if (element.TryGetProperty("description", out var descProp))
+                    {
+                        dto.description = descProp.GetString();
+                    }
+                    if (element.TryGetProperty("type", out var typeProp))
+                    {
+                        dto.type = typeProp.GetString();
+                    }
+                    list.Add(dto);
+                }
+                return list.ToArray();
+            }
+        }
         public string[] videoLinks
         {
             get
