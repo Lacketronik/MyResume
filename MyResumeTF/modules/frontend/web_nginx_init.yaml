@@ -1,0 +1,36 @@
+#cloud-config
+package_update: true
+packages:
+  - nginx
+  - unzip
+
+write_files:
+  - path: /etc/nginx/sites-available/resume
+    content: |
+      ${indent(6, nginx_config)}
+    permissions: '0644'
+
+  - path: /etc/ssl/certs/cloudflare_cert_example.pem
+    content: |
+      ${indent(6, ssl_cert)}
+    permissions: '0644'
+
+  - path: /etc/ssl/private/cloudflare_key_e.pem
+    content: |
+      ${indent(6, ssl_key)}
+    permissions: '0600'
+
+runcmd:
+  - wget -O /tmp/dist.zip "${download_url}"
+
+  - mkdir -p /var/www/html
+  - unzip -o /tmp/dist.zip -d /var/www/html/
+
+  - ln -sf /etc/nginx/sites-available/resume /etc/nginx/sites-enabled/
+  - rm -f /etc/nginx/sites-enabled/default
+  
+  - chown -R www-data:www-data /var/www/html
+  - systemctl enable nginx
+  - systemctl restart nginx
+
+  - rm -f /tmp/dist.zip

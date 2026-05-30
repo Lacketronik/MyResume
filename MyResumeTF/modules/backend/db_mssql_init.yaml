@@ -1,0 +1,51 @@
+#cloud-config
+package_update: true
+
+write_files:
+  - path: /tmp/migration.sql
+    permissions: '0600'
+    owner: root:root
+    content: |
+      ${indent(6, db_migration_script)}
+
+  - path: /tmp/run_migration.sh
+    permissions: '0700'
+    owner: root:root
+    content: |
+      #!/bin/bash
+      set -euo pipefail
+      export PATH="$PATH:/opt/mssql-tools18/bin"
+      echo "Waiting for SQL Server to start..."
+      for i in $(seq 1 120); do
+        if /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P '${sql_admin_password}' -Q "SELECT 1" -C >/dev/null 2>&1; then
+          echo "SQL Server is up! Running migration script..."
+          /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P '${sql_admin_password}' -i /tmp/migration.sql -C
+          exit 0
+        fi
+        sleep 2
+      done
+      echo "Timeout waiting for SQL Server after 240s" >&2
+      exit 1
+
+runcmd:
+  - mkdir -p /etc/apt/keyrings
+  - 'curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/keyrings/microsoft.gpg'
+
+  - 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/24.04/mssql-server-2025 noble main" > /etc/apt/sources.list.d/mssql-server-2025.list'
+
+  - apt-get update
+  - apt-get install -y mssql-server
+
+  - ACCEPT_EULA=Y MSSQL_SA_PASSWORD='${sql_admin_password}' MSSQL_PID='Developer' /opt/mssql/bin/mssql-conf -n setup accept-eula
+
+  - 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/24.04/prod noble main" > /etc/apt/sources.list.d/msprod.list'
+  
+  - apt-get update
+  - env ACCEPT_EULA=Y apt-get install -y mssql-tools18 unixodbc-dev
+
+  - 'echo "export PATH=\"\$PATH:/opt/mssql-tools18/bin\"" >> /etc/profile.d/mssql-tools.sh'
+
+  - systemctl daemon-reload
+  - systemctl enable --now mssql-server
+
+  - bash /tmp/run_migration.sh &

@@ -84,6 +84,15 @@ CREATE TABLE projects (
 	PRIMARY KEY (project_id)
 )
 
+CREATE TABLE project_descriptions (
+	description_id INT IDENTITY(1,1) NOT NULL,
+	project_id INT NOT NULL,
+	description VARCHAR(4000) NOT NULL,
+	type VARCHAR(50) NOT NULL,
+	PRIMARY KEY (description_id),
+	FOREIGN KEY (project_id) REFERENCES projects (project_id)
+)
+
 CREATE TABLE project_videos (
 	video_id INT IDENTITY(1,1) NOT NULL,
 	project_id INT NOT NULL,

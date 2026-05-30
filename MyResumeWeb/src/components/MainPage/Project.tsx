@@ -138,11 +138,12 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
                                                 return (
                                                     <div
                                                         key={videoIndex}
-                                                        className={isLastOddVideo ? "col-12 d-flex justify-content-center" : "col-12 col-md-6"}
+                                                        className={isLastOddVideo ? "col-12 d-flex justify-content-center" : "col-12 col-md-6 "}
                                                     >
                                                         <div style={{ width: "100%", maxWidth: isLastOddVideo ? "min(100%, 760px)" : "100%" }}>
                                                             <Player
                                                                 src={link}
+                                                                //light={true}
                                                                 controls
                                                                 width="100%"
                                                                 height="360px"
@@ -156,6 +157,7 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
                                         <div style={{ width: '100%' }}>
                                             <Player
                                                 src={videos[0]}
+                                                //light = {true}
                                                 controls
                                                 width="100%"
                                                 height="360px"
@@ -173,7 +175,23 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
                         <Card className="flex-fill">
                             <Card.Body>
                                 <Card.Title as="h5">Description</Card.Title>
-                                <Card.Text className="mb-0 text-start text-muted small">{proj.description}</Card.Text>
+                                <div className="text-start text-muted small">
+                                    {proj.descriptions.map((descriptionItem, index) => {
+                                        if (descriptionItem.type === "bullet") {
+                                            return (
+                                                <ul key={index} className="ps-3 mb-2">
+                                                    <li>{descriptionItem.description}</li>
+                                                </ul>
+                                            );
+                                        }
+
+                                        return (
+                                            <Card.Text as="div" key={index} className="mb-2">
+                                                {descriptionItem.description}
+                                            </Card.Text>
+                                        );
+                                    })}
+                                </div>
                                 {proj.githubUrl && (
                                     <div className="mt-3">
                                         <Button variant="outline-secondary" href={proj.githubUrl} target="_blank" rel="noopener noreferrer">
