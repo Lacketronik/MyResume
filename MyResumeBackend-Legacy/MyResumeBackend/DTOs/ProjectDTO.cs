@@ -16,6 +16,8 @@ namespace MyResumeBackend.DTOs
         public DateTime projectDate { get; set; }
         [JsonIgnore]
         public string? rawProjectFileIDs { get; set; }
+        [JsonIgnore]
+        public string? rawTechnologies { get; set; }
         public IEnumerable<ProjectDescriptionDTO> descriptions
         {
             get
@@ -83,6 +85,23 @@ namespace MyResumeBackend.DTOs
                 foreach (var element in doc.RootElement.EnumerateArray())
                 {
                     if (element.TryGetProperty("file_id", out var prop))
+                    {
+                        list.Add(prop.GetString());
+                    }
+                }
+                return list.ToArray();
+            }
+        }
+        public string[] technologies
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(rawTechnologies)) return Array.Empty<string>();
+                using var doc = JsonDocument.Parse(rawTechnologies);
+                var list = new List<string>();
+                foreach (var element in doc.RootElement.EnumerateArray())
+                {
+                    if (element.TryGetProperty("technology_name", out var prop))
                     {
                         list.Add(prop.GetString());
                     }
