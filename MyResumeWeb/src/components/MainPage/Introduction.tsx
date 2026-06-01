@@ -110,7 +110,7 @@ function Introduction({ information, files }: { information: InformationProps; f
                         disabled={!resumeFileSrc}
                         download={information.name.replace(/\s+/g, '_') + '_Resume.pdf'}
                       >
-                        Download {getMetaName(resumeFileID) ?? 'Resume'}
+                        Download Resume
                       </Button>
                     )}
                   </div>
