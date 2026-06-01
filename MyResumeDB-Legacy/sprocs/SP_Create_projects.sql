@@ -43,7 +43,14 @@ BEGIN
             FROM dbo.project_files pf
             WHERE pf.project_id = p.project_id
             FOR JSON PATH
-        ) AS rawProjectFileIDs
+        ) AS rawProjectFileIDs,
+
+        (
+            SELECT pt.technology_name AS [technology_name]
+            FROM dbo.project_technologies pt
+            WHERE pt.project_id = p.project_id
+            FOR JSON PATH
+        ) AS rawTechnologies
 
     FROM dbo.projects p;
 END;

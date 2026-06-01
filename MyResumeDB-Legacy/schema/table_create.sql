@@ -119,3 +119,11 @@ CREATE TABLE project_files (
 	FOREIGN KEY (project_id) REFERENCES projects (project_id),
 	FOREIGN KEY (file_id) REFERENCES files (file_id)
 )
+
+CREATE TABLE project_technologies (
+	project_technology_id INT IDENTITY(1,1) NOT NULL,
+	project_id INT NOT NULL,
+	technology_name VARCHAR(255) NOT NULL,
+	PRIMARY KEY (project_technology_id),
+	FOREIGN KEY (project_id) REFERENCES projects (project_id)
+)
