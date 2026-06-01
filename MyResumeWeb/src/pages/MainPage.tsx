@@ -13,7 +13,10 @@ function MainPage({ portfolio }: { portfolio: PortfolioProps }) {
     <div className="MainPage">
         <PersistentAlert />
       <Introduction information={portfolio.information} files={portfolio.files} />
-        <Tabs defaultActiveKey="experience" id="main-page-tabs" className="justify-content-center mb-3 fs-2">
+        <Tabs defaultActiveKey="projects" id="main-page-tabs" className="justify-content-center mb-3 fs-2">
+            <Tab eventKey="projects" title="Projects">
+                <Project projects={portfolio.projects} files={portfolio.files} imageDetails={portfolio.imageDetails} />
+            </Tab>
             <Tab eventKey="experience" title="Experience">
                 <Experience experiences={portfolio.experiences} />
             </Tab>
@@ -22,9 +25,6 @@ function MainPage({ portfolio }: { portfolio: PortfolioProps }) {
             </Tab>
             <Tab eventKey="certification" title="Certification">
                 <Certification certs={portfolio.certifications} />
-            </Tab>
-            <Tab eventKey="projects" title="Projects">
-                <Project projects={portfolio.projects} files={portfolio.files} imageDetails={portfolio.imageDetails} />
             </Tab>
         </Tabs>
     </div>
