@@ -1,6 +1,7 @@
 using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -13,13 +14,16 @@ builder.Services
     .ConfigureFunctionsApplicationInsights();
 builder.Services.AddSingleton(sp =>
 {
+    var configuration = sp.GetRequiredService<IConfiguration>();
     string connectionString = builder.Configuration["CosmosConnectionString"];
 
-    bool isLocalHttpEmulator = string.Equals(
-        builder.Configuration["IsLocalHttpEmulator"],
-        "true",
-        StringComparison.InvariantCultureIgnoreCase
-     );
+    if (string.IsNullOrEmpty(connectionString))
+    {
+        throw new InvalidOperationException("CRITICAL: 'CosmosConnectionString' is missing from App Settings!");
+    }
+
+    string isLocal = builder.Configuration["IsLocalHttpEmulator"];
+    bool isLocalHttpEmulator = !string.IsNullOrEmpty(isLocal) && isLocal.Equals("true", StringComparison.OrdinalIgnoreCase);
 
     if (isLocalHttpEmulator)
     {
@@ -33,8 +37,20 @@ builder.Services.AddSingleton(sp =>
         };
         return new CosmosClient(connectionString, localOptions);
     }
-
-    return new CosmosClient(connectionString);
+    else
+    {
+        try
+        {
+            // Add this line to force a connection check
+            var client = new CosmosClient(connectionString);
+            return client;
+        }
+        catch (Exception ex)
+        {
+            // This will now print the InnerException in your logs
+            throw new Exception($"COSMOS_ERROR: {ex.Message} | Inner: {ex.InnerException?.Message}", ex);
+        }
+    }
 });
 
 builder.Build().Run();
