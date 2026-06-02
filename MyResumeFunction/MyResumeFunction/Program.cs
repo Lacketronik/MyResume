@@ -41,13 +41,11 @@ builder.Services.AddSingleton(sp =>
     {
         try
         {
-            // Add this line to force a connection check
             var client = new CosmosClient(connectionString);
             return client;
         }
         catch (Exception ex)
         {
-            // This will now print the InnerException in your logs
             throw new Exception($"COSMOS_ERROR: {ex.Message} | Inner: {ex.InnerException?.Message}", ex);
         }
     }

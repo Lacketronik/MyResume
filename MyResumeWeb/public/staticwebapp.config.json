@@ -1,0 +1,34 @@
+{
+  "routes": [
+    {
+      "route": "/data/portfolio.json",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, must-revalidate"
+      }
+    },
+    {
+      "route": "/images/info/*.webp",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, must-revalidate"
+      }
+    },
+	{
+      "route": "/images/project/*.webp",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, must-revalidate"
+      }
+    },
+    {
+      "route": "/documents/projects/*.pdf",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, must-revalidate"
+      }
+    },
+	{
+      "route": "/documents/resume/*.pdf",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, must-revalidate"
+      }
+    }
+  ]
+}
