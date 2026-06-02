@@ -44,6 +44,22 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
 
     const getImageSetName = (id: string) => imageMetaLookup[id.toUpperCase()]?.imageSet ?? 'NONE';
 
+    const getSortedProjectFileIDs = (projectFileIDs: string[]) => {
+        return [...projectFileIDs].sort((leftID, rightID) => {
+            const leftUploadedAt = fileMetas[leftID.toUpperCase()]?.uploadedAt;
+            const rightUploadedAt = fileMetas[rightID.toUpperCase()]?.uploadedAt;
+
+            const leftTime = leftUploadedAt ? new Date(leftUploadedAt).valueOf() : Number.POSITIVE_INFINITY;
+            const rightTime = rightUploadedAt ? new Date(rightUploadedAt).valueOf() : Number.POSITIVE_INFINITY;
+
+            if (leftTime !== rightTime) {
+                return leftTime - rightTime;
+            }
+
+            return leftID.localeCompare(rightID);
+        });
+    };
+
     const buildFileSrc = (id: string) => {
         const meta = fileMetas[id.toUpperCase()];
 
@@ -56,7 +72,7 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
     };
 
     const openPdfDetails = (projectName: string, projectFileIDs: string[]) => {
-        const modalFiles = projectFileIDs
+        const modalFiles = getSortedProjectFileIDs(projectFileIDs)
             .map((id) => {
                 const meta = fileMetas[id.toUpperCase()];
 
@@ -108,7 +124,7 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
 
                     <ProjectAssetsSection
                         imageBlobIDs={proj.imageBlobIDs}
-                        projectFileIDs={proj.projectFileIDs}
+                        projectFileIDs={getSortedProjectFileIDs(proj.projectFileIDs ?? [])}
                         getMetaName={getMetaName}
                         getMetaPath={getMetaPath}
                         getImageSetName={getImageSetName}
