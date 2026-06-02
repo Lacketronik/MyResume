@@ -30,5 +30,8 @@
         "Cache-Control": "public, max-age=2592000, must-revalidate"
       }
     }
-  ]
+  ],
+  "globalHeaders": {
+    "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self';"
+  }
 }
