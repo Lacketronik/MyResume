@@ -32,6 +32,6 @@
     }
   ],
   "globalHeaders": {
-    "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self';"
+    "Content-Security-Policy": "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://*.azurewebsites.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
   }
 }
