@@ -44,19 +44,15 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
 
     const getImageSetName = (id: string) => imageMetaLookup[id.toUpperCase()]?.imageSet ?? 'NONE';
 
-    const getSortedProjectFileIDs = (projectFileIDs: string[]) => {
+    const getProjectFileIDs = (projectFileIDs: string[]) => {
         return [...projectFileIDs].sort((leftID, rightID) => {
-            const leftUploadedAt = fileMetas[leftID.toUpperCase()]?.uploadedAt;
-            const rightUploadedAt = fileMetas[rightID.toUpperCase()]?.uploadedAt;
+            const leftName = fileMetas[leftID.toUpperCase()]?.name ?? leftID;
+            const rightName = fileMetas[rightID.toUpperCase()]?.name ?? rightID;
 
-            const leftTime = leftUploadedAt ? new Date(leftUploadedAt).valueOf() : Number.POSITIVE_INFINITY;
-            const rightTime = rightUploadedAt ? new Date(rightUploadedAt).valueOf() : Number.POSITIVE_INFINITY;
+            const normalizedLeftName = leftName.replace(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}_?/i, "");
+            const normalizedRightName = rightName.replace(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}_?/i, "");
 
-            if (leftTime !== rightTime) {
-                return leftTime - rightTime;
-            }
-
-            return leftID.localeCompare(rightID);
+            return normalizedLeftName.localeCompare(normalizedRightName, undefined, { sensitivity: "base", numeric: true });
         });
     };
 
@@ -72,7 +68,7 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
     };
 
     const openPdfDetails = (projectName: string, projectFileIDs: string[]) => {
-        const modalFiles = getSortedProjectFileIDs(projectFileIDs)
+        const modalFiles = getProjectFileIDs(projectFileIDs)
             .map((id) => {
                 const meta = fileMetas[id.toUpperCase()];
 
@@ -124,7 +120,7 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
 
                     <ProjectAssetsSection
                         imageBlobIDs={proj.imageBlobIDs}
-                        projectFileIDs={getSortedProjectFileIDs(proj.projectFileIDs ?? [])}
+                        projectFileIDs={getProjectFileIDs(proj.projectFileIDs ?? [])}
                         getMetaName={getMetaName}
                         getMetaPath={getMetaPath}
                         getImageSetName={getImageSetName}
