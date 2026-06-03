@@ -25,7 +25,7 @@ public class PortfolioTrigger
     [Function("Portfolio")]
     public async Task<HttpResponseData> RunAsync([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequestData req)
     {
-        _logger.LogInformation("C# HTTP trigger function processed a request.");
+        _logger.LogInformation("Portfolio Triggered too!");
 
         string dbName = _configuration["CosmosTargetDatabase"];
         string containerName = _configuration["CosmosTargetContainer"];
