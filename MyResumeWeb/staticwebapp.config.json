@@ -37,11 +37,10 @@
     "rewrite": "/index.html",
     "exclude": [
       "/images/*.{png,jpg,jpeg,gif,webp}",
-      "/documents/*.{pdf}",
-      "/data/*.*",
-      "/*.{css,js}",
-      "/favicon.ico",
-      "/robots.txt"
+      "/documents/*.pdf",
+      "/data/*.json",
+      "/*.{css,js,html}",
+      "/favicon.ico"
     ]
   },
   "globalHeaders": {
