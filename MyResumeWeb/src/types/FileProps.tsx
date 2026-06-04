@@ -4,4 +4,5 @@ export interface FileProps {
     path: string
     extension: string
     type: string
+    uploadedAt: Date
 }

@@ -7,6 +7,6 @@
         public string path { get; set; }
         public string extension { get; set; }
         public string type { get; set; }
-        public DateTime  uploadedAt { get; set; }
+        public DateTime uploadedAt { get; set; }
     }
 }

@@ -63,26 +63,59 @@ function ProjectPdfDetailsModal({ show, projectName, files, onHide }: ProjectPdf
                                     {file.name}
                                 </Card.Title>
 
-                                <div className="project-pdf-frame-wrap">
-                                    <iframe
-                                        title={file.name}
-                                        src={file.src}
-                                        className="project-pdf-frame"
-                                    />
-                                </div>
+                                {isMobile ? (
+                                    <div className="d-flex flex-column gap-3">
+                                        <Alert variant="info" className="mb-0">
+                                            Open the PDF in your browser for the best mobile experience.
+                                        </Alert>
 
-                                <div className="d-flex justify-content-end mt-3">
-                                    <Button
-                                        as="a"
-                                        variant="outline-light"
-                                        href={file.src}
-                                        download={file.downloadName}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Download PDF
-                                    </Button>
-                                </div>
+                                        <div className="d-flex flex-wrap justify-content-end gap-2">
+                                            <Button
+                                                as="a"
+                                                variant="outline-light"
+                                                href={file.src}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                Open PDF
+                                            </Button>
+
+                                            <Button
+                                                as="a"
+                                                variant="outline-light"
+                                                href={file.src}
+                                                download={file.downloadName}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                Download PDF
+                                            </Button>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <>
+                                        <div className="project-pdf-frame-wrap">
+                                            <iframe
+                                                title={file.name}
+                                                src={file.src}
+                                                className="project-pdf-frame"
+                                            />
+                                        </div>
+
+                                        <div className="d-flex justify-content-end mt-3">
+                                            <Button
+                                                as="a"
+                                                variant="outline-light"
+                                                href={file.src}
+                                                download={file.downloadName}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                Download PDF
+                                            </Button>
+                                        </div>
+                                    </>
+                                )}
                             </Card.Body>
                         </Card>
                     ))}

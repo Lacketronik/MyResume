@@ -44,6 +44,18 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
 
     const getImageSetName = (id: string) => imageMetaLookup[id.toUpperCase()]?.imageSet ?? 'NONE';
 
+    const getProjectFileIDs = (projectFileIDs: string[]) => {
+        return [...projectFileIDs].sort((leftID, rightID) => {
+            const leftName = fileMetas[leftID.toUpperCase()]?.name ?? leftID;
+            const rightName = fileMetas[rightID.toUpperCase()]?.name ?? rightID;
+
+            const normalizedLeftName = leftName.replace(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}_?/i, "");
+            const normalizedRightName = rightName.replace(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}_?/i, "");
+
+            return normalizedLeftName.localeCompare(normalizedRightName, undefined, { sensitivity: "base", numeric: true });
+        });
+    };
+
     const buildFileSrc = (id: string) => {
         const meta = fileMetas[id.toUpperCase()];
 
@@ -56,7 +68,7 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
     };
 
     const openPdfDetails = (projectName: string, projectFileIDs: string[]) => {
-        const modalFiles = projectFileIDs
+        const modalFiles = getProjectFileIDs(projectFileIDs)
             .map((id) => {
                 const meta = fileMetas[id.toUpperCase()];
 
@@ -108,7 +120,7 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
 
                     <ProjectAssetsSection
                         imageBlobIDs={proj.imageBlobIDs}
-                        projectFileIDs={proj.projectFileIDs}
+                        projectFileIDs={getProjectFileIDs(proj.projectFileIDs ?? [])}
                         getMetaName={getMetaName}
                         getMetaPath={getMetaPath}
                         getImageSetName={getImageSetName}
