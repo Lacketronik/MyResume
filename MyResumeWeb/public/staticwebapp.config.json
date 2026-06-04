@@ -3,7 +3,9 @@
     {
       "route": "/data/portfolio.json",
       "headers": {
-        "Cache-Control": "public, max-age=2592000, must-revalidate"
+        "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0, s-maxage=0",
+        "Pragma": "no-cache",
+        "Expires": "0"
       }
     },
     {

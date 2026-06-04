@@ -1,0 +1,1209 @@
+{
+  "information": {
+    "name": "FALIQ",
+    "linkedin": "https://www.linkedin.com/in/m-faliq-b-alhakim/",
+    "resumeFileID": "69532ed9-0286-43cb-91cb-3fe69d99753c",
+    "profileImageID": "3f4a3c07-7986-455c-936b-44b4b0fe75a2",
+    "introduction": [
+      "Hello! I'm Faliq, and I build for the web. I get genuinely excited about clean architecture and code, and everything that happens from the first line of code to the final deployment.",
+      "I'm also really leaning into cloud computing. I enjoy configuring and managing cloud infrastructure to build scalable and reliable solutions.",
+      "Please find my contact details in my LinkedIn profile if you wish to connect. Let's build something together!"
+    ],
+    "role": [
+      "Full-Stack Developer",
+      "Cloud & DevOps Enthusiast"
+    ]
+  },
+  "experiences": [
+    {
+      "company": "SoftBank Telecom Singapore",
+      "position": "Software Developer Intern",
+      "startDate": "2017-05-01T00:00:00",
+      "endDate": "2018-04-01T00:00:00",
+      "responsibilities": [
+        "Developed and optimised autonomous behaviours for NAO robot using Python and Choregraphe, focusing on social robotics applications for concierge and entertainment",
+        "Designed and deployed web-based control interfaces using HTML, CSS and JavaScript to allow users to interact with NAO",
+        "Delivered live demonstrations to clients to validate requirements and provided immediate technical consultations to address inquiries"
+      ]
+    },
+    {
+      "company": "Accenture",
+      "position": "Associate Software Developer",
+      "startDate": "2021-07-01T00:00:00",
+      "endDate": "2022-07-01T00:00:00",
+      "responsibilities": [
+        "Trained in Java and Pega development before being transferred internally to the Technical Architecture team to assist in designing and maintaining scalable enterprise solutions",
+        "Managed cloud infrastructure setup on Microsoft Azure, implemented Server Hardening and network isolation protocols to ensure secure environment for sensitive data",
+        "Developed & Deployed automation scripts with PowerShell and Azure DevOps Pipelines to streamline deployments and tasks across servers and MS SQL databases",
+        "Established monitoring and maintenance using ManageEngine Applications Manager, maintaining 24/7 system stability and high availability"
+      ]
+    },
+    {
+      "company": "Total eBiz Solutions",
+      "position": "Full Stack Developer Intern",
+      "startDate": "2025-05-01T00:00:00",
+      "endDate": "2026-04-01T00:00:00",
+      "responsibilities": [
+        "Resolved technical tickets to maintain high client satisfaction rate through efficient debugging in .NET and SQL",
+        "Developed and deployed feature changes that aligns with client’s requests and improving application performance against demanding traffic",
+        "Strengthened application security by resolving critical vulnerabilities identified in VAPT assessments, hardening application to ensure full compliance with industry data protection standards"
+      ]
+    }
+  ],
+  "educations": [
+    {
+      "institution": "Temasek Polytechnic",
+      "degree": "Diploma in Computer Engineering",
+      "graduationDate": "2018-04-01T00:00:00"
+    },
+    {
+      "institution": "Singapore Institute of Technology & Digipen Institute of Technology",
+      "degree": "Bachelor's of Science in Computer Science in Interactive Media & Game Development",
+      "graduationDate": "2026-10-01T00:00:00"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "08F634-A23SF5",
+      "title": "Microsoft Certified: Azure Fundamentals",
+      "provider": "Microsoft",
+      "examCode": "AZ-900",
+      "issueDate": "2026-05-18T00:00:00",
+      "expirationDate": null,
+      "verificationLink": "https://learn.microsoft.com/api/credentials/share/en-us/MUHAMMADFALIQBINALHAKIM-8135/C1481DC33EEBD175?sharingId=3C3813146DD04534",
+      "status": "Active"
+    }
+  ],
+  "projects": [
+    {
+      "name": "SingaPourCast - Cloud Architecture Design",
+      "githubUrl": null,
+      "projectDate": "2025-03-01T00:00:00",
+      "descriptions": [
+        {
+          "description": "SingaPourCast is a Cloud Computing module school project focused on the hands-on deployment of a weather forecasting and email subscription app on AWS. While the app itself is simple, the real goal was to build a full, production-ready infrastructure to show how real-world cloud systems work.",
+          "type": "paragraph"
+        },
+        {
+          "description": "Set up a 7-instance architecture that uses an Elastic Load Balancer (ELB) and an Auto Scaling Group (ASG) to keep the web servers highly available.",
+          "type": "bullet"
+        },
+        {
+          "description": "configured specific Route Tables and Security Group rules so the public can only access the web tier.",
+          "type": "bullet"
+        },
+        {
+          "description": "Isolated the batch (backend) server, which handles the email intervals, to only take traffic from the web servers.",
+          "type": "bullet"
+        },
+        {
+          "description": "RDS database is locked down to receive data strictly from the web and batch tiers.",
+          "type": "bullet"
+        }
+      ],
+      "videoLinks": [
+        "https://youtu.be/FxMMzhjzSFg"
+      ],
+      "imageBlobIDs": [
+        "156A4BBD-CA0A-4585-AE39-D2BB4498617B",
+        "35A58930-C7D7-409E-811F-6A9325C8E677",
+        "35AF5AFE-7558-44B0-BF06-F4AD2A40337F",
+        "38D3704E-8094-4A99-B83B-1261DE36A337",
+        "3F4E49F9-1B81-45C3-98D3-608AA4663216",
+        "6B0310B8-4520-44B8-B665-7B321F8F77C5",
+        "6E934D45-E405-451B-A901-70513B65E9F0",
+        "6F578277-E394-4AB5-9879-7C98DDC4FFBA",
+        "781FD4C1-376D-4261-8250-60209BEE939F",
+        "827F005E-0AF0-4DA4-80C6-17E6D69341ED",
+        "8A2B3A92-D0CC-475D-ABEB-21C38953641C",
+        "8E2CCBE1-8256-4752-AE82-23C7218F20F3",
+        "9BCE38B3-A074-49E2-B8E6-2A6BAB142C82",
+        "C1259310-0CB8-495A-B9E3-089C56BFFC40",
+        "E08095DD-8055-4C22-BFDA-075CA4802997",
+        "EF2924A6-D7C6-4256-98EA-20B6989B9449",
+        "F5AAEAB4-DECC-447E-99A0-32AD931BF680",
+        "FD5907CA-24F3-4FA9-9D1F-2B7539465F87"
+      ],
+      "projectFileIDs": [
+        "B178DCA1-983C-4D3D-AD23-BCF6E80D2E4C",
+        "408D230C-C7D4-4B92-A617-FDF528CF4F4B"
+      ],
+      "technologies": [
+        "AWS",
+        "PHP",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "name": "MyResume",
+      "githubUrl": "https://github.com/Lacketronik/MyResume",
+      "projectDate": "2026-06-01T00:00:00",
+      "descriptions": [
+        {
+          "description": "MyResume is a cloud-native personal portfolio project developed to demonstrate the evolution of cloud architecture from traditional deployment to serverless infrastructure. Built as an applied learning project, it was executed across four distinct phases to showcase a deep understanding of cloud migration and Automation.",
+          "type": "paragraph"
+        },
+        {
+          "description": "Phase 1: I initially built the application using a traditional virtualized stack (React/TypeScript, C# .NET Core WebAPI, and SQL) via manual cloud configuration (\"ClickOps\"). ",
+          "type": "bullet"
+        },
+        {
+          "description": "Phase 2: I then matured the infrastructure by provisioning the entire stack using Terraform for Infrastructure as Code (IaC).",
+          "type": "bullet"
+        },
+        {
+          "description": "Phase 3: To demonstrate modern cloud optimization, the project was completely refactored into a fully decoupled, Serverless architecture leveraging Azure Static Web Apps, Azure Functions, and an Azure Cosmos DB NoSQL database.",
+          "type": "bullet"
+        },
+        {
+          "description": "Phase 4: Serverless architecture entirely automated and managed with Terraform.",
+          "type": "bullet"
+        }
+      ],
+      "videoLinks": [
+        "https://youtu.be/UXQjgVNc6oU",
+        "https://youtu.be/CmrjHdvfDxY",
+        "https://youtu.be/tmgLuaD1T7o"
+      ],
+      "imageBlobIDs": [
+        "098C9820-2179-4665-A0EA-711A60DFF97F",
+        "0C5B08A1-92BE-454E-BEB7-5B48FEB3BFB3",
+        "21115450-2A28-4812-A17D-09AE8F10A037",
+        "35FB45AD-BE73-47FF-806C-D0DD058C9185",
+        "4EE0E5A3-988E-41A1-BEE4-0F85FED4C57B",
+        "5E45F9FC-EA98-4404-860D-08C02048CAF7",
+        "822D5705-6DEB-419A-853D-61BEEB6255B0",
+        "86F25559-BA72-4E80-8893-A8AAB5F87E69",
+        "8D867D16-9D95-4019-AB25-74A4AAE2ADE4",
+        "B594E1F0-C31C-43BF-B750-CC96F3F0706D",
+        "DD872C65-4871-42BA-89BB-C706D9293814",
+        "DDFA0BA4-64D4-43B8-ABA7-D5A7E77608FD",
+        "DE49A729-5FB7-4655-A46C-AAB3131F318B",
+        "F2461B92-B3BE-4E1C-878F-5A15E5621043",
+        "F9117EA7-4C25-4F21-9B18-CC15EE0132A2",
+        "04FAF0ED-5F75-4FD2-A17B-42FA76759A40",
+        "0A1CB2CB-D502-4C3A-8E4A-1463ADA551CC",
+        "0E02F85A-7F6C-4410-A1BB-656532070983",
+        "0FD78896-E78C-4F37-AFC3-6FE3F49A4567",
+        "2701D648-7860-4ABD-B473-BCFA6025671F",
+        "39C84899-450C-4C70-8C82-7075B09D3FF5",
+        "589A09A8-DF4C-4A0B-9F1A-CA86FC5AAC22",
+        "5F985615-37EA-41FB-B960-FAF02CF8E517",
+        "62EF9DD1-9BC5-4FC5-8C25-D86742B1C73E",
+        "67C0ED62-2B84-4A2A-BEF8-4E5AB676155F",
+        "72699900-0D58-4F76-93D3-B05C6EC0311B",
+        "738B3259-2ED6-46CD-A90A-BAB4F6D76D46",
+        "805AD252-975E-40D2-8EBE-DEED1E68B3BD",
+        "8149ADCA-109B-4BF7-B88E-C46C8835DE44",
+        "843066B6-B897-4F65-B7F9-38B83574FDB8",
+        "8DA1A00E-E669-400F-A563-8278B40EE070",
+        "A433D9B0-DE86-407E-B71F-6BF79657BC2E",
+        "A7936029-DC75-443E-A0E8-EC74A6DEE6B1",
+        "B274E3BF-B0D4-4249-A353-5B1713340276",
+        "B7B2DF4C-BDBE-4930-BCE9-268AED05A7E7",
+        "BD81035B-4205-48E1-8090-AE215FECA5E1",
+        "BD9BC2A6-9498-4EF9-B8C2-17E28E08D8BA",
+        "C90BC8FB-5BFE-42BE-9BA0-D60B805CE6DD",
+        "E5CBB55F-BC20-4FF9-8465-FEADDA689918",
+        "064C5B4C-271C-4ABC-8D1E-6AA7763B028B",
+        "08548DBC-288F-42D4-B11F-D5DA64FF6D89",
+        "395FD4EF-C0F4-4FAC-8568-680F0E1092DA",
+        "3D8D65C1-D426-422F-9CAC-0D25430F525F",
+        "60D9F92A-2519-40FF-B017-8BC2496B9923",
+        "64E86A3C-18E9-44AE-9699-FF9E96AA77CC",
+        "77065AC9-5F70-4BC2-84A6-16020DCFD717",
+        "8B330A86-C2A1-4E96-B117-557F2A8BAE3F",
+        "A4172AE6-FD08-4E65-8A38-C64662FCD7B6",
+        "C285BE8A-8251-4315-943F-6B8D551DA64D",
+        "DA5C5939-74F3-4856-88C8-C66E5F87F57F",
+        "F7C2FEFE-5727-41CB-9535-BEEA4105EE50",
+        "FE50C142-F18B-4B44-9292-5A9F8B711067"
+      ],
+      "projectFileIDs": [
+        "B9FC73B3-952E-440A-8A2B-471D33A210E9",
+        "F6CE859B-5B81-47FB-BC66-D34B205589C7",
+        "46AC5357-66FF-4AE5-84A8-DCB819FA6F67"
+      ],
+      "technologies": [
+        "Azure",
+        "Terraform",
+        "React",
+        "TypeScript",
+        "C# .NET Core",
+        "SQL",
+        "Linux"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "id": "e08095dd-8055-4c22-bfda-075ca4802997",
+      "name": "security_group",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "c1259310-0cb8-495a-b9e3-089c56bffc40",
+      "name": "webserver_security_group",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "5e45f9fc-ea98-4404-860d-08c02048caf7",
+      "name": "lb-myresume-app",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "21115450-2a28-4812-a17d-09ae8f10a037",
+      "name": "vnet-myresume-prod",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "3d8d65c1-d426-422f-9cac-0d25430f525f",
+      "name": "azure-function-deploy-successful",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "4ee0e5a3-988e-41a1-bee4-0f85fed4c57b",
+      "name": "vnet-myresume-web-prod",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "38d3704e-8094-4a99-b83b-1261de36a337",
+      "name": "public_nat",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "0a1cb2cb-d502-4c3a-8e4a-1463ada551cc",
+      "name": "portfolio-controller",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "77065ac9-5f70-4bc2-84a6-16020dcfd717",
+      "name": "cosmos-db-emulator-data",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "bd9bc2a6-9498-4ef9-b8c2-17e28e08d8ba",
+      "name": "storage-account",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "827f005e-0af0-4da4-80c6-17e6d69341ed",
+      "name": "email_sent",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "ef2924a6-d7c6-4256-98ea-20b6989b9449",
+      "name": "rds_database",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "8a2b3a92-d0cc-475d-abeb-21c38953641c",
+      "name": "autoscaling_group",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "8e2ccbe1-8256-4752-ae82-23c7218f20f3",
+      "name": "internet_gateway",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "b7b2df4c-bdbe-4930-bce9-268aed05a7e7",
+      "name": "terraform-apply-result",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "9bce38b3-a074-49e2-b8e6-2a6bab142c82",
+      "name": "load_balancer_target",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "fd5907ca-24f3-4fa9-9d1f-2b7539465f87",
+      "name": "subnets",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "f5aaeab4-decc-447e-99a0-32ad931bf680",
+      "name": "rds_security_group",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "843066b6-b897-4f65-b7f9-38b83574fdb8",
+      "name": "mssql-data",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "69532ed9-0286-43cb-91cb-3fe69d99753c",
+      "name": "resume",
+      "path": "/documents/resume",
+      "extension": "pdf",
+      "type": "application/pdf",
+      "uploadedAt": "2026-05-19T00:00:00"
+    },
+    {
+      "id": "04faf0ed-5f75-4fd2-a17b-42fa76759a40",
+      "name": "nginx-cloud-init",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "3f4a3c07-7986-455c-936b-44b4b0fe75a2",
+      "name": "profile",
+      "path": "/images/info",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-21T01:01:40.027"
+    },
+    {
+      "id": "b9fc73b3-952e-440a-8a2b-471d33a210e9",
+      "name": "MyResume_Phase01_Doc",
+      "path": "documents/projects",
+      "extension": "pdf",
+      "type": "application/pdf",
+      "uploadedAt": "2026-05-24T01:27:44.393"
+    },
+    {
+      "id": "67c0ed62-2b84-4a2a-bef8-4e5ab676155f",
+      "name": "portfolio-service",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "8b330a86-c2a1-4e96-b117-557f2a8bae3f",
+      "name": "docker-cosmos-emulator-container",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "f2461b92-b3be-4e1c-878f-5a15e5621043",
+      "name": "db-migration-script",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "fe50c142-f18b-4b44-9292-5a9f8b711067",
+      "name": "func-myresume-db-call-fail",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "b274e3bf-b0d4-4249-a353-5b1713340276",
+      "name": "terraform-destroy-cmd",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "0c5b08a1-92be-454e-beb7-5b48feb3bfb3",
+      "name": "vnet-peering-connected",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "781fd4c1-376d-4261-8250-60209bee939f",
+      "name": "rds_subnet_group",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "3f4e49f9-1b81-45c3-98d3-608aa4663216",
+      "name": "public_subnet_02",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "822d5705-6deb-419a-853d-61beeb6255b0",
+      "name": "nginx-config",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "0e02f85a-7f6c-4410-a1bb-656532070983",
+      "name": "api-call",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "395fd4ef-c0f4-4fac-8568-680f0e1092da",
+      "name": "func-myresume-cors",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "35a58930-c7d7-409e-811f-6a9325c8e677",
+      "name": "architecture",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "064c5b4c-271c-4abc-8d1e-6aa7763b028b",
+      "name": "cloudflare-record",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "c285be8a-8251-4315-943f-6b8d551da64d",
+      "name": "func-myresume",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "a433d9b0-de86-407e-b71f-6bf79657bc2e",
+      "name": "terraform-architecture",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "0fd78896-e78c-4f37-afc3-6fe3f49a4567",
+      "name": "nginx-conf-file",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "6e934d45-e405-451b-a901-70513b65e9f0",
+      "name": "elastic_load_balancer",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "39c84899-450c-4c70-8c82-7075b09d3ff5",
+      "name": "terraform-plan-cmd",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "098c9820-2179-4665-a0ea-711a60dff97f",
+      "name": "nat-myresume-egress",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "8d867d16-9d95-4019-ab25-74a4aae2ade4",
+      "name": "actual_architecture",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "6b0310b8-4520-44b8-b665-7b321f8f77c5",
+      "name": "batchserver_security_group",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "6f578277-e394-4ab5-9879-7c98ddc4ffba",
+      "name": "private_subnet_batch",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "8da1a00e-e669-400f-a563-8278b40ee070",
+      "name": "terraform-destroy-result",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "60d9f92a-2519-40ff-b017-8bc2496b9923",
+      "name": "rg-myresume",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "86f25559-ba72-4e80-8893-a8aab5f87e69",
+      "name": "intended_architecture",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "de49a729-5fb7-4655-a46c-aab3131f318b",
+      "name": "myresume-service-api-running",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "bd81035b-4205-48e1-8090-ae215feca5e1",
+      "name": "terraform-apply-cmd",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "72699900-0d58-4f76-93d3-b05c6ec0311b",
+      "name": "api-call-result",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "738b3259-2ed6-46cd-a90a-bab4f6d76d46",
+      "name": "terraform-init",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "b178dca1-983c-4d3d-ad23-bcf6e80d2e4c",
+      "name": "project1_doc2",
+      "path": "/documents/projects",
+      "extension": "pdf",
+      "type": "application/pdf",
+      "uploadedAt": "2026-05-19T00:00:00"
+    },
+    {
+      "id": "2701d648-7860-4abd-b473-bcfa6025671f",
+      "name": "portfolio-dto",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "f7c2fefe-5727-41cb-9535-beea4105ee50",
+      "name": "func-myresume-env-var",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "8149adca-109b-4bf7-b88e-c46c8835de44",
+      "name": "nginx-status-running",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "a4172ae6-fd08-4e65-8a38-c64662fcd7b6",
+      "name": "serverless-architecture",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "da5c5939-74f3-4856-88c8-c66e5f87f57f",
+      "name": "azure-cosmos-db",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "dd872c65-4871-42ba-89bb-c706d9293814",
+      "name": "vms-myresume",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "589a09a8-df4c-4a0b-9f1a-ca86fc5aac22",
+      "name": "myresume-api-service-running",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "f9117ea7-4c25-4f21-9b18-cc15ee0132a2",
+      "name": "mssql-installed",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "b594e1f0-c31c-43bf-b750-cc96f3f0706d",
+      "name": "lb-myresume-web",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "35fb45ad-be73-47ff-806c-d0dd058c9185",
+      "name": "myresume-api-service",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "156a4bbd-ca0a-4585-ae39-d2bb4498617b",
+      "name": "Singapourcast",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "f6ce859b-5b81-47fb-bc66-d34b205589c7",
+      "name": "MyResume_Phase03_Doc",
+      "path": "documents/projects",
+      "extension": "pdf",
+      "type": "application/pdf",
+      "uploadedAt": "2026-06-02T20:23:12.07"
+    },
+    {
+      "id": "ddfa0ba4-64d4-43b8-aba7-d5a7e77608fd",
+      "name": "cloudflare-dns",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "08548dbc-288f-42d4-b11f-d5da64ff6d89",
+      "name": "azure-function-block",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "c90bc8fb-5bfe-42be-9ba0-d60b805ce6dd",
+      "name": "terraform-validate",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "62ef9dd1-9bc5-4fc5-8c25-d86742b1c73e",
+      "name": "mssql-service-running",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "46ac5357-66ff-4ae5-84a8-dcb819fa6f67",
+      "name": "MyResume_Phase02_Doc",
+      "path": "documents/projects",
+      "extension": "pdf",
+      "type": "application/pdf",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "805ad252-975e-40d2-8ebe-deed1e68b3bd",
+      "name": "nginx-conf",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "a7936029-dc75-443e-a0e8-ec74a6dee6b1",
+      "name": "myresume-api-service-content",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "35af5afe-7558-44b0-bf06-f4ad2a40337f",
+      "name": "public_subnet_01",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "5f985615-37ea-41fb-b960-faf02cf8e517",
+      "name": "actual-architecture",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "408d230c-c7d4-4b92-a617-fdf528cf4f4b",
+      "name": "project1_doc1",
+      "path": "/documents/projects",
+      "extension": "pdf",
+      "type": "application/pdf",
+      "uploadedAt": "2026-05-19T00:00:00"
+    },
+    {
+      "id": "e5cbb55f-bc20-4ff9-8465-feadda689918",
+      "name": "portfolio-interface",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "64e86a3c-18e9-44ae-9699-ff9e96aa77cc",
+      "name": "swa-myresume-custom-domains",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-02T20:23:06.8"
+    }
+  ],
+  "imageDetails": [
+    {
+      "imageID": "156a4bbd-ca0a-4585-ae39-d2bb4498617b",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "35a58930-c7d7-409e-811f-6a9325c8e677",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "35af5afe-7558-44b0-bf06-f4ad2a40337f",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "38d3704e-8094-4a99-b83b-1261de36a337",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "3f4e49f9-1b81-45c3-98d3-608aa4663216",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "6b0310b8-4520-44b8-b665-7b321f8f77c5",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "6e934d45-e405-451b-a901-70513b65e9f0",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "6f578277-e394-4ab5-9879-7c98ddc4ffba",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "781fd4c1-376d-4261-8250-60209bee939f",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "827f005e-0af0-4da4-80c6-17e6d69341ed",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "8a2b3a92-d0cc-475d-abeb-21c38953641c",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "8e2ccbe1-8256-4752-ae82-23c7218f20f3",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "9bce38b3-a074-49e2-b8e6-2a6bab142c82",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "c1259310-0cb8-495a-b9e3-089c56bffc40",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "e08095dd-8055-4c22-bfda-075ca4802997",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "ef2924a6-d7c6-4256-98ea-20b6989b9449",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "f5aaeab4-decc-447e-99a0-32ad931bf680",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "fd5907ca-24f3-4fa9-9d1f-2b7539465f87",
+      "projectID": 1,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "098c9820-2179-4665-a0ea-711a60dff97f",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "0c5b08a1-92be-454e-beb7-5b48feb3bfb3",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "21115450-2a28-4812-a17d-09ae8f10a037",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "35fb45ad-be73-47ff-806c-d0dd058c9185",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "4ee0e5a3-988e-41a1-bee4-0f85fed4c57b",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "5e45f9fc-ea98-4404-860d-08c02048caf7",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "822d5705-6deb-419a-853d-61beeb6255b0",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "86f25559-ba72-4e80-8893-a8aab5f87e69",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "8d867d16-9d95-4019-ab25-74a4aae2ade4",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "b594e1f0-c31c-43bf-b750-cc96f3f0706d",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "dd872c65-4871-42ba-89bb-c706d9293814",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "ddfa0ba4-64d4-43b8-aba7-d5a7e77608fd",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "de49a729-5fb7-4655-a46c-aab3131f318b",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "f2461b92-b3be-4e1c-878f-5a15e5621043",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "f9117ea7-4c25-4f21-9b18-cc15ee0132a2",
+      "projectID": 2,
+      "imageSet": "Phase 1: ClickOps"
+    },
+    {
+      "imageID": "04faf0ed-5f75-4fd2-a17b-42fa76759a40",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "0a1cb2cb-d502-4c3a-8e4a-1463ada551cc",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "0e02f85a-7f6c-4410-a1bb-656532070983",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "0fd78896-e78c-4f37-afc3-6fe3f49a4567",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "2701d648-7860-4abd-b473-bcfa6025671f",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "39c84899-450c-4c70-8c82-7075b09d3ff5",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "589a09a8-df4c-4a0b-9f1a-ca86fc5aac22",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "5f985615-37ea-41fb-b960-faf02cf8e517",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "62ef9dd1-9bc5-4fc5-8c25-d86742b1c73e",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "67c0ed62-2b84-4a2a-bef8-4e5ab676155f",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "72699900-0d58-4f76-93d3-b05c6ec0311b",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "738b3259-2ed6-46cd-a90a-bab4f6d76d46",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "805ad252-975e-40d2-8ebe-deed1e68b3bd",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "8149adca-109b-4bf7-b88e-c46c8835de44",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "843066b6-b897-4f65-b7f9-38b83574fdb8",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "8da1a00e-e669-400f-a563-8278b40ee070",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "a433d9b0-de86-407e-b71f-6bf79657bc2e",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "a7936029-dc75-443e-a0e8-ec74a6dee6b1",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "b274e3bf-b0d4-4249-a353-5b1713340276",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "b7b2df4c-bdbe-4930-bce9-268aed05a7e7",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "bd81035b-4205-48e1-8090-ae215feca5e1",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "bd9bc2a6-9498-4ef9-b8c2-17e28e08d8ba",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "c90bc8fb-5bfe-42be-9ba0-d60b805ce6dd",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "e5cbb55f-bc20-4ff9-8465-feadda689918",
+      "projectID": 2,
+      "imageSet": "Phase 2: Terraform IaC"
+    },
+    {
+      "imageID": "064c5b4c-271c-4abc-8d1e-6aa7763b028b",
+      "projectID": 2,
+      "imageSet": "Phase 3: Serverless"
+    },
+    {
+      "imageID": "08548dbc-288f-42d4-b11f-d5da64ff6d89",
+      "projectID": 2,
+      "imageSet": "Phase 3: Serverless"
+    },
+    {
+      "imageID": "395fd4ef-c0f4-4fac-8568-680f0e1092da",
+      "projectID": 2,
+      "imageSet": "Phase 3: Serverless"
+    },
+    {
+      "imageID": "3d8d65c1-d426-422f-9cac-0d25430f525f",
+      "projectID": 2,
+      "imageSet": "Phase 3: Serverless"
+    },
+    {
+      "imageID": "60d9f92a-2519-40ff-b017-8bc2496b9923",
+      "projectID": 2,
+      "imageSet": "Phase 3: Serverless"
+    },
+    {
+      "imageID": "64e86a3c-18e9-44ae-9699-ff9e96aa77cc",
+      "projectID": 2,
+      "imageSet": "Phase 3: Serverless"
+    },
+    {
+      "imageID": "77065ac9-5f70-4bc2-84a6-16020dcfd717",
+      "projectID": 2,
+      "imageSet": "Phase 3: Serverless"
+    },
+    {
+      "imageID": "8b330a86-c2a1-4e96-b117-557f2a8bae3f",
+      "projectID": 2,
+      "imageSet": "Phase 3: Serverless"
+    },
+    {
+      "imageID": "a4172ae6-fd08-4e65-8a38-c64662fcd7b6",
+      "projectID": 2,
+      "imageSet": "Phase 3: Serverless"
+    },
+    {
+      "imageID": "c285be8a-8251-4315-943f-6b8d551da64d",
+      "projectID": 2,
+      "imageSet": "Phase 3: Serverless"
+    },
+    {
+      "imageID": "da5c5939-74f3-4856-88c8-c66e5f87f57f",
+      "projectID": 2,
+      "imageSet": "Phase 3: Serverless"
+    },
+    {
+      "imageID": "f7c2fefe-5727-41cb-9535-beea4105ee50",
+      "projectID": 2,
+      "imageSet": "Phase 3: Serverless"
+    },
+    {
+      "imageID": "fe50c142-f18b-4b44-9292-5a9f8b711067",
+      "projectID": 2,
+      "imageSet": "Phase 3: Serverless"
+    }
+  ]
+}
