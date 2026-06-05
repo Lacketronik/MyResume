@@ -1,13 +1,25 @@
 {
   "routes": [
     {
-      "route": "/images/*/*.webp",
+      "route": "/images/info/*.webp",
       "headers": {
         "Cache-Control": "public, max-age=2592000, must-revalidate"
       }
     },
     {
-      "route": "/documents/*/*.pdf",
+      "route": "/images/project/*.webp",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, must-revalidate"
+      }
+    },
+    {
+      "route": "/documents/projects/*.pdf",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, must-revalidate"
+      }
+    },
+    {
+      "route": "/documents/resume/*.pdf",
       "headers": {
         "Cache-Control": "public, max-age=2592000, must-revalidate"
       }
@@ -16,9 +28,11 @@
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [
-      "/images/*/*.{png,jpg,jpeg,gif,webp}",
-      "/documents/*/*.pdf",
-      "/**/*.{css,js,html}",
+      "/images/info/*.{png,jpg,jpeg,gif,webp}",
+      "/images/project/*.{png,jpg,jpeg,gif,webp}",
+      "/documents/projects/*.pdf",
+      "/documents/resume/*.pdf",
+      "/assets/*.{css,js,html}",
       "/favicon.ico"
     ]
   },
