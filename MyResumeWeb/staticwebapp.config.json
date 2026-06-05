@@ -1,33 +1,13 @@
 {
   "routes": [
     {
-      "route": "/data/portfolio.json",
-      "headers": {
-        "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0, s-maxage=0",
-        "Pragma": "no-cache",
-        "Expires": "0"
-      }
-    },
-    {
-      "route": "/images/info/*.webp",
-      "headers": {
-        "Cache-Control": "public, max-age=2592000, must-revalidate"
-      }
-    },
-	{
-      "route": "/images/project/*.webp",
+      "route": "/images/**/*.webp",
       "headers": {
         "Cache-Control": "public, max-age=2592000, must-revalidate"
       }
     },
     {
-      "route": "/documents/projects/*.pdf",
-      "headers": {
-        "Cache-Control": "public, max-age=2592000, must-revalidate"
-      }
-    },
-	{
-      "route": "/documents/resume/*.pdf",
+      "route": "/documents/**/*.pdf",
       "headers": {
         "Cache-Control": "public, max-age=2592000, must-revalidate"
       }
@@ -36,10 +16,9 @@
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [
-      "/images/*.{png,jpg,jpeg,gif,webp}",
-      "/documents/*.pdf",
-      "/data/*.json",
-      "/*.{css,js,html}",
+      "/images/**/*.{png,jpg,jpeg,gif,webp}",
+      "/documents/**/*.pdf",
+      "/**/*.{css,js,html}",
       "/favicon.ico"
     ]
   },
