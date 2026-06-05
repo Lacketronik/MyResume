@@ -1,13 +1,13 @@
 {
   "routes": [
     {
-      "route": "/images/**/*.webp",
+      "route": "/images/*/*.webp",
       "headers": {
         "Cache-Control": "public, max-age=2592000, must-revalidate"
       }
     },
     {
-      "route": "/documents/**/*.pdf",
+      "route": "/documents/*/*.pdf",
       "headers": {
         "Cache-Control": "public, max-age=2592000, must-revalidate"
       }
@@ -16,8 +16,8 @@
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [
-      "/images/**/*.{png,jpg,jpeg,gif,webp}",
-      "/documents/**/*.pdf",
+      "/images/*/*.{png,jpg,jpeg,gif,webp}",
+      "/documents/*/*.pdf",
       "/**/*.{css,js,html}",
       "/favicon.ico"
     ]
