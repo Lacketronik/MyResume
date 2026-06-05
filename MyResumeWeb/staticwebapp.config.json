@@ -1,0 +1,42 @@
+{
+  "routes": [
+    {
+      "route": "/images/info/*.webp",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, must-revalidate"
+      }
+    },
+    {
+      "route": "/images/project/*.webp",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, must-revalidate"
+      }
+    },
+    {
+      "route": "/documents/projects/*.pdf",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, must-revalidate"
+      }
+    },
+    {
+      "route": "/documents/resume/*.pdf",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, must-revalidate"
+      }
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/images/info/*.{png,jpg,jpeg,gif,webp}",
+      "/images/project/*.{png,jpg,jpeg,gif,webp}",
+      "/documents/projects/*.pdf",
+      "/documents/resume/*.pdf",
+      "/assets/*.{css,js,html}",
+      "/favicon.ico"
+    ]
+  },
+  "globalHeaders": {
+    "Content-Security-Policy": "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://*.youtube.com https://*.youtu.be https://cloudflareinsights.com; frame-src 'self' https://www.faliqdoescoding.com https://faliqdoescoding.com https://www.youtube.com https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.youtube.com;"
+  }
+}
