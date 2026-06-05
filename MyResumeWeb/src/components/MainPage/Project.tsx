@@ -113,7 +113,10 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
                     </div>
                 )}
 
-                <ProjectVideoSection videos={proj.videoLinks ?? []} />
+                <ProjectVideoSection
+                    videos={proj.videoLinks ?? []}
+                    isActive={activeProjectKey === proj.name}
+                />
 
                 <div className="g-3 row">
                     <ProjectDescriptionSection descriptions={proj.descriptions} githubUrl={proj.githubUrl} />

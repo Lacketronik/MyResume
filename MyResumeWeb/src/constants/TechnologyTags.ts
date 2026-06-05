@@ -62,6 +62,21 @@ const TECHNOLOGY_STYLES: Record<string, TechnologyStyle> = {
         borderColor: "rgba(241, 196, 15, 0.35)",
         color: "#fffdf0",
     },
+    "c++": {
+        backgroundColor: "rgba(0, 89, 156, 0.18)",
+        borderColor: "rgba(0, 89, 156, 0.42)",
+        color: "#e6f4ff",
+    },
+    android: {
+        backgroundColor: "rgba(61, 220, 132, 0.15)", 
+        borderColor: "rgba(61, 220, 132, 0.38)",
+        color: "#e6ffe6",
+    },
+    kotlin: {
+        backgroundColor: "rgba(241, 101, 41, 0.18)",
+        borderColor: "rgba(242, 78, 122, 0.42)",
+        color: "#fff0eb",
+    },
     // ---------------------
     default: {
         backgroundColor: "rgba(148, 163, 184, 0.16)",

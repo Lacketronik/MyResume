@@ -2,6 +2,7 @@ import { Card, Col, Row } from "react-bootstrap";
 
 type ProjectVideoSectionProps = {
     videos: string[];
+    isActive: boolean;
 };
 
 function getYouTubeVideoId(link: string) {
@@ -45,8 +46,8 @@ function buildYouTubeEmbedUrl(link: string) {
     return embedUrl.toString();
 }
 
-function ProjectVideoSection({ videos }: ProjectVideoSectionProps) {
-    if (videos.length === 0) {
+function ProjectVideoSection({ videos, isActive }: ProjectVideoSectionProps) {
+    if (!isActive || videos.length === 0) {
         return null;
     }
 
@@ -60,36 +61,72 @@ function ProjectVideoSection({ videos }: ProjectVideoSectionProps) {
                             <div className="row g-3">
                                 {videos.map((link, videoIndex) => {
                                     const isLastOddVideo = videos.length % 2 === 1 && videoIndex === videos.length - 1;
-                                    const videoID = getYouTubeVideoId(link) ?? `${link}-${videoIndex}`;
-                                    const embedUrl = buildYouTubeEmbedUrl(link);
+                                    if(link.endsWith(".webm")) {
+                                        const fileName = link.split("/").pop();
+                                        const videoID = `${fileName}-${videoIndex}`;
+                                        const embedUrl = link;
 
-                                    return (
-                                        <div
-                                            key={videoID}
-                                            id={videoID}
-                                            className={isLastOddVideo ? "col-12 d-flex justify-content-center" : "col-12 col-md-6 "}
-                                        >
-                                            <div style={{ width: "100%", maxWidth: isLastOddVideo ? "min(100%, 760px)" : "100%" }}>
-                                                {embedUrl ? (
-                                                    <iframe
-                                                        title={`YouTube video ${videoID}`}
-                                                        src={embedUrl}
-                                                        width="100%"
-                                                        height="360"
-                                                        style={{ border: 0 }}
-                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                        allowFullScreen
-                                                        loading="lazy"
-                                                        referrerPolicy="strict-origin-when-cross-origin"
-                                                    />
-                                                ) : (
-                                                    <div className="text-center text-light-emphasis py-5">
-                                                        Unsupported video URL
-                                                    </div>
-                                                )}
+                                        return (
+                                            <div
+                                                key={videoID}
+                                                id={videoID}
+                                                className={isLastOddVideo ? "col-12 d-flex justify-content-center" : "col-12 col-md-6 "}
+                                            >
+                                                <div style={{ width: "100%", maxWidth: isLastOddVideo ? "min(100%, 760px)" : "100%" }}>
+                                                    {embedUrl ? (
+                                                        <video
+                                                            src={link}
+                                                            width="100%"
+                                                            height="360"
+                                                            controls
+                                                            autoPlay
+                                                            muted
+                                                            loop
+                                                            playsInline
+                                                            preload="metadata"
+                                                            style={{ borderRadius: "4px", backgroundColor: "#000", objectFit: "contain" }}
+                                                        />
+                                                    ) : (
+                                                        <div className="text-center text-light-emphasis py-5">
+                                                            Unsupported video URL
+                                                        </div>
+                                                    )}
+                                                </div>
                                             </div>
-                                        </div>
-                                    );
+                                        );
+                                    }
+                                    else {
+                                        const videoID = getYouTubeVideoId(link) ?? `${link}-${videoIndex}`;
+                                        const embedUrl = buildYouTubeEmbedUrl(link);
+
+                                        return (
+                                            <div
+                                                key={videoID}
+                                                id={videoID}
+                                                className={isLastOddVideo ? "col-12 d-flex justify-content-center" : "col-12 col-md-6 "}
+                                            >
+                                                <div style={{ width: "100%", maxWidth: isLastOddVideo ? "min(100%, 760px)" : "100%" }}>
+                                                    {embedUrl ? (
+                                                        <iframe
+                                                            title={`YouTube video ${videoID}`}
+                                                            src={embedUrl}
+                                                            width="100%"
+                                                            height="360"
+                                                            style={{ border: 0 }}
+                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                            allowFullScreen
+                                                            loading="lazy"
+                                                            referrerPolicy="strict-origin-when-cross-origin"
+                                                        />
+                                                    ) : (
+                                                        <div className="text-center text-light-emphasis py-5">
+                                                            Unsupported video URL
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        );
+                                    }
                                 })}
                             </div>
                         ) : (
@@ -108,7 +145,18 @@ function ProjectVideoSection({ videos }: ProjectVideoSectionProps) {
                                     />
                                 ) : (
                                     <div className="text-center text-light-emphasis py-5">
-                                        Unsupported video URL
+                                        <video
+                                            src={videos[0]}
+                                            width="100%"
+                                            height="360"
+                                            controls
+                                            autoPlay
+                                            muted
+                                            loop
+                                            playsInline
+                                            preload="metadata"
+                                            style={{ borderRadius: "4px", backgroundColor: "#000", objectFit: "contain" }}
+                                        />
                                     </div>
                                 )}
                             </div>
