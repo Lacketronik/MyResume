@@ -234,9 +234,165 @@
         "SQL",
         "Linux"
       ]
+    },
+    {
+      "name": "Seven11",
+      "githubUrl": "",
+      "projectDate": "2022-11-27T00:00:00",
+      "descriptions": [
+        {
+          "description": "Seven11 is a 2D grid-based puzzle game built in C++ using DigiPen's CProcessing library. The game blends the box-pushing mechanics of Sokoban with roguelike elements. Navigate the convenience store aisles, push inventory boxes to their objectives, and whatever you do, don't bump into the customers! Clear the level, pick a buff (or a debuff), and see how long you can survive the shift.",
+          "type": "paragraph"
+        },
+        {
+          "description": "Ian: <LinkedIn Link>",
+          "type": "bullet"
+        },
+        {
+          "description": "Jerell: https://www.linkedin.com/in/jerelltan/",
+          "type": "bullet"
+        },
+        {
+          "description": "Shafiq: <LinkedIn Link>",
+          "type": "bullet"
+        },
+        {
+          "description": "Yiming: <LinkedIn Link>",
+          "type": "bullet"
+        },
+        {
+          "description": "Faliq: Me",
+          "type": "bullet"
+        }
+      ],
+      "videoLinks": [
+        "/videos/project/F2C24D44-0A52-452F-A67C-0305EBC1642C_seven11-obstacle.webm",
+        "/videos/project/FA004B31-A9E4-418A-8242-5E6C97514E66_seven11-teleporter.webm",
+        "/videos/project/32C61FD8-EF16-4173-A825-BB3DA5E854DD_seven11-pushing.webm",
+        "/videos/project/9C053AF7-7A47-4B35-9627-175DA114456D_seven11-distracted.webm",
+        "/videos/project/4588D4A6-F671-4729-A0B4-0282F7D31A2C_seven11-short-trailer.webm"
+      ],
+      "imageBlobIDs": [
+        "A56638CC-BA27-4EE8-AD5B-E4BBF2B0A8A4"
+      ],
+      "projectFileIDs": [],
+      "technologies": [
+        "C++"
+      ]
+    },
+    {
+      "name": "Hopwards",
+      "githubUrl": "",
+      "projectDate": "2023-04-02T00:00:00",
+      "descriptions": [
+        {
+          "description": "Hopwards is a 2D isometric puzzle-platformer built in C++ using DigiPen's Alpha Engine. The game creates a mind-bending 3D illusion where you control a wizard on his first day of school. He needs to navigate a perplexed maze of animated, shifting stairs to make it to class on time or face immediate expulsion. Tactically leap through levels, rotate stairs, uncover hidden bridges, and use Blue Flame Teleportation to survive the orientation day from hell.",
+          "type": "paragraph"
+        },
+        {
+          "description": "Engine Programmer/Physics - Ian: <LinkedIn Link>",
+          "type": "bullet"
+        },
+        {
+          "description": "Graphics Programmer/Art Asset - Shafiq: <LinkedIn Link>",
+          "type": "bullet"
+        },
+        {
+          "description": "Game Programmer - Jingsong: <LinkedIn Link>",
+          "type": "bullet"
+        },
+        {
+          "description": "Level Designer/Data Serializer - Faliq: Me",
+          "type": "bullet"
+        }
+      ],
+      "videoLinks": [
+        "/videos/project/54925885-B310-4D0C-BB4E-89B454BE06C2_hopwards-short-teaser.webm",
+        "https://youtu.be/ynLWIu6v5AE",
+        "https://youtu.be/5H_OciK7kEE"
+      ],
+      "imageBlobIDs": [
+        "AB23424C-F7A4-46E0-8877-14300CD1C1F0",
+        "D8B1C5E4-825F-4F83-8C02-8C9CBA7D0667",
+        "FD36B223-B351-41BB-9157-29BDAADD267F",
+        "301E6C13-BBDF-4309-A81D-EBB7CF65F44C"
+      ],
+      "projectFileIDs": [],
+      "technologies": [
+        "C++"
+      ]
+    },
+    {
+      "name": "Driving Sim",
+      "githubUrl": "",
+      "projectDate": "2025-02-25T00:00:00",
+      "descriptions": [
+        {
+          "description": "Driving Sim is an endless runner game where players take the wheel of a car that never stops. Your only objective is to survive the open road by weaving left and right to dodge incoming obstacles. The longer you stay on the asphalt without crashing, the further you travel. Once you hit an obstacle, the engine cuts, the run ends, and your final score is tallied based on your total distance.",
+          "type": "paragraph"
+        },
+        {
+          "description": "Jerell: https://www.linkedin.com/in/jerelltan/",
+          "type": "bullet"
+        },
+        {
+          "description": "Lance: https://www.linkedin.com/in/lancemlim/",
+          "type": "bullet"
+        },
+        {
+          "description": "Shafiq: <LinkedIn Link>",
+          "type": "bullet"
+        },
+        {
+          "description": "Zhun Hang: https://www.linkedin.com/in/zhunhang-tay/",
+          "type": "bullet"
+        },
+        {
+          "description": "Zhi Cheng: https://www.linkedin.com/in/zeng-zhicheng/",
+          "type": "bullet"
+        },
+        {
+          "description": "Faliq: Me",
+          "type": "bullet"
+        }
+      ],
+      "videoLinks": [
+        "https://youtu.be/Gg_3l_2ddmY"
+      ],
+      "imageBlobIDs": [
+        "696E55E3-427F-43A7-B1C5-CB9D849F3190",
+        "8DF9EB6C-99C5-4F60-8521-B62BB79CD313",
+        "FF98AFA8-12C3-4A77-931F-DBAEEB6C8B86",
+        "1BAE2525-707C-4B75-9AC6-094D9EC64344",
+        "7D6A2BD5-3931-49F8-BC6E-95A4D755F7BD",
+        "B9BC2592-35EB-41AF-A105-52E90F310F21"
+      ],
+      "projectFileIDs": [
+        "C9BAE589-CCF8-4BA0-A954-7EF8CC96344B"
+      ],
+      "technologies": [
+        "Android",
+        "Kotlin"
+      ]
     }
   ],
   "files": [
+    {
+      "id": "4588d4a6-f671-4729-a0b4-0282f7d31a2c",
+      "name": "seven11-short-trailer",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-06-05T21:53:27.623"
+    },
+    {
+      "id": "f2c24d44-0a52-452f-a67c-0305ebc1642c",
+      "name": "seven11-obstacle",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-06-05T21:24:30.95"
+    },
     {
       "id": "e08095dd-8055-4c22-bfda-075ca4802997",
       "name": "security_group",
@@ -260,6 +416,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "1bae2525-707c-4b75-9ac6-094d9ec64344",
+      "name": "drivingsim-03",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-05T23:57:08.537"
     },
     {
       "id": "21115450-2a28-4812-a17d-09ae8f10a037",
@@ -294,6 +458,14 @@
       "uploadedAt": "2026-05-20T20:58:14.14"
     },
     {
+      "id": "ab23424c-f7a4-46e0-8877-14300cd1c1f0",
+      "name": "hopwards-rotate-platforms",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-05T23:08:12.673"
+    },
+    {
       "id": "0a1cb2cb-d502-4c3a-8e4a-1463ada551cc",
       "name": "portfolio-controller",
       "path": "/images/project",
@@ -308,6 +480,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "9c053af7-7a47-4b35-9627-175da114456d",
+      "name": "seven11-distracted",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-06-05T21:24:30.95"
     },
     {
       "id": "bd9bc2a6-9498-4ef9-b8c2-17e28e08d8ba",
@@ -356,6 +536,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "fd36b223-b351-41bb-9157-29bdaadd267f",
+      "name": "hopwards-hidden-bridges",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-05T23:08:12.673"
     },
     {
       "id": "9bce38b3-a074-49e2-b8e6-2a6bab142c82",
@@ -430,6 +618,14 @@
       "uploadedAt": "2026-05-31T00:23:38.18"
     },
     {
+      "id": "b9bc2592-35eb-41af-a105-52e90f310f21",
+      "name": "drivingsim-game-over",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-05T23:57:08.537"
+    },
+    {
       "id": "8b330a86-c2a1-4e96-b117-557f2a8bae3f",
       "name": "docker-cosmos-emulator-container",
       "path": "/images/project",
@@ -468,6 +664,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "fa004b31-a9e4-418a-8242-5e6c97514e66",
+      "name": "seven11-teleporter",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-06-05T21:24:30.95"
     },
     {
       "id": "781fd4c1-376d-4261-8250-60209bee939f",
@@ -598,6 +802,14 @@
       "uploadedAt": "2026-05-20T20:58:14.14"
     },
     {
+      "id": "c9bae589-ccf8-4ba0-a954-7ef8cc96344b",
+      "name": "DrivingSim_Doc",
+      "path": "documents/projects",
+      "extension": "pdf",
+      "type": "application/pdf",
+      "uploadedAt": "2026-06-05T23:57:08.543"
+    },
+    {
       "id": "8da1a00e-e669-400f-a563-8278b40ee070",
       "name": "terraform-destroy-result",
       "path": "/images/project",
@@ -606,12 +818,36 @@
       "uploadedAt": "2026-05-31T00:23:38.18"
     },
     {
+      "id": "54925885-b310-4d0c-bb4e-89b454be06c2",
+      "name": "hopwards-short-teaser",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-06-05T23:08:12.673"
+    },
+    {
       "id": "60d9f92a-2519-40ff-b017-8bc2496b9923",
       "name": "rg-myresume",
       "path": "/images/project",
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-06-02T20:23:06.8"
+    },
+    {
+      "id": "d8b1c5e4-825f-4f83-8c02-8c9cba7d0667",
+      "name": "hopwards-puzzles",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-05T23:08:12.673"
+    },
+    {
+      "id": "7d6a2bd5-3931-49f8-bc6e-95a4d755f7bd",
+      "name": "drivingsim-04",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-05T23:57:08.537"
     },
     {
       "id": "86f25559-ba72-4e80-8893-a8aab5f87e69",
@@ -646,12 +882,28 @@
       "uploadedAt": "2026-05-31T00:23:38.18"
     },
     {
+      "id": "8df9eb6c-99c5-4f60-8521-b62bb79cd313",
+      "name": "drivingsim-01",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-05T23:57:08.537"
+    },
+    {
       "id": "738b3259-2ed6-46cd-a90a-bab4f6d76d46",
       "name": "terraform-init",
       "path": "/images/project",
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "32c61fd8-ef16-4173-a825-bb3da5e854dd",
+      "name": "seven11-pushing",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-06-05T21:24:30.95"
     },
     {
       "id": "b178dca1-983c-4d3d-ad23-bcf6e80d2e4c",
@@ -716,6 +968,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "696e55e3-427f-43a7-b1c5-cb9d849f3190",
+      "name": "drivingsim-start",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-05T23:57:08.537"
     },
     {
       "id": "f9117ea7-4c25-4f21-9b18-cc15ee0132a2",
@@ -790,6 +1050,14 @@
       "uploadedAt": "2026-05-31T00:23:38.18"
     },
     {
+      "id": "ff98afa8-12c3-4a77-931f-dbaeeb6c8b86",
+      "name": "drivingsim-02",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-05T23:57:08.537"
+    },
+    {
       "id": "46ac5357-66ff-4ae5-84a8-dcb819fa6f67",
       "name": "MyResume_Phase02_Doc",
       "path": "documents/projects",
@@ -804,6 +1072,22 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "a56638cc-ba27-4ee8-ad5b-e4bbf2b0a8a4",
+      "name": "seven11-overview",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-05T21:24:30.947"
+    },
+    {
+      "id": "301e6c13-bbdf-4309-a81d-ebb7cf65f44c",
+      "name": "hopwards-checkpoint",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-05T23:08:12.673"
     },
     {
       "id": "a7936029-dc75-443e-a0e8-ec74a6dee6b1",
@@ -1204,6 +1488,61 @@
       "imageID": "fe50c142-f18b-4b44-9292-5a9f8b711067",
       "projectID": 2,
       "imageSet": "Phase 3: Serverless"
+    },
+    {
+      "imageID": "a56638cc-ba27-4ee8-ad5b-e4bbf2b0a8a4",
+      "projectID": 3,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "ab23424c-f7a4-46e0-8877-14300cd1c1f0",
+      "projectID": 4,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "d8b1c5e4-825f-4f83-8c02-8c9cba7d0667",
+      "projectID": 4,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "fd36b223-b351-41bb-9157-29bdaadd267f",
+      "projectID": 4,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "301e6c13-bbdf-4309-a81d-ebb7cf65f44c",
+      "projectID": 4,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "696e55e3-427f-43a7-b1c5-cb9d849f3190",
+      "projectID": 5,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "8df9eb6c-99c5-4f60-8521-b62bb79cd313",
+      "projectID": 5,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "ff98afa8-12c3-4a77-931f-dbaeeb6c8b86",
+      "projectID": 5,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "1bae2525-707c-4b75-9ac6-094d9ec64344",
+      "projectID": 5,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "7d6a2bd5-3931-49f8-bc6e-95a4d755f7bd",
+      "projectID": 5,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "b9bc2592-35eb-41af-a105-52e90f310f21",
+      "projectID": 5,
+      "imageSet": "NONE"
     }
   ]
 }

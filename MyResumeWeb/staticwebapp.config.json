@@ -13,6 +13,12 @@
       }
     },
     {
+      "route": "/videos/project/*.webm",
+      "headers": {
+        "Cache-Control": "public, max-age=2592000, must-revalidate"
+      }
+    },
+    {
       "route": "/documents/projects/*.pdf",
       "headers": {
         "Cache-Control": "public, max-age=2592000, must-revalidate"
@@ -30,6 +36,7 @@
     "exclude": [
       "/images/info/*.{png,jpg,jpeg,gif,webp}",
       "/images/project/*.{png,jpg,jpeg,gif,webp}",
+      "/videos/project/*.webm",
       "/documents/projects/*.pdf",
       "/documents/resume/*.pdf",
       "/assets/*.{css,js,html}",

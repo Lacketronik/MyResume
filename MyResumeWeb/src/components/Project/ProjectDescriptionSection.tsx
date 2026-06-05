@@ -7,6 +7,32 @@ type ProjectDescriptionSectionProps = {
 };
 
 function ProjectDescriptionSection({ descriptions, githubUrl }: ProjectDescriptionSectionProps) {
+    
+    const renderContentWithLinks = (text: string) => {
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        
+        if (!urlRegex.test(text)) {
+            return text;
+        }
+
+        const [name, url] = text.split(/:\s*(https?:\/\/[^\s]+)/);
+
+        return (
+            <>
+                <span>{name}: </span>
+                <a 
+                    href={url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary text-decoration-underline-hover ms-1"
+                    style={{ color: '#61dafb' }}
+                >
+                    LinkedIn
+                </a>
+            </>
+        );
+    };
+
     return (
         <Col xs={12} lg={7} className="d-flex">
             <Card className="flex-fill">
@@ -17,7 +43,7 @@ function ProjectDescriptionSection({ descriptions, githubUrl }: ProjectDescripti
                             if (descriptionItem.type === "bullet") {
                                 return (
                                     <ul key={index} className="ps-3 mb-2">
-                                        <li>{descriptionItem.description}</li>
+                                        <li>{renderContentWithLinks(descriptionItem.description)}</li>
                                     </ul>
                                 );
                             }
