@@ -47,7 +47,7 @@ function buildYouTubeEmbedUrl(link: string) {
 }
 
 function ProjectVideoSection({ videos, isActive }: ProjectVideoSectionProps) {
-    if (!isActive || videos.length === 0) {
+    if (videos.length === 0) {
         return null;
     }
 

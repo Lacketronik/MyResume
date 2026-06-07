@@ -29,6 +29,25 @@
       "headers": {
         "Cache-Control": "public, max-age=2592000, must-revalidate"
       }
+    },
+    {
+      "route": "*/Build/*.framework.js.gz",
+      "headers": {
+        "Content-Encoding": "gzip"
+      }
+    },
+    {
+      "route": "*/Build/*.data.gz",
+      "headers": {
+        "Content-Encoding": "gzip"
+      }
+    },
+    {
+      "route": "*/Build/*.wasm.gz",
+      "headers": {
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/wasm"
+      }
     }
   ],
   "navigationFallback": {
@@ -40,10 +59,15 @@
       "/documents/projects/*.pdf",
       "/documents/resume/*.pdf",
       "/assets/*.{css,js,html}",
-      "/favicon.ico"
+      "/favicon.ico",
+      "*/Build/*.gz"
     ]
   },
+  "mimeTypes": {
+    ".data.gz": "application/octet-stream",
+    ".wasm.gz": "application/wasm"
+  },
   "globalHeaders": {
-    "Content-Security-Policy": "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://*.youtube.com https://*.youtu.be https://cloudflareinsights.com; frame-src 'self' https://www.faliqdoescoding.com https://faliqdoescoding.com https://www.youtube.com https://www.youtube-nocookie.com https://itch.io https://*.itch.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.youtube.com;"
+    "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-eval' https://static.cloudflareinsights.com; connect-src 'self' data: blob: https://*.youtube.com https://*.youtu.be https://cloudflareinsights.com; frame-src 'self' https://www.faliqdoescoding.com https://faliqdoescoding.com https://www.youtube.com https://www.youtube-nocookie.com https://itch.io https://*.itch.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.youtube.com;"
   }
 }
