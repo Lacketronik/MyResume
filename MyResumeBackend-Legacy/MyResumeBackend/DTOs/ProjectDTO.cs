@@ -18,6 +18,8 @@ namespace MyResumeBackend.DTOs
         public string? rawProjectFileIDs { get; set; }
         [JsonIgnore]
         public string? rawTechnologies { get; set; }
+        [JsonIgnore]
+        public string? rawProjectDemos { get; set; }
         public IEnumerable<ProjectDescriptionDTO> descriptions
         {
             get
@@ -102,6 +104,23 @@ namespace MyResumeBackend.DTOs
                 foreach (var element in doc.RootElement.EnumerateArray())
                 {
                     if (element.TryGetProperty("technology_name", out var prop))
+                    {
+                        list.Add(prop.GetString());
+                    }
+                }
+                return list.ToArray();
+            }
+        }
+        public string[] demos
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(rawProjectDemos)) return Array.Empty<string>();
+                using var doc = JsonDocument.Parse(rawProjectDemos);
+                var list = new List<string>();
+                foreach (var element in doc.RootElement.EnumerateArray())
+                {
+                    if (element.TryGetProperty("demo_link", out var prop))
                     {
                         list.Add(prop.GetString());
                     }

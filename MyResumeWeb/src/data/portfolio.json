@@ -133,7 +133,8 @@
         "PHP",
         "HTML",
         "CSS"
-      ]
+      ],
+      "demos": []
     },
     {
       "name": "MyResume",
@@ -233,7 +234,8 @@
         "C# .NET Core",
         "SQL",
         "Linux"
-      ]
+      ],
+      "demos": []
     },
     {
       "name": "Seven11",
@@ -278,7 +280,8 @@
       "projectFileIDs": [],
       "technologies": [
         "C++"
-      ]
+      ],
+      "demos": []
     },
     {
       "name": "Hopwards",
@@ -320,7 +323,8 @@
       "projectFileIDs": [],
       "technologies": [
         "C++"
-      ]
+      ],
+      "demos": []
     },
     {
       "name": "Driving Sim",
@@ -373,6 +377,211 @@
       "technologies": [
         "Android",
         "Kotlin"
+      ],
+      "demos": []
+    },
+    {
+      "name": "Forged In Flames: Dilemma",
+      "githubUrl": "",
+      "projectDate": "2024-06-16T00:00:00",
+      "descriptions": [
+        {
+          "description": "An ordinary day in the town square turns into a living nightmare. An unexpected explosion rips through the city, knocking you unconscious. When you awake, the square is ablaze, and your wife and daughter are missing. As a retired firefighter, you refuse to wait for backup. You must rely on your old instincts to navigate the burning ruins, find your family, and uncover a dark truth, was this a tragic accident, or a deliberate act of arson?",
+          "type": "Paragraph"
+        },
+        {
+          "description": " ",
+          "type": "Paragraph"
+        },
+        {
+          "description": "Developed as a student project, \"Forged In Flames: Dilemma\" serves as a focused application of handcrafted 3D level design best practices. Every corner of this environment has been meticulously structured to guide the player and enhance the narrative tension.",
+          "type": "Paragraph"
+        },
+        {
+          "description": " ",
+          "type": "Paragraph"
+        },
+        {
+          "description": "Key Design Highlights",
+          "type": "Paragraph"
+        },
+        {
+          "description": "Intuitive Layout: The level architecture uses natural choke points, framing, and distinct landmarks to guide player pathfinding organically without relying on intrusive UI or arrows.",
+          "type": "Bullet"
+        },
+        {
+          "description": "Visual Guiding & Lighting: Fire, smoke, and dynamic light sources act as visual \"breadcrumbs\" to naturally draw the player's eye toward key narrative beats and interactive points.",
+          "type": "Bullet"
+        },
+        {
+          "description": "Pacing & Tension: The map layout deliberately balances tight, claustrophobic debris corridors with wide, chaotic open spaces to mirror the protagonist's rising panic and keep exploration engaging.",
+          "type": "Bullet"
+        },
+        {
+          "description": " ",
+          "type": "Paragraph"
+        },
+        {
+          "description": "CONTROLS:",
+          "type": "Paragraph"
+        },
+        {
+          "description": "W, A, S, D - Move Protagonist",
+          "type": "Bullet"
+        },
+        {
+          "description": "Mouse - Look / Change Direction",
+          "type": "Bullet"
+        },
+        {
+          "description": "E - Interact (Pick Up items, open doors, rescue civilians, etc.)",
+          "type": "Bullet"
+        }
+      ],
+      "videoLinks": [],
+      "imageBlobIDs": [],
+      "projectFileIDs": [
+        "77BAD90B-B732-4ECA-A371-9D685756FD22"
+      ],
+      "technologies": [
+        "Unity",
+        "C#"
+      ],
+      "demos": [
+        "https://itch.io/embed-upload/17838035?color=333333"
+      ]
+    },
+    {
+      "name": "Forged In Flames: Fate's Trigger",
+      "githubUrl": "",
+      "projectDate": "2024-07-28T00:00:00",
+      "descriptions": [
+        {
+          "description": "You are a firefighter trapped inside a collapsing building filled with Infernal Spawn, demonic monsters born from the flames. Every playthrough features a brand-new, procedurally generated layout, forcing you to rely on your dynamic minimap and navigate a blinding Fog of War. Use your trusty firehose to clear the blazes, defeat powerful bosses to unlock upgraded weaponry and defensive abilities, and stop the horde from pouring into the world!",
+          "type": "Paragraph"
+        },
+        {
+          "description": " ",
+          "type": "Paragraph"
+        },
+        {
+          "description": "\"Forged In Flames -Fate's Trigger\" is a top-down, procedural dungeon crawler developed as a student project.",
+          "type": "Paragraph"
+        },
+        {
+          "description": " ",
+          "type": "Paragraph"
+        },
+        {
+          "description": "Key Design Highlights",
+          "type": "Paragraph"
+        },
+        {
+          "description": "Dynamic, Varied Enemies: Battle a diverse horde of Infernal Spawns, each featuring distinct behaviors and elemental fire traits. Players must constantly adapt their movement and positioning to counter different enemy attack patterns.",
+          "type": "Bullet"
+        },
+        {
+          "description": "Engaging Boss Encounters & Progression: Face off against powerful, stage-ruling bosses like Ray Burnz and Smoky Jake. Defeating these bosses isn't just for progression, it rewards the player with game-changing tools and mechanics that alter how they navigate the dungeon.",
+          "type": "Bullet"
+        },
+        {
+          "description": "An Evolving, Tactical Arsenal: Upgrade from a standard primary firehose to an advanced arsenal. Unlock the high-output Auto Hose MK II for crowd control, deploy Ice Bombs for explosive area damage, and Erect Walls to manipulate enemy pathfinding and create defensive choke points.",
+          "type": "Bullet"
+        },
+        {
+          "description": " ",
+          "type": "Paragraph"
+        },
+        {
+          "description": "CONTROLS:",
+          "type": "Paragraph"
+        },
+        {
+          "description": "W, A, S, D - Move Firefighter",
+          "type": "Bullet"
+        },
+        {
+          "description": "Mouse - Change Direction / Aim",
+          "type": "Bullet"
+        },
+        {
+          "description": "LMB - Normal Hose (Primary Fire)",
+          "type": "Bullet"
+        },
+        {
+          "description": "RMB - Auto Hose MK II (Unlock: Defeat Ray Burnz)",
+          "type": "Bullet"
+        },
+        {
+          "description": "Scroll Click - Water Bomb (Unlock: Defeat Smoky Jake)",
+          "type": "Bullet"
+        },
+        {
+          "description": "R - Erect Wall (Unlock: Defeat Smoky Jake)",
+          "type": "Bullet"
+        },
+        {
+          "description": "G - Toggle Minimap (A bit Bugged, try pressing again to work)",
+          "type": "Bullet"
+        },
+        {
+          "description": "B - Open Infernal Book",
+          "type": "Bullet"
+        },
+        {
+          "description": " ",
+          "type": "Paragraph"
+        },
+        {
+          "description": "CHEATS (For Testing):",
+          "type": "Paragraph"
+        },
+        {
+          "description": "M - Toggle Map Size",
+          "type": "Bullet"
+        },
+        {
+          "description": "O - +100 Auto Hose MK II Ammo",
+          "type": "Bullet"
+        },
+        {
+          "description": "J - God Mode (No Damage Taken, Instant Kill)",
+          "type": "Bullet"
+        },
+        {
+          "description": "K - Invincible Mode (No Damage Taken, Normal Damage Dealt)",
+          "type": "Bullet"
+        },
+        {
+          "description": "L - Toggle Fog of War",
+          "type": "Bullet"
+        },
+        {
+          "description": "H - Restart Game",
+          "type": "Bullet"
+        },
+        {
+          "description": " ",
+          "type": "Paragraph"
+        },
+        {
+          "description": "Bugs:",
+          "type": "Paragraph"
+        },
+        {
+          "description": "Defeating Torch Head Ted when it is near a wall may spawn the collectibiles in the walls.",
+          "type": "Bullet"
+        }
+      ],
+      "videoLinks": [],
+      "imageBlobIDs": [],
+      "projectFileIDs": [],
+      "technologies": [
+        "Unity",
+        "C#"
+      ],
+      "demos": [
+        "https://itch.io/embed-upload/17837907?color=333333"
       ]
     }
   ],
@@ -848,6 +1057,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-06-05T23:57:08.537"
+    },
+    {
+      "id": "77bad90b-b732-4eca-a371-9d685756fd22",
+      "name": "ForgedInFlamesDilemma_LevelDesignPlan",
+      "path": "documents/projects",
+      "extension": "pdf",
+      "type": "application/pdf",
+      "uploadedAt": "2026-06-07T19:36:31.54"
     },
     {
       "id": "86f25559-ba72-4e80-8893-a8aab5f87e69",
