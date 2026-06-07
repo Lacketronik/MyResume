@@ -2,7 +2,6 @@ import { Card, Col, Row } from "react-bootstrap";
 
 type ProjectVideoSectionProps = {
     videos: string[];
-    isActive: boolean;
 };
 
 function getYouTubeVideoId(link: string) {
@@ -46,7 +45,7 @@ function buildYouTubeEmbedUrl(link: string) {
     return embedUrl.toString();
 }
 
-function ProjectVideoSection({ videos, isActive }: ProjectVideoSectionProps) {
+function ProjectVideoSection({ videos }: ProjectVideoSectionProps) {
     if (videos.length === 0) {
         return null;
     }

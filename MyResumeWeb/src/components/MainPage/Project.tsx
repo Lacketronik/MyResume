@@ -116,7 +116,7 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
 
                 <ProjectVideoSection
                     videos={proj.videoLinks ?? []}
-                    isActive={activeProjectKey === proj.name}
+                    //isActive={activeProjectKey === proj.name}
                 />
 
                 <ProjectDemoSection demos={proj.demos ?? []} />
