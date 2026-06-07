@@ -1,0 +1,20 @@
+# Local provider plugins and data (Huge binaries, ignore)
+.terraform/
+
+# Lock file (Do NOT ignore this, commit it!)
+# !.terraform.lock.hcl
+
+# Local state files (Contains secrets, absolutely ignore)
+*.tfstate
+*.tfstate.*
+
+# Variables files containing real passwords/keys (Ignore)
+*.tfvars
+*.tfvars.json
+
+# Generated local key material
+app_key.pem
+db_key.pem
+web_key.pem
+cloudflare_key.pem
+cloudflare_cert.pem

@@ -29,5 +29,5 @@ dist-ssr
 .env.production
 
 # Build output
-public/images/*
-public/documents/*
+#public/images/*
+#public/documents/*
