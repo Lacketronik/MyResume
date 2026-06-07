@@ -4,6 +4,8 @@ import { useMemo } from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
 
 function Introduction({ information, files }: { information: InformationProps; files: FileProps[] }) {
+  //const itchUrl = "https://itch.io/embed-upload/17838035?color=333333";
+  const itchUrl = "https://itch.io/embed-upload/17837907?color=333333"
   const fallbackProfileImage =
     "data:image/svg+xml;charset=UTF-8," +
     encodeURIComponent(`
@@ -126,6 +128,33 @@ function Introduction({ information, files }: { information: InformationProps; f
           </Row>
         </Card.Body>
       </Card>
+
+       <div style={{ 
+      position: 'relative', 
+      width: '100%', 
+      maxWidth: '1280px', 
+      margin: '0 auto', 
+      aspectRatio: '16 / 9' 
+    }}>
+      <iframe
+        src={itchUrl}
+        frameBorder="0"
+        allowFullScreen
+        allow="autoplay; fullscreen *; geolocation; gamepad"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          border: 'none',
+          borderRadius: '8px'
+        }}
+        title="Forged In Flame Dilemma"
+      >
+        <p>Your browser does not support iframes.</p>
+      </iframe>
+    </div>
     </div>
   );
 }
