@@ -126,6 +126,7 @@ function Introduction({ information, files }: { information: InformationProps; f
           </Row>
         </Card.Body>
       </Card>
+
     </div>
   );
 }

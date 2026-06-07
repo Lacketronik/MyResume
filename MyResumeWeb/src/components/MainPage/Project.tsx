@@ -6,6 +6,7 @@ import { Accordion, Card } from "react-bootstrap";
 import ProjectPdfDetailsModal, { type ProjectPdfDetailsModalFile } from "../Project/ProjectPdfDetailsModal.tsx";
 import ProjectAccordionHeader from "../Project/ProjectAccordionHeader.tsx";
 import ProjectVideoSection from "../Project/ProjectVideoSection.tsx";
+import ProjectDemoSection from "../Project/ProjectDemoSection.tsx";
 import ProjectDescriptionSection from "../Project/ProjectDescriptionSection.tsx";
 import ProjectAssetsSection from "../Project/ProjectAssetsSection.tsx";
 
@@ -117,6 +118,8 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
                     videos={proj.videoLinks ?? []}
                     isActive={activeProjectKey === proj.name}
                 />
+
+                <ProjectDemoSection demos={proj.demos ?? []} />
 
                 <div className="g-3 row">
                     <ProjectDescriptionSection descriptions={proj.descriptions} githubUrl={proj.githubUrl} />

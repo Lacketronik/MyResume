@@ -127,3 +127,11 @@ CREATE TABLE project_technologies (
 	PRIMARY KEY (project_technology_id),
 	FOREIGN KEY (project_id) REFERENCES projects (project_id)
 )
+
+CREATE TABLE project_demos (
+	project_demo_id INT IDENTITY(1,1) NOT NULL,
+	project_id INT NOT NULL,
+	demo_link VARCHAR(255) NOT NULL,
+	PRIMARY KEY (project_demo_id),
+	FOREIGN KEY (project_id) REFERENCES projects (project_id)
+)
