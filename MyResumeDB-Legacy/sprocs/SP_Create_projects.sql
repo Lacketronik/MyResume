@@ -50,7 +50,14 @@ BEGIN
             FROM dbo.project_technologies pt
             WHERE pt.project_id = p.project_id
             FOR JSON PATH
-        ) AS rawTechnologies
+        ) AS rawTechnologies,
+
+        (
+            SELECT pd.demo_link AS [demo_link]
+            FROM dbo.project_demos pd
+            WHERE pd.project_id = p.project_id
+            FOR JSON PATH
+        ) AS rawProjectDemos
 
     FROM dbo.projects p;
 END;
