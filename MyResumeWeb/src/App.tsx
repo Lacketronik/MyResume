@@ -41,6 +41,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<MainPage portfolio={portfolio} />} />
+        <Route path="*" element={<MainPage portfolio={portfolio} />} />
       </Routes>
     </>
   )

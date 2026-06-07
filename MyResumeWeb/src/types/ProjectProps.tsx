@@ -8,4 +8,5 @@ export type ProjectProps = {
     githubUrl?: string
     projectFileIDs?: string[]
     projectDate?: Date
+    technologies?: string[]
 }
