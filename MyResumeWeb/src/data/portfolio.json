@@ -407,15 +407,15 @@
         },
         {
           "description": "Intuitive Layout: The level architecture uses natural choke points, framing, and distinct landmarks to guide player pathfinding organically without relying on intrusive UI or arrows.",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "Visual Guiding & Lighting: Fire, smoke, and dynamic light sources act as visual \"breadcrumbs\" to naturally draw the player's eye toward key narrative beats and interactive points.",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "Pacing & Tension: The map layout deliberately balances tight, claustrophobic debris corridors with wide, chaotic open spaces to mirror the protagonist's rising panic and keep exploration engaging.",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": " ",
@@ -427,15 +427,15 @@
         },
         {
           "description": "W, A, S, D - Move Protagonist",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "Mouse - Look / Change Direction",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "E - Interact (Pick Up items, open doors, rescue civilians, etc.)",
-          "type": "Bullet"
+          "type": "bullet"
         }
       ],
       "videoLinks": [],
@@ -478,15 +478,15 @@
         },
         {
           "description": "Dynamic, Varied Enemies: Battle a diverse horde of Infernal Spawns, each featuring distinct behaviors and elemental fire traits. Players must constantly adapt their movement and positioning to counter different enemy attack patterns.",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "Engaging Boss Encounters & Progression: Face off against powerful, stage-ruling bosses like Ray Burnz and Smoky Jake. Defeating these bosses isn't just for progression, it rewards the player with game-changing tools and mechanics that alter how they navigate the dungeon.",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "An Evolving, Tactical Arsenal: Upgrade from a standard primary firehose to an advanced arsenal. Unlock the high-output Auto Hose MK II for crowd control, deploy Ice Bombs for explosive area damage, and Erect Walls to manipulate enemy pathfinding and create defensive choke points.",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": " ",
@@ -498,35 +498,35 @@
         },
         {
           "description": "W, A, S, D - Move Firefighter",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "Mouse - Change Direction / Aim",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "LMB - Normal Hose (Primary Fire)",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "RMB - Auto Hose MK II (Unlock: Defeat Ray Burnz)",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "Scroll Click - Water Bomb (Unlock: Defeat Smoky Jake)",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "R - Erect Wall (Unlock: Defeat Smoky Jake)",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "G - Toggle Minimap (A bit Bugged, try pressing again to work)",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "B - Open Infernal Book",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": " ",
@@ -538,27 +538,27 @@
         },
         {
           "description": "M - Toggle Map Size",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "O - +100 Auto Hose MK II Ammo",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "J - God Mode (No Damage Taken, Instant Kill)",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "K - Invincible Mode (No Damage Taken, Normal Damage Dealt)",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "L - Toggle Fog of War",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": "H - Restart Game",
-          "type": "Bullet"
+          "type": "bullet"
         },
         {
           "description": " ",
@@ -570,7 +570,7 @@
         },
         {
           "description": "Defeating Torch Head Ted when it is near a wall may spawn the collectibiles in the walls.",
-          "type": "Bullet"
+          "type": "bullet"
         }
       ],
       "videoLinks": [],
@@ -582,6 +582,53 @@
       ],
       "demos": [
         "https://itch.io/embed-upload/17837907?color=333333"
+      ]
+    },
+    {
+      "name": "Smart AI Steering Car",
+      "githubUrl": "",
+      "projectDate": "2024-07-27T00:00:00",
+      "descriptions": [
+        {
+          "description": "Smart AI Steering Car is a car simulator designed to showcase a vehicle navigating down a street autonomously. Its core features include automatic lane changing, adherence to traffic light signals, and stopping for pedestrian crossings. This is a student project focused on implementing Artificial Intelligence in simulations.",
+          "type": "Paragraph"
+        },
+        {
+          "description": "CONTROLS: There are no controls, this is a simulation",
+          "type": "bullet"
+        },
+        {
+          "description": " ",
+          "type": "paragraph"
+        },
+        {
+          "description": "Jerell: https://www.linkedin.com/in/jerelltan/",
+          "type": "bullet"
+        },
+        {
+          "description": "Lance: https://www.linkedin.com/in/lancemlim/",
+          "type": "bullet"
+        },
+        {
+          "description": "Zhun Hang: https://www.linkedin.com/in/zhunhang-tay/",
+          "type": "bullet"
+        },
+        {
+          "description": "Faliq: Me",
+          "type": "bullet"
+        }
+      ],
+      "videoLinks": [],
+      "imageBlobIDs": [],
+      "projectFileIDs": [
+        "E00E177F-43E3-476F-985B-3221FCAECD95"
+      ],
+      "technologies": [
+        "Unity",
+        "C#"
+      ],
+      "demos": [
+        "https://itch.io/embed-upload/17841669?color=333333"
       ]
     }
   ],
@@ -769,6 +816,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "e00e177f-43e3-476f-985b-3221fcaecd95",
+      "name": "SmartAISteeringCar",
+      "path": "documents/projects",
+      "extension": "pdf",
+      "type": "application/pdf",
+      "uploadedAt": "2026-06-08T00:13:04.85"
     },
     {
       "id": "f5aaeab4-decc-447e-99a0-32ad931bf680",

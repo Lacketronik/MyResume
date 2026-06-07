@@ -77,6 +77,16 @@ const TECHNOLOGY_STYLES: Record<string, TechnologyStyle> = {
         borderColor: "rgba(242, 78, 122, 0.42)",
         color: "#fff0eb",
     },
+    unity: {
+        backgroundColor: "rgba(0, 188, 212, 0.15)", 
+        borderColor: "rgba(0, 188, 212, 0.45)",     
+        color: "#e0f7fa",                            
+    },
+    "c#": {
+        backgroundColor: "rgba(115, 36, 134, 0.18)",
+        borderColor: "rgba(115, 36, 134, 0.42)",
+        color: "#fae6ff",
+    },
     // ---------------------
     default: {
         backgroundColor: "rgba(148, 163, 184, 0.16)",

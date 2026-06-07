@@ -9,4 +9,5 @@ export type ProjectProps = {
     projectFileIDs?: string[]
     projectDate?: Date
     technologies?: string[]
+    demos?: string[]
 }

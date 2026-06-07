@@ -18,6 +18,9 @@ function ProjectAssetsSection({
     getImageSetName,
     buildFileSrc,
 }: ProjectAssetsSectionProps) {
+    if (!imageBlobIDs?.length && !projectFileIDs?.length) {
+        return null;
+    }
     return (
         <Col xs={12} lg={5} className="d-flex">
             <Card className="flex-fill">
