@@ -125,7 +125,6 @@
         "FD5907CA-24F3-4FA9-9D1F-2B7539465F87"
       ],
       "projectFileIDs": [
-        "B178DCA1-983C-4D3D-AD23-BCF6E80D2E4C",
         "408D230C-C7D4-4B92-A617-FDF528CF4F4B"
       ],
       "technologies": [
@@ -595,7 +594,7 @@
         },
         {
           "description": "CONTROLS: There are no controls, this is a simulation",
-          "type": "bullet"
+          "type": "paragraph"
         },
         {
           "description": " ",
@@ -843,7 +842,7 @@
     },
     {
       "id": "69532ed9-0286-43cb-91cb-3fe69d99753c",
-      "name": "resume",
+      "name": "Resume",
       "path": "/documents/resume",
       "extension": "pdf",
       "type": "application/pdf",
@@ -1178,14 +1177,6 @@
       "uploadedAt": "2026-06-05T21:24:30.95"
     },
     {
-      "id": "b178dca1-983c-4d3d-ad23-bcf6e80d2e4c",
-      "name": "project1_doc2",
-      "path": "/documents/projects",
-      "extension": "pdf",
-      "type": "application/pdf",
-      "uploadedAt": "2026-05-19T00:00:00"
-    },
-    {
       "id": "2701d648-7860-4abd-b473-bcfa6025671f",
       "name": "portfolio-dto",
       "path": "/images/project",
@@ -1387,7 +1378,7 @@
     },
     {
       "id": "408d230c-c7d4-4b92-a617-fdf528cf4f4b",
-      "name": "project1_doc1",
+      "name": "SingaPourCast_Doc",
       "path": "/documents/projects",
       "extension": "pdf",
       "type": "application/pdf",
