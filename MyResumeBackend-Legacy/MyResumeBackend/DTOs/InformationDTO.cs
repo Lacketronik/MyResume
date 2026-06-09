@@ -8,6 +8,7 @@ namespace MyResumeBackend.DTOs
     {
         public string name { get; set; }
         public string linkedin { get; set; }
+        public string github { get; set; }
         public Guid? resumeFileID { get; set; }
         public Guid? profileImageID { get; set; }
 

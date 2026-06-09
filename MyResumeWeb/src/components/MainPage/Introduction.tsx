@@ -70,6 +70,11 @@ function Introduction({ information, files }: { information: InformationProps; f
                 LinkedIn Profile
               </Button>
             )}
+            {information.github && (
+              <Button variant="outline-secondary" href={information.github} target="_blank" rel="noopener noreferrer" size="sm">
+                GitHub Profile
+              </Button>
+            )}
             {resumeFileID && (
               <Button
                 as="a"

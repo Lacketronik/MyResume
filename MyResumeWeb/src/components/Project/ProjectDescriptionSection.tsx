@@ -1,4 +1,4 @@
-import { Button, Card, Col } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import type { ProjectDescriptionProps } from "../../types/ProjectDescriptionProps";
 
 type ProjectDescriptionSectionProps = {

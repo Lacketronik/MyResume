@@ -2,6 +2,7 @@
   "information": {
     "name": "FALIQ",
     "linkedin": "https://www.linkedin.com/in/m-faliq-b-alhakim/",
+    "github": "https://github.com/Lacketronik",
     "resumeFileID": "69532ed9-0286-43cb-91cb-3fe69d99753c",
     "profileImageID": "3f4a3c07-7986-455c-936b-44b4b0fe75a2",
     "introduction": [
@@ -701,7 +702,11 @@
           "type": "bullet"
         }
       ],
-      "videoLinks": [],
+      "videoLinks": [
+        "/videos/project/8F9547D5-F0D3-4109-939F-06DFF13FCCCA_iron-dome-gameplay.webm",
+        "/videos/project/C2EF5500-BAA5-40C6-91CB-63E1FE1DDADD_iron-dome-upgrade.webm",
+        "https://youtu.be/HunHNX4fzPk"
+      ],
       "imageBlobIDs": [],
       "projectFileIDs": [],
       "technologies": [
@@ -826,6 +831,14 @@
       "extension": "webm",
       "type": "video/webm",
       "uploadedAt": "2026-06-05T21:24:30.95"
+    },
+    {
+      "id": "8f9547d5-f0d3-4109-939f-06dff13fccca",
+      "name": "iron-dome-gameplay",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-06-09T23:26:16.053"
     },
     {
       "id": "e08095dd-8055-4c22-bfda-075ca4802997",
@@ -1138,6 +1151,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "c2ef5500-baa5-40c6-91cb-63e1fe1ddadd",
+      "name": "iron-dome-upgrade",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-06-09T23:26:16.053"
     },
     {
       "id": "0e02f85a-7f6c-4410-a1bb-656532070983",
