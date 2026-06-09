@@ -292,3 +292,15 @@ main {
     justify-content: space-between;
     align-items: center;
 }
+
+.profile-btn {
+    width: 180px;
+    height: 35px;      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 576px) {
+    .profile-btn { width: 100%; }
+}

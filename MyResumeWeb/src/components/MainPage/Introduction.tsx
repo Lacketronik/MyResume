@@ -66,17 +66,18 @@ function Introduction({ information, files }: { information: InformationProps; f
 
           <div className="d-flex flex-wrap gap-2 justify-content-center mb-4">
             {information.linkedin && (
-              <Button variant="outline-primary" href={information.linkedin} target="_blank" rel="noopener noreferrer" size="sm">
+              <Button className="profile-btn" variant="outline-primary" href={information.linkedin} target="_blank" rel="noopener noreferrer" size="sm">
                 LinkedIn Profile
               </Button>
             )}
             {information.github && (
-              <Button variant="outline-secondary" href={information.github} target="_blank" rel="noopener noreferrer" size="sm">
+              <Button className="profile-btn" variant="outline-secondary" href={information.github} target="_blank" rel="noopener noreferrer" size="sm">
                 GitHub Profile
               </Button>
             )}
             {resumeFileID && (
               <Button
+                className="profile-btn"
                 as="a"
                 variant="outline-success"
                 size="sm"
@@ -89,6 +90,7 @@ function Introduction({ information, files }: { information: InformationProps; f
             )}
             {resumeFileID && (
               <Button
+                className="profile-btn"
                 as="a"
                 variant="outline-light"
                 size="sm"

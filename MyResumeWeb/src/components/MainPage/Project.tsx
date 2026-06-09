@@ -35,16 +35,14 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
         }, {});
     }, [imageDetails]);
 
-    const [selectedTag, setSelectedTag] = useState<string | null>(null); // New state
+    const [selectedTag, setSelectedTag] = useState<string | null>(null); 
 
-    // 1. Extract all unique tags for the filter buttons
     const allTags = useMemo(() => {
         const tags = new Set<string>();
         projects.forEach(p => p.technologies?.forEach(t => tags.add(t)));
         return Array.from(tags).sort();
     }, [projects]);
 
-    // 2. Filter projects based on the selected tag
     const filteredProjects = useMemo(() => {
         if (!selectedTag) return projects;
         return projects.filter(p => p.technologies?.includes(selectedTag));

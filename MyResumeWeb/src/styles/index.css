@@ -89,11 +89,10 @@ body {
 }
 
 .project-technology-tags {
-  display: grid;
-  grid-template-columns: repeat(7, max-content);
+  display: flex;
+  flex-wrap: wrap; 
   justify-content: start;
   gap: 0.4rem 0.5rem;
-  flex: 0 0 auto;
   max-width: 100%;
 }
 
