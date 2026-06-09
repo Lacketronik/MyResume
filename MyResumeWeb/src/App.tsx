@@ -4,6 +4,8 @@ import { Routes, Route } from 'react-router-dom'
 import type { PortfolioProps } from './types/PortfolioProps';
 import PortfolioService from './services/PortfolioService';
 import { useEffect, useState } from 'react'
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const createEmptyPortfolio = (): PortfolioProps => ({
   information: {
@@ -21,7 +23,7 @@ const createEmptyPortfolio = (): PortfolioProps => ({
 });
 
 function App() {
-
+  const [activeTab, setActiveTab] = useState("projects");
   const [portfolio, setPortfolio] = useState<PortfolioProps>(createEmptyPortfolio());
 
   useEffect(() => {
@@ -37,13 +39,19 @@ function App() {
     fetchPortfolio();
   }, []);
 
+  if (!portfolio) return <div>Loading...</div>;
+  
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<MainPage portfolio={portfolio} />} />
-        <Route path="*" element={<MainPage portfolio={portfolio} />} />
-      </Routes>
-    </>
+    <div className="app-container">
+      <Header portfolio={portfolio} activeTab={activeTab} setActiveTab={setActiveTab} />
+      
+      <main className="content-wrapper">
+        <Routes>
+          <Route path="/" element={<MainPage portfolio={portfolio} activeTab={activeTab} />} />
+        </Routes>
+      </main>
+      <Footer portfolio={portfolio} />
+    </div>
   )
 }
 

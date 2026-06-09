@@ -34,8 +34,8 @@ function ProjectDescriptionSection({ descriptions, githubUrl }: ProjectDescripti
     };
 
     return (
-        <Col xs={12} lg={7} className="d-flex">
-            <Card className="flex-fill">
+        // <Col xs={12} lg={7} className="d-flex">
+            <Card className="flex-fill h-100">
                 <Card.Body>
                     <Card.Title as="h5">Description</Card.Title>
                     <div className="text-start text-muted small">
@@ -65,7 +65,7 @@ function ProjectDescriptionSection({ descriptions, githubUrl }: ProjectDescripti
                     )}
                 </Card.Body>
             </Card>
-        </Col>
+        // </Col>
     );
 }
 

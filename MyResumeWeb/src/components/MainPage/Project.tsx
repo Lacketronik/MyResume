@@ -99,6 +99,7 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
     };
 
     const renderProjectContent = (proj: ProjectProps) => {
+        const hasAssets = (proj.imageBlobIDs && proj.imageBlobIDs?.length > 0) || (proj.projectFileIDs && proj.projectFileIDs?.length > 0);
         return (
             <Card.Body>
                 {proj.projectFileIDs && proj.projectFileIDs.length > 0 && (
@@ -120,10 +121,13 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
                 />
 
                 <ProjectDemoSection demos={proj.demos ?? []} />
-
+                
+                
                 <div className="g-3 row">
-                    <ProjectDescriptionSection descriptions={proj.descriptions} githubUrl={proj.githubUrl} />
-
+                    <div className={hasAssets ? "col-lg-7" : "col-12"}>
+                        <ProjectDescriptionSection descriptions={proj.descriptions} githubUrl={proj.githubUrl} />
+                    </div>
+                    
                     <ProjectAssetsSection
                         imageBlobIDs={proj.imageBlobIDs}
                         projectFileIDs={getProjectFileIDs(proj.projectFileIDs ?? [])}
