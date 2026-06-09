@@ -275,3 +275,20 @@ main {
     position: static;
   }
 }
+
+.dropdown-menu {
+    /* Match the aesthetic of your cards */
+    width: 250px !important; /* Set a specific, comfortable width */
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #444 !important;
+    background-color: #212529 !important;
+}
+
+/* Ensure the Toggle also has room to breathe */
+.dropdown-toggle {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

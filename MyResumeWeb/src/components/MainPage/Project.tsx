@@ -9,6 +9,8 @@ import ProjectVideoSection from "../Project/ProjectVideoSection.tsx";
 import ProjectDemoSection from "../Project/ProjectDemoSection.tsx";
 import ProjectDescriptionSection from "../Project/ProjectDescriptionSection.tsx";
 import ProjectAssetsSection from "../Project/ProjectAssetsSection.tsx";
+import FilterBadge from "../Project/ProjectFilterBadge.tsx";
+import { Dropdown } from "react-bootstrap";
 
 function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; files: FileProps[]; imageDetails: ImageProps[] }) {
     const [activePdfProject, setActivePdfProject] = useState<{
@@ -33,7 +35,22 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
         }, {});
     }, [imageDetails]);
 
-    const sortedProjects = [...projects].sort((a, b) => {
+    const [selectedTag, setSelectedTag] = useState<string | null>(null); // New state
+
+    // 1. Extract all unique tags for the filter buttons
+    const allTags = useMemo(() => {
+        const tags = new Set<string>();
+        projects.forEach(p => p.technologies?.forEach(t => tags.add(t)));
+        return Array.from(tags).sort();
+    }, [projects]);
+
+    // 2. Filter projects based on the selected tag
+    const filteredProjects = useMemo(() => {
+        if (!selectedTag) return projects;
+        return projects.filter(p => p.technologies?.includes(selectedTag));
+    }, [projects, selectedTag]);
+
+    const sortedProjects = [...filteredProjects].sort((a, b) => {
         const aDate = a.projectDate ? new Date(a.projectDate).valueOf() : 0;
         const bDate = b.projectDate ? new Date(b.projectDate).valueOf() : 0;
         return bDate - aDate;
@@ -143,6 +160,43 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
 
     return (
         <>
+            <Dropdown>
+                <Dropdown.Toggle variant="secondary">
+                    {selectedTag ?? "All Tags"}
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className="bg-dark border-secondary" 
+                    style={{ 
+                        maxHeight: '300px',   
+                        overflowY: 'auto'     
+                    }}>
+                    <Dropdown.Item
+                    onClick={() => setSelectedTag(null)}
+                    className="bg-dark"
+                    >
+                    <FilterBadge
+                        label="All"
+                        isActive={selectedTag === null}
+                    />
+                    </Dropdown.Item>
+
+                    <Dropdown.Divider className="border-secondary" />
+
+                    {allTags.map((tag) => (
+                    <Dropdown.Item
+                        key={tag}
+                        onClick={() => setSelectedTag(tag)}
+                        className="bg-dark"
+                    >
+                        <FilterBadge
+                        label={tag}
+                        isActive={selectedTag === tag}
+                        />
+                    </Dropdown.Item>
+                    ))}
+                </Dropdown.Menu>
+            </Dropdown>
+
             <Accordion
                 className="project-section"
                 activeKey={activeProjectKey ?? undefined}
