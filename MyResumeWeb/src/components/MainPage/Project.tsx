@@ -103,7 +103,7 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
         return (
             <Card.Body>
                 {proj.projectFileIDs && proj.projectFileIDs.length > 0 && (
-                    <div className="d-flex justify-content-end mb-3">
+                    <div className="d-flex justify-content-center mb-3">
                         <button
                             type="button"
                             className="btn btn-warning fw-semibold px-3 py-2 shadow-sm"

@@ -246,7 +246,7 @@
           "type": "paragraph"
         },
         {
-          "description": "Ian: <LinkedIn Link>",
+          "description": "Ian: https://www.linkedin.com/in/iancrb/",
           "type": "bullet"
         },
         {
@@ -254,7 +254,7 @@
           "type": "bullet"
         },
         {
-          "description": "Shafiq: <LinkedIn Link>",
+          "description": "Shafiq: https://www.linkedin.com/in/shafiq-mirza",
           "type": "bullet"
         },
         {
@@ -292,11 +292,11 @@
           "type": "paragraph"
         },
         {
-          "description": "Engine Programmer/Physics - Ian: <LinkedIn Link>",
+          "description": "Engine Programmer/Physics - Ian: https://www.linkedin.com/in/iancrb/",
           "type": "bullet"
         },
         {
-          "description": "Graphics Programmer/Art Asset - Shafiq: <LinkedIn Link>",
+          "description": "Graphics Programmer/Art Asset - Shafiq: https://www.linkedin.com/in/shafiq-mirza",
           "type": "bullet"
         },
         {
@@ -343,7 +343,7 @@
           "type": "bullet"
         },
         {
-          "description": "Shafiq: <LinkedIn Link>",
+          "description": "Shafiq: https://www.linkedin.com/in/shafiq-mirza",
           "type": "bullet"
         },
         {
@@ -676,7 +676,7 @@
           "type": "bullet"
         },
         {
-          "description": "Game Designer - Daniel: <LinkedIn Link>",
+          "description": "Game Designer - Daniel: https://www.linkedin.com/in/daniel-phua-jm/",
           "type": "bullet"
         },
         {
@@ -684,11 +684,11 @@
           "type": "bullet"
         },
         {
-          "description": "Sound Engineer - Hasif : <LinkedIn Link>",
+          "description": "Audio Programmer - Hasif : https://www.linkedin.com/in/abuhasif/",
           "type": "bullet"
         },
         {
-          "description": "Graphics Programmer - Shafiq: <LinkedIn Link>",
+          "description": "Graphics Programmer - Shafiq: https://www.linkedin.com/in/shafiq-mirza",
           "type": "bullet"
         },
         {
@@ -697,6 +697,105 @@
         },
         {
           "description": "ImGui/Data Serializer - Faliq: Me",
+          "type": "bullet"
+        }
+      ],
+      "videoLinks": [],
+      "imageBlobIDs": [],
+      "projectFileIDs": [],
+      "technologies": [
+        "C++",
+        "OpenGL"
+      ],
+      "demos": []
+    },
+    {
+      "name": "Bots TD",
+      "githubUrl": "",
+      "projectDate": "2025-04-07T00:00:00",
+      "descriptions": [
+        {
+          "description": "Bots TD flips the classic tower defense genre on its head by plunging players directly into the action with a first-person 3D perspective. Instead of playing as an commander in the sky, you are a defense architect on the ground, actively sprinting across the map to construct, manage, and upgrade defensive towers. You must think on your feet and utilize the terrain to defend your objective from relentless, escalating waves of AI-driven combat bots.",
+          "type": "paragraph"
+        },
+        {
+          "description": "Built entirely from scratch as ad advanced student project, Bots TD runs on a custom C++ 3D game engine. This project showcases the complexities of rendering 3D environments, real-time lighting, 3D physics and data management without the aid of commercial engines.",
+          "type": "paragraph"
+        },
+        {
+          "description": "Key Engineering Highlights (My Role):",
+          "type": "paragraph"
+        },
+        {
+          "description": "Robust Data Serialization: Architected and implemented the engine's serialization system using yaml-cpp, enabling efficient saving and loading of complex game data, including tower configurations, player states, game prefabs and map layouts.",
+          "type": "bullet"
+        },
+        {
+          "description": "Assistant Graphics Programming: Contributed directly to the engine's rendering pipeline, assisting in the implementation of 3D asset rendering, shader management, and visual optimizations to ensure smooth performance during heavy combat waves.",
+          "type": "bullet"
+        },
+        {
+          "description": "",
+          "type": "paragraph"
+        },
+        {
+          "description": "Members:",
+          "type": "paragraph"
+        },
+        {
+          "description": "Tech Lead/Engine Programmer - Zhi Cheng: https://www.linkedin.com/in/zeng-zhicheng/",
+          "type": "bullet"
+        },
+        {
+          "description": "Project Manager/Physics Programmer - Jerell: https://www.linkedin.com/in/jerelltan/",
+          "type": "bullet"
+        },
+        {
+          "description": "Game Designer - Daniel: https://www.linkedin.com/in/daniel-phua-jm/",
+          "type": "bullet"
+        },
+        {
+          "description": "Level Designer/Art Assets - Danish: <LinkedIn Link>",
+          "type": "bullet"
+        },
+        {
+          "description": "Level Designer - Lance: https://www.linkedin.com/in/lancemlim/",
+          "type": "bullet"
+        },
+        {
+          "description": "AI States Programmer - Yong Hui",
+          "type": "bullet"
+        },
+        {
+          "description": "Game Programmer - Phillip",
+          "type": "bullet"
+        },
+        {
+          "description": "Game Programmer - Sen Chuan",
+          "type": "bullet"
+        },
+        {
+          "description": "Graphics Programmer - Zhun Hang: https://www.linkedin.com/in/zhunhang-tay/",
+          "type": "bullet"
+        },
+        {
+          "description": "Graphics Programmer - Sheen",
+          "type": "bullet"
+        },
+        {
+          "description": "Audio Programmer/Audio Asset - Darren: https://www.linkedin.com/in/darren-lua/",
+          "type": "bullet"
+        },
+        {
+          "description": "Audio Programmer/Audio Asset - Clement: https://www.linkedin.com/in/clementlsw/",
+          "type": "bullet"
+        },
+        {
+          "description": "ImGui/3D Modeler - Jia He: https://www.linkedin.com/in/jia-he-wong/",
+          "type": "bullet"
+        },
+        {
+          "description": "Data Serializer - Faliq: Me",
           "type": "bullet"
         }
       ],

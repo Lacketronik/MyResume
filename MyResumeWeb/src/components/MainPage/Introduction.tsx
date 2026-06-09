@@ -64,11 +64,6 @@ function Introduction({ information, files }: { information: InformationProps; f
             />
           </div>
 
-          <div className="text-center">
-            <h1 className="mb-2">{information.name}</h1>
-            <h2 className="h4 text-secondary mb-4">{information.role.join(" | ")}</h2>
-          </div>
-
           <div className="d-flex flex-wrap gap-2 justify-content-center mb-4">
             {information.linkedin && (
               <Button variant="outline-primary" href={information.linkedin} target="_blank" rel="noopener noreferrer" size="sm">
@@ -85,6 +80,18 @@ function Introduction({ information, files }: { information: InformationProps; f
                 download={information.name.replace(/\s+/g, '_') + '_Resume.pdf'}
               >
                 Download Resume
+              </Button>
+            )}
+            {resumeFileID && (
+              <Button
+                as="a"
+                variant="outline-light"
+                size="sm"
+                href={resumeFileSrc}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Resume
               </Button>
             )}
           </div>

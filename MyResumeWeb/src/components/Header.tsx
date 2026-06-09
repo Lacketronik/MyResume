@@ -14,7 +14,10 @@ const Header: React.FC<HeaderProps> = ({ portfolio, activeTab, setActiveTab }) =
   return (
     <header className="header">
       <div className="header-container">
-        <h1>{portfolio.information.name}</h1>
+        <div className="header-branding">
+          <h1>{portfolio.information.name}</h1>
+          <span className="header-role">{portfolio.information.role.join(" | ")}</span>
+        </div>
         <nav className="header-tabs">
           {tabs.map((tab) => (
             <button 
