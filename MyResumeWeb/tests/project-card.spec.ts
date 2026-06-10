@@ -36,8 +36,15 @@ test.describe('MyResume Project Accordion', () => {
     console.log('YouTube iframe loaded successfully.');
 
     await page.getByRole('button', { name: 'nat-myresume-egress nat-' }).click();
-    await page.getByRole('button', { name: 'Next image', exact: true }).click();
-    await page.getByRole('button', { name: 'Next image', exact: true }).press('Escape');
+    const dialog = page.getByRole('dialog');
+    await expect(dialog).toBeVisible();
+    const nextButton = dialog
+      .locator('button[aria-label*="Next"], button[title*="Next"]')
+      .first();
+    await expect(nextButton).toBeVisible({ timeout: 10000 });
+    await nextButton.click();
+    await page.keyboard.press('Escape');
+    await expect(dialog).not.toBeVisible();
     console.log('Image carousel tested.');
     
     const [download1] = await Promise.all([
