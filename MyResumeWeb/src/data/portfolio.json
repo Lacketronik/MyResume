@@ -260,7 +260,7 @@
           "type": "bullet"
         },
         {
-          "description": "Yiming: <LinkedIn Link>",
+          "description": "Yiming: https://www.linkedin.com/in/guo-yiming/",
           "type": "bullet"
         },
         {
@@ -302,7 +302,7 @@
           "type": "bullet"
         },
         {
-          "description": "Game Programmer - Jingsong: <LinkedIn Link>",
+          "description": "Game Programmer - Jingsong: https://www.linkedin.com/in/jingsong-0102-wei/",
           "type": "bullet"
         },
         {
@@ -725,7 +725,7 @@
           "type": "paragraph"
         },
         {
-          "description": "Built entirely from scratch as ad advanced student project, Bots TD runs on a custom C++ 3D game engine. This project showcases the complexities of rendering 3D environments, real-time lighting, 3D physics and data management without the aid of commercial engines.",
+          "description": "Built entirely from scratch as an advanced student project, Bots TD runs on a custom C++ 3D game engine. This project showcases the complexities of rendering 3D environments, real-time lighting, 3D physics and data management without the aid of commercial engines.",
           "type": "paragraph"
         },
         {
@@ -805,7 +805,11 @@
           "type": "bullet"
         }
       ],
-      "videoLinks": [],
+      "videoLinks": [
+        "/videos/project/B9DD3336-6CD8-4AF3-934D-A8F0FF87FE59_bots-td-upgrade.webm",
+        "/videos/project/21C4175A-F4E5-4529-B0D4-88CFC06D686E_bots-td-gameplay.webm",
+        "https://youtu.be/FrulheEtL6o"
+      ],
       "imageBlobIDs": [],
       "projectFileIDs": [],
       "technologies": [
@@ -1281,6 +1285,14 @@
       "uploadedAt": "2026-05-31T00:23:38.18"
     },
     {
+      "id": "21c4175a-f4e5-4529-b0d4-88cfc06d686e",
+      "name": "bots-td-gameplay",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-06-10T18:55:28.943"
+    },
+    {
       "id": "54925885-b310-4d0c-bb4e-89b454be06c2",
       "name": "hopwards-short-teaser",
       "path": "/videos/project",
@@ -1327,6 +1339,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "b9dd3336-6cd8-4af3-934d-a8f0ff87fe59",
+      "name": "bots-td-upgrade",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-06-10T18:55:28.943"
     },
     {
       "id": "de49a729-5fb7-4655-a46c-aab3131f318b",
