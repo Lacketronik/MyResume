@@ -38,12 +38,6 @@ test.describe('MyResume Project Accordion', () => {
       name: 'nat-myresume-egress nat-'
     }).click();
 
-    const dialog = page.getByRole('dialog');
-    await expect(dialog).toBeVisible({ timeout: 10000 });
-    await page.mouse.click(5, 5);
-    await expect(dialog).not.toBeVisible({ timeout: 10000 });
-    console.log('Image gallery tested.');
-
     const [download1] = await Promise.all([
         page.waitForEvent('download'),
         page.getByRole('button', { name: 'Download MyResume_Phase01_Doc' }).click()
@@ -58,5 +52,11 @@ test.describe('MyResume Project Accordion', () => {
     await expect(newPage).toHaveURL(/github\.com/);
     await newPage.close();
     console.log('GitHub link opened in new tab.');
+
+    const dialog = page.getByRole('dialog');
+    await expect(dialog).toBeVisible({ timeout: 10000 });
+    await page.mouse.click(5, 5);
+    await expect(dialog).not.toBeVisible({ timeout: 10000 });
+    console.log('Image gallery tested.');
   });
 });
