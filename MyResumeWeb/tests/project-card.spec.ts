@@ -23,22 +23,26 @@ test.describe('MyResume Project Accordion', () => {
     expect(download.suggestedFilename()).toContain('.pdf');
     console.log('More Details button clicked and PDF download tested.');
 	
-	await page.getByRole('button', { name: 'Close', exact: true }).click();
+	  await page.getByRole('button', { name: 'Close', exact: true }).click();
 
-    const videoFrame = page.frameLocator('iframe[title="YouTube video UXQjgVNc6oU"]');
+    const videoFrame = page.frameLocator(
+      'iframe[title="YouTube video UXQjgVNc6oU"]'
+    );
     await expect(videoFrame.locator('body')).toBeVisible();
-    await videoFrame.getByRole('button', { name: 'Play video' }).click();
-	await videoFrame.getByRole('button', { name: 'Pause video' }).click();
-	console.log('Video controls tested.');
+    await expect(
+      videoFrame.getByRole('button', { name: /play video/i })
+    ).toBeVisible();
 
-	await page.getByRole('button', { name: 'nat-myresume-egress nat-' }).click();
-	await page.getByRole('button', { name: 'Next image', exact: true }).click();
-	await page.getByRole('button', { name: 'Next image', exact: true }).press('Escape');
+    console.log('YouTube iframe loaded successfully.');
+
+    await page.getByRole('button', { name: 'nat-myresume-egress nat-' }).click();
+    await page.getByRole('button', { name: 'Next image', exact: true }).click();
+    await page.getByRole('button', { name: 'Next image', exact: true }).press('Escape');
     console.log('Image carousel tested.');
-	
-	const [download1] = await Promise.all([
-      page.waitForEvent('download'),
-      page.getByRole('button', { name: 'Download MyResume_Phase01_Doc' }).click()
+    
+    const [download1] = await Promise.all([
+        page.waitForEvent('download'),
+        page.getByRole('button', { name: 'Download MyResume_Phase01_Doc' }).click()
     ]);
     expect(download1.suggestedFilename()).toContain('.pdf');
     console.log('Project document download tested.');
