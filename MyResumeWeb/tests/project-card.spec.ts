@@ -32,20 +32,15 @@ test.describe('MyResume Project Accordion', () => {
     await expect(
       videoFrame.getByRole('button', { name: /play video/i })
     ).toBeVisible();
-
     console.log('YouTube iframe loaded successfully.');
 
     await page.getByRole('button', { name: 'nat-myresume-egress nat-' }).click();
     const dialog = page.getByRole('dialog');
     await expect(dialog).toBeVisible();
-    const nextButton = dialog
-      .locator('button[aria-label*="Next"], button[title*="Next"]')
-      .first();
-    await expect(nextButton).toBeVisible({ timeout: 10000 });
-    await nextButton.click();
+    await expect(dialog.locator('img').first()).toBeVisible();
     await page.keyboard.press('Escape');
     await expect(dialog).not.toBeVisible();
-    console.log('Image carousel tested.');
+    console.log('Image gallery tested.');
     
     const [download1] = await Promise.all([
         page.waitForEvent('download'),
