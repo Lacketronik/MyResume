@@ -35,7 +35,7 @@ test.describe('MyResume Project Accordion', () => {
   });
 
   test ('Test Project Card Functionality - Document Download', async ({ page }) => {
-    const downloadBtn = page.getByRole('link', { name: 'Download MyResume_Phase01_Doc' });
+    const downloadBtn = page.getByRole('button', { name: 'Download MyResume_Phase01_Doc' });
     await expect(downloadBtn).toBeVisible();
     const downloadPromise = page.waitForEvent('download');
     await downloadBtn.click();
