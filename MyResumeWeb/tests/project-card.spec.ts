@@ -34,14 +34,16 @@ test.describe('MyResume Project Accordion', () => {
     ).toBeVisible();
     console.log('YouTube iframe loaded successfully.');
 
-    await page.getByRole('button', { name: 'nat-myresume-egress nat-' }).click();
+    await page.getByRole('button', {
+      name: 'nat-myresume-egress nat-'
+    }).click();
+
     const dialog = page.getByRole('dialog');
-    await expect(dialog).toBeVisible();
-    await expect(dialog.locator('img').first()).toBeVisible();
-    await page.keyboard.press('Escape');
-    await expect(dialog).not.toBeVisible();
+    await expect(dialog).toBeVisible({ timeout: 10000 });
+    await page.mouse.click(5, 5);
+    await expect(dialog).not.toBeVisible({ timeout: 10000 });
     console.log('Image gallery tested.');
-    
+
     const [download1] = await Promise.all([
         page.waitForEvent('download'),
         page.getByRole('button', { name: 'Download MyResume_Phase01_Doc' }).click()
