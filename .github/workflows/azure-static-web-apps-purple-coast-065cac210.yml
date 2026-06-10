@@ -43,7 +43,8 @@ jobs:
         working-directory: ./MyResumeWeb
 
       - name: Start Vite
-        run: npm run dev
+        working-directory: ./MyResumeWeb
+        run: npm run dev &
 
       - name: Run Playwright Tests
         run: npx playwright test
