@@ -2,11 +2,13 @@
   "information": {
     "name": "FALIQ",
     "linkedin": "https://www.linkedin.com/in/m-faliq-b-alhakim/",
+    "github": "https://github.com/Lacketronik",
     "resumeFileID": "69532ed9-0286-43cb-91cb-3fe69d99753c",
     "profileImageID": "3f4a3c07-7986-455c-936b-44b4b0fe75a2",
     "introduction": [
       "Hello! I'm Faliq, and I build for the web. I get genuinely excited about clean architecture and code, and everything that happens from the first line of code to the final deployment.",
       "I'm also really leaning into cloud computing. I enjoy configuring and managing cloud infrastructure to build scalable and reliable solutions.",
+      "As a game developer, I enjoy level designing and custom engine data serialization. I am passionate about crafting immersive, deliberately designed environments that guide the player naturally, backed by a strong technical foundation in building robust data systems and internal developer tools.",
       "Please find my contact details in my LinkedIn profile if you wish to connect. Let's build something together!"
     ],
     "role": [
@@ -76,7 +78,7 @@
   ],
   "projects": [
     {
-      "name": "SingaPourCast - Cloud Architecture Design",
+      "name": "SingaPourCast - Scalable Weather Forecasting Cloud Infrastructure",
       "githubUrl": null,
       "projectDate": "2025-03-01T00:00:00",
       "descriptions": [
@@ -136,7 +138,7 @@
       "demos": []
     },
     {
-      "name": "MyResume",
+      "name": "MyResume - Modern Cloud-native Portfolio",
       "githubUrl": "https://github.com/Lacketronik/MyResume",
       "projectDate": "2026-06-01T00:00:00",
       "descriptions": [
@@ -237,7 +239,7 @@
       "demos": []
     },
     {
-      "name": "Seven11",
+      "name": "Seven11 - 2D Sokoban-style Roguelike Game",
       "githubUrl": "",
       "projectDate": "2022-11-27T00:00:00",
       "descriptions": [
@@ -246,7 +248,7 @@
           "type": "paragraph"
         },
         {
-          "description": "Ian: <LinkedIn Link>",
+          "description": "Ian: https://www.linkedin.com/in/iancrb/",
           "type": "bullet"
         },
         {
@@ -254,7 +256,7 @@
           "type": "bullet"
         },
         {
-          "description": "Shafiq: <LinkedIn Link>",
+          "description": "Shafiq: https://www.linkedin.com/in/shafiq-mirza",
           "type": "bullet"
         },
         {
@@ -283,7 +285,7 @@
       "demos": []
     },
     {
-      "name": "Hopwards",
+      "name": "Hopwards - 2D Isometric Puzzle-Platformer with 3D-style Visuals",
       "githubUrl": "",
       "projectDate": "2023-04-02T00:00:00",
       "descriptions": [
@@ -292,11 +294,11 @@
           "type": "paragraph"
         },
         {
-          "description": "Engine Programmer/Physics - Ian: <LinkedIn Link>",
+          "description": "Engine Programmer/Physics - Ian: https://www.linkedin.com/in/iancrb/",
           "type": "bullet"
         },
         {
-          "description": "Graphics Programmer/Art Asset - Shafiq: <LinkedIn Link>",
+          "description": "Graphics Programmer/Art Asset - Shafiq: https://www.linkedin.com/in/shafiq-mirza",
           "type": "bullet"
         },
         {
@@ -326,7 +328,7 @@
       "demos": []
     },
     {
-      "name": "Driving Sim",
+      "name": "Driving Sim - Android Game Featuring Gyroscope-based Vehicle Control",
       "githubUrl": "",
       "projectDate": "2025-02-25T00:00:00",
       "descriptions": [
@@ -343,7 +345,7 @@
           "type": "bullet"
         },
         {
-          "description": "Shafiq: <LinkedIn Link>",
+          "description": "Shafiq: https://www.linkedin.com/in/shafiq-mirza",
           "type": "bullet"
         },
         {
@@ -380,29 +382,29 @@
       "demos": []
     },
     {
-      "name": "Forged In Flames: Dilemma",
+      "name": "Forged In Flames: Dilemma - 3D Handcrafted Narrative Game",
       "githubUrl": "",
       "projectDate": "2024-06-16T00:00:00",
       "descriptions": [
         {
           "description": "An ordinary day in the town square turns into a living nightmare. An unexpected explosion rips through the city, knocking you unconscious. When you awake, the square is ablaze, and your wife and daughter are missing. As a retired firefighter, you refuse to wait for backup. You must rely on your old instincts to navigate the burning ruins, find your family, and uncover a dark truth, was this a tragic accident, or a deliberate act of arson?",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": " ",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "Developed as a student project, \"Forged In Flames: Dilemma\" serves as a focused application of handcrafted 3D level design best practices. Every corner of this environment has been meticulously structured to guide the player and enhance the narrative tension.",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": " ",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "Key Design Highlights",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "Intuitive Layout: The level architecture uses natural choke points, framing, and distinct landmarks to guide player pathfinding organically without relying on intrusive UI or arrows.",
@@ -418,11 +420,11 @@
         },
         {
           "description": " ",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "CONTROLS:",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "W, A, S, D - Move Protagonist",
@@ -451,29 +453,29 @@
       ]
     },
     {
-      "name": "Forged In Flames: Fate's Trigger",
+      "name": "Forged In Flames: Fate's Trigger - 2D Procedural Dungeon Crawler",
       "githubUrl": "",
       "projectDate": "2024-07-28T00:00:00",
       "descriptions": [
         {
           "description": "You are a firefighter trapped inside a collapsing building filled with Infernal Spawn, demonic monsters born from the flames. Every playthrough features a brand-new, procedurally generated layout, forcing you to rely on your dynamic minimap and navigate a blinding Fog of War. Use your trusty firehose to clear the blazes, defeat powerful bosses to unlock upgraded weaponry and defensive abilities, and stop the horde from pouring into the world!",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": " ",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "\"Forged In Flames -Fate's Trigger\" is a top-down, procedural dungeon crawler developed as a student project.",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": " ",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "Key Design Highlights",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "Dynamic, Varied Enemies: Battle a diverse horde of Infernal Spawns, each featuring distinct behaviors and elemental fire traits. Players must constantly adapt their movement and positioning to counter different enemy attack patterns.",
@@ -489,11 +491,11 @@
         },
         {
           "description": " ",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "CONTROLS:",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "W, A, S, D - Move Firefighter",
@@ -529,11 +531,11 @@
         },
         {
           "description": " ",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "CHEATS (For Testing):",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "M - Toggle Map Size",
@@ -561,11 +563,11 @@
         },
         {
           "description": " ",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "Bugs:",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "Defeating Torch Head Ted when it is near a wall may spawn the collectibiles in the walls.",
@@ -584,13 +586,13 @@
       ]
     },
     {
-      "name": "Smart AI Steering Car",
+      "name": "Smart AI Steering Car - Driving Simulation Implementing Intelligent Car AI",
       "githubUrl": "",
       "projectDate": "2024-07-27T00:00:00",
       "descriptions": [
         {
           "description": "Smart AI Steering Car is a car simulator designed to showcase a vehicle navigating down a street autonomously. Its core features include automatic lane changing, adherence to traffic light signals, and stopping for pedestrian crossings. This is a student project focused on implementing Artificial Intelligence in simulations.",
-          "type": "Paragraph"
+          "type": "paragraph"
         },
         {
           "description": "CONTROLS: There are no controls, this is a simulation",
@@ -629,6 +631,188 @@
       "demos": [
         "https://itch.io/embed-upload/17841669?color=333333"
       ]
+    },
+    {
+      "name": "Iron Dome - 2D Stationary Tower Defense Game",
+      "githubUrl": "",
+      "projectDate": "2024-04-07T00:00:00",
+      "descriptions": [
+        {
+          "description": "Iron Dome is a hybrid of 2D Tower Defense and Bullet Hell that is built entirely from scratch. Players step into the hot seat of a stationary base turret to defend a lone outpost from relentless waves of airborne threats. Survive the brutal, bullet-riddled night assaults, then use the safety of the daytime to repair your base, manage resources, and strategically upgrade your arsenal to withstand the next night’s escalating chaos.",
+          "type": "paragraph"
+        },
+        {
+          "description": "Developed as an advanced student project, Iron Dome was built completely from the ground up using a custom C++ game engine, rather than relying on commercial software like Unity or Unreal.",
+          "type": "paragraph"
+        },
+        {
+          "description": "",
+          "type": "paragraph"
+        },
+        {
+          "description": "Key Engineering Highlights (My Role):",
+          "type": "paragraph"
+        },
+        {
+          "description": "Custom Engine Tooling: Architected the engine's internal developer tools by integrating and configuring the Dear ImGui framework, allowing for real-time debugging, performance monitoring, and live value-tweaking during gameplay.",
+          "type": "bullet"
+        },
+        {
+          "description": "Robust Data Serialization: Implemented a robust data serialization system using yaml-cpp to handle game states, asset loading, and upgrade progression, ensuring seamless data saving/loading and cleaner game architecture.",
+          "type": "bullet"
+        },
+        {
+          "description": "",
+          "type": "paragraph"
+        },
+        {
+          "description": "Members:",
+          "type": "paragraph"
+        },
+        {
+          "description": "Tech Lead/Engine Programmer - Zhi Cheng: https://www.linkedin.com/in/zeng-zhicheng/",
+          "type": "bullet"
+        },
+        {
+          "description": "Project Manager/AI States Programmer - Jerell: https://www.linkedin.com/in/jerelltan/",
+          "type": "bullet"
+        },
+        {
+          "description": "Game Designer - Daniel: https://www.linkedin.com/in/daniel-phua-jm/",
+          "type": "bullet"
+        },
+        {
+          "description": "Level Designer/Art Assets - Danish: <LinkedIn Link>",
+          "type": "bullet"
+        },
+        {
+          "description": "Audio Programmer - Hasif : https://www.linkedin.com/in/abuhasif/",
+          "type": "bullet"
+        },
+        {
+          "description": "Graphics Programmer - Shafiq: https://www.linkedin.com/in/shafiq-mirza",
+          "type": "bullet"
+        },
+        {
+          "description": "Graphics Programmer - Zhun Hang: https://www.linkedin.com/in/zhunhang-tay/",
+          "type": "bullet"
+        },
+        {
+          "description": "ImGui/Data Serializer - Faliq: Me",
+          "type": "bullet"
+        }
+      ],
+      "videoLinks": [
+        "/videos/project/8F9547D5-F0D3-4109-939F-06DFF13FCCCA_iron-dome-gameplay.webm",
+        "/videos/project/C2EF5500-BAA5-40C6-91CB-63E1FE1DDADD_iron-dome-upgrade.webm",
+        "https://youtu.be/HunHNX4fzPk"
+      ],
+      "imageBlobIDs": [],
+      "projectFileIDs": [],
+      "technologies": [
+        "C++",
+        "OpenGL"
+      ],
+      "demos": []
+    },
+    {
+      "name": "Bots TD - 3D First-person Tower Defense Game",
+      "githubUrl": "",
+      "projectDate": "2025-04-07T00:00:00",
+      "descriptions": [
+        {
+          "description": "Bots TD flips the classic tower defense genre on its head by plunging players directly into the action with a first-person 3D perspective. Instead of playing as an commander in the sky, you are a defense architect on the ground, actively sprinting across the map to construct, manage, and upgrade defensive towers. You must think on your feet and utilize the terrain to defend your objective from relentless, escalating waves of AI-driven combat bots.",
+          "type": "paragraph"
+        },
+        {
+          "description": "Built entirely from scratch as ad advanced student project, Bots TD runs on a custom C++ 3D game engine. This project showcases the complexities of rendering 3D environments, real-time lighting, 3D physics and data management without the aid of commercial engines.",
+          "type": "paragraph"
+        },
+        {
+          "description": "Key Engineering Highlights (My Role):",
+          "type": "paragraph"
+        },
+        {
+          "description": "Robust Data Serialization: Architected and implemented the engine's serialization system using yaml-cpp, enabling efficient saving and loading of complex game data, including tower configurations, player states, game prefabs and map layouts.",
+          "type": "bullet"
+        },
+        {
+          "description": "Assistant Graphics Programming: Contributed directly to the engine's rendering pipeline, assisting in the implementation of 3D asset rendering, shader management, and visual optimizations to ensure smooth performance during heavy combat waves.",
+          "type": "bullet"
+        },
+        {
+          "description": "",
+          "type": "paragraph"
+        },
+        {
+          "description": "Members:",
+          "type": "paragraph"
+        },
+        {
+          "description": "Tech Lead/Engine Programmer - Zhi Cheng: https://www.linkedin.com/in/zeng-zhicheng/",
+          "type": "bullet"
+        },
+        {
+          "description": "Project Manager/Physics Programmer - Jerell: https://www.linkedin.com/in/jerelltan/",
+          "type": "bullet"
+        },
+        {
+          "description": "Game Designer - Daniel: https://www.linkedin.com/in/daniel-phua-jm/",
+          "type": "bullet"
+        },
+        {
+          "description": "Level Designer/Art Assets - Danish: <LinkedIn Link>",
+          "type": "bullet"
+        },
+        {
+          "description": "Level Designer - Lance: https://www.linkedin.com/in/lancemlim/",
+          "type": "bullet"
+        },
+        {
+          "description": "AI States Programmer - Yong Hui",
+          "type": "bullet"
+        },
+        {
+          "description": "Game Programmer - Phillip",
+          "type": "bullet"
+        },
+        {
+          "description": "Game Programmer - Sen Chuan",
+          "type": "bullet"
+        },
+        {
+          "description": "Graphics Programmer - Zhun Hang: https://www.linkedin.com/in/zhunhang-tay/",
+          "type": "bullet"
+        },
+        {
+          "description": "Graphics Programmer - Sheen",
+          "type": "bullet"
+        },
+        {
+          "description": "Audio Programmer/Audio Asset - Darren: https://www.linkedin.com/in/darren-lua/",
+          "type": "bullet"
+        },
+        {
+          "description": "Audio Programmer/Audio Asset - Clement: https://www.linkedin.com/in/clementlsw/",
+          "type": "bullet"
+        },
+        {
+          "description": "ImGui/3D Modeler - Jia He: https://www.linkedin.com/in/jia-he-wong/",
+          "type": "bullet"
+        },
+        {
+          "description": "Data Serializer - Faliq: Me",
+          "type": "bullet"
+        }
+      ],
+      "videoLinks": [],
+      "imageBlobIDs": [],
+      "projectFileIDs": [],
+      "technologies": [
+        "C++",
+        "OpenGL"
+      ],
+      "demos": []
     }
   ],
   "files": [
@@ -647,6 +831,14 @@
       "extension": "webm",
       "type": "video/webm",
       "uploadedAt": "2026-06-05T21:24:30.95"
+    },
+    {
+      "id": "8f9547d5-f0d3-4109-939f-06dff13fccca",
+      "name": "iron-dome-gameplay",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-06-09T23:26:16.053"
     },
     {
       "id": "e08095dd-8055-4c22-bfda-075ca4802997",
@@ -959,6 +1151,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "c2ef5500-baa5-40c6-91cb-63e1fe1ddadd",
+      "name": "iron-dome-upgrade",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-06-09T23:26:16.053"
     },
     {
       "id": "0e02f85a-7f6c-4410-a1bb-656532070983",

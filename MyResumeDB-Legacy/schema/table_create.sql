@@ -14,6 +14,7 @@ CREATE TABLE informations (
 	information_id INT IDENTITY(1,1) NOT NULL,
 	information_name VARCHAR(255) NOT NULL,
 	linkedin VARCHAR(255) NULL,
+	github VARCHAR(255) NULL,
 	resume_file_id UNIQUEIDENTIFIER NULL,
 	profile_image_id UNIQUEIDENTIFIER NULL,
 	PRIMARY KEY (information_id),

@@ -9,6 +9,8 @@ import ProjectVideoSection from "../Project/ProjectVideoSection.tsx";
 import ProjectDemoSection from "../Project/ProjectDemoSection.tsx";
 import ProjectDescriptionSection from "../Project/ProjectDescriptionSection.tsx";
 import ProjectAssetsSection from "../Project/ProjectAssetsSection.tsx";
+import FilterBadge from "../Project/ProjectFilterBadge.tsx";
+import { Dropdown } from "react-bootstrap";
 
 function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; files: FileProps[]; imageDetails: ImageProps[] }) {
     const [activePdfProject, setActivePdfProject] = useState<{
@@ -33,7 +35,20 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
         }, {});
     }, [imageDetails]);
 
-    const sortedProjects = [...projects].sort((a, b) => {
+    const [selectedTag, setSelectedTag] = useState<string | null>(null); 
+
+    const allTags = useMemo(() => {
+        const tags = new Set<string>();
+        projects.forEach(p => p.technologies?.forEach(t => tags.add(t)));
+        return Array.from(tags).sort();
+    }, [projects]);
+
+    const filteredProjects = useMemo(() => {
+        if (!selectedTag) return projects;
+        return projects.filter(p => p.technologies?.includes(selectedTag));
+    }, [projects, selectedTag]);
+
+    const sortedProjects = [...filteredProjects].sort((a, b) => {
         const aDate = a.projectDate ? new Date(a.projectDate).valueOf() : 0;
         const bDate = b.projectDate ? new Date(b.projectDate).valueOf() : 0;
         return bDate - aDate;
@@ -99,10 +114,11 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
     };
 
     const renderProjectContent = (proj: ProjectProps) => {
+        const hasAssets = (proj.imageBlobIDs && proj.imageBlobIDs?.length > 0) || (proj.projectFileIDs && proj.projectFileIDs?.length > 0);
         return (
             <Card.Body>
                 {proj.projectFileIDs && proj.projectFileIDs.length > 0 && (
-                    <div className="d-flex justify-content-end mb-3">
+                    <div className="d-flex justify-content-center mb-3">
                         <button
                             type="button"
                             className="btn btn-warning fw-semibold px-3 py-2 shadow-sm"
@@ -120,10 +136,13 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
                 />
 
                 <ProjectDemoSection demos={proj.demos ?? []} />
-
+                
+                
                 <div className="g-3 row">
-                    <ProjectDescriptionSection descriptions={proj.descriptions} githubUrl={proj.githubUrl} />
-
+                    <div className={hasAssets ? "col-lg-7" : "col-12"}>
+                        <ProjectDescriptionSection descriptions={proj.descriptions} githubUrl={proj.githubUrl} />
+                    </div>
+                    
                     <ProjectAssetsSection
                         imageBlobIDs={proj.imageBlobIDs}
                         projectFileIDs={getProjectFileIDs(proj.projectFileIDs ?? [])}
@@ -139,6 +158,43 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
 
     return (
         <>
+            <Dropdown>
+                <Dropdown.Toggle variant="secondary">
+                    {selectedTag ?? "All Tags"}
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className="bg-dark border-secondary" 
+                    style={{ 
+                        maxHeight: '300px',   
+                        overflowY: 'auto'     
+                    }}>
+                    <Dropdown.Item
+                    onClick={() => setSelectedTag(null)}
+                    className="bg-dark"
+                    >
+                    <FilterBadge
+                        label="All"
+                        isActive={selectedTag === null}
+                    />
+                    </Dropdown.Item>
+
+                    <Dropdown.Divider className="border-secondary" />
+
+                    {allTags.map((tag) => (
+                    <Dropdown.Item
+                        key={tag}
+                        onClick={() => setSelectedTag(tag)}
+                        className="bg-dark"
+                    >
+                        <FilterBadge
+                        label={tag}
+                        isActive={selectedTag === tag}
+                        />
+                    </Dropdown.Item>
+                    ))}
+                </Dropdown.Menu>
+            </Dropdown>
+
             <Accordion
                 className="project-section"
                 activeKey={activeProjectKey ?? undefined}

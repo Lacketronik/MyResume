@@ -56,6 +56,13 @@
   }
 }
 
+/* Keep the routed content full width so the main grid can breathe */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: none;
+}
+
 #center {
   display: flex;
   flex-direction: column;
@@ -181,4 +188,119 @@
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+/* Reset margins to ensure full width */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the app container takes the full viewport */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%; /* Force full width */
+}
+
+/* This makes the header/footer span the full viewport width */
+.footer {
+  width: 100%;
+}
+
+.main-page-layout {
+    display: grid;
+    grid-template-columns: minmax(400px, 500px) minmax(0, 1fr);
+    gap: 10px;
+    align-items: start;
+    padding: 40px 30px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Ensure the sidebar doesn't get squashed */
+.profile-sidebar {
+  width: 100%;
+  position: sticky;
+  top: 120px;
+}
+
+.main-content-panel {
+  min-width: 0;
+}
+
+.Introduction {
+  width: 100%;
+}
+
+.intro-card {
+  width: 100%;
+  border-left: 5px solid #0d6efd;
+  border-right: 5px solid #0d6efd;
+}
+
+.intro-avatar-wrap {
+  width: min(100%, 320px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.35);
+  background-color: #111827;
+}
+
+.intro-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tab-content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .main-page-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 28px 16px;
+  }
+
+  .profile-sidebar {
+    position: static;
+  }
+}
+
+.dropdown-menu {
+    /* Match the aesthetic of your cards */
+    width: 250px !important; /* Set a specific, comfortable width */
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #444 !important;
+    background-color: #212529 !important;
+}
+
+/* Ensure the Toggle also has room to breathe */
+.dropdown-toggle {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-btn {
+    width: 180px;
+    height: 35px;      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 576px) {
+    .profile-btn { width: 100%; }
 }

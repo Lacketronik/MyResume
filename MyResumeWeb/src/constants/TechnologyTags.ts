@@ -87,6 +87,11 @@ const TECHNOLOGY_STYLES: Record<string, TechnologyStyle> = {
         borderColor: "rgba(115, 36, 134, 0.42)",
         color: "#fae6ff",
     },
+    opengl: {
+        backgroundColor: "rgba(224, 43, 43, 0.16)",
+        borderColor: "rgba(224, 43, 43, 0.42)",     
+        color: "#ffebee",                            
+    },
     // ---------------------
     default: {
         backgroundColor: "rgba(148, 163, 184, 0.16)",
