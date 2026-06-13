@@ -159,14 +159,15 @@
           "type": "bullet"
         },
         {
-          "description": "Phase 4: Serverless architecture entirely automated and managed with Terraform.",
+          "description": "Phase 4: Serverless architecture deployed with Terraform. The project is then optimised for cost and speed and established CI/CD with automated tests.",
           "type": "bullet"
         }
       ],
       "videoLinks": [
         "https://youtu.be/UXQjgVNc6oU",
         "https://youtu.be/CmrjHdvfDxY",
-        "https://youtu.be/tmgLuaD1T7o"
+        "https://youtu.be/tmgLuaD1T7o",
+        "https://youtu.be/uMEicBK6wqA"
       ],
       "imageBlobIDs": [
         "098C9820-2179-4665-A0EA-711A60DFF97F",
@@ -220,9 +221,26 @@
         "C285BE8A-8251-4315-943F-6B8D551DA64D",
         "DA5C5939-74F3-4856-88C8-C66E5F87F57F",
         "F7C2FEFE-5727-41CB-9535-BEEA4105EE50",
-        "FE50C142-F18B-4B44-9292-5A9F8B711067"
+        "FE50C142-F18B-4B44-9292-5A9F8B711067",
+        "EB888341-0C64-4937-896B-684B4854FDCC",
+        "3E011EDB-BADC-4EEF-A8D4-4668C3720F7C",
+        "6838AC54-2089-4FAD-802E-CAB825D1AADA",
+        "BDFA13F5-5B78-4ED3-A2AF-287A2109BA6C",
+        "36185B58-45CF-48A8-87D5-81B1DA7B987A",
+        "1171B54F-7AE2-4348-B2AC-F29089E6C2DE",
+        "3419C5BA-D172-467D-BF84-D0DF2CB8E6A2",
+        "51961577-3E8E-49B4-B96A-C9E4480C9954",
+        "26E2E349-0B08-4D20-9E83-76200A8B903C",
+        "17531C78-E582-442D-B1DE-424884FFC0D0",
+        "1EE6D18D-2DA8-4290-8974-193EF81F6313",
+        "98CA5A15-4B39-4B40-9A1F-268C8134ABE0",
+        "AAF2655C-2AED-4D8B-A144-E59B0B5C20B7",
+        "2C3B2E65-9EAD-4435-8B4D-4C13F3849CAB",
+        "DE553C32-4F4D-4181-8390-2E637276E973",
+        "D318E0B0-F2C1-490A-9DBB-7B780918595C"
       ],
       "projectFileIDs": [
+        "82DAA7FE-FE89-4783-A1AA-31810D7E5443",
         "B9FC73B3-952E-440A-8A2B-471D33A210E9",
         "F6CE859B-5B81-47FB-BC66-D34B205589C7",
         "46AC5357-66FF-4AE5-84A8-DCB819FA6F67"
@@ -957,6 +975,14 @@
       "uploadedAt": "2026-05-20T20:58:14.14"
     },
     {
+      "id": "1ee6d18d-2da8-4290-8974-193ef81f6313",
+      "name": "workflow-02",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
+    },
+    {
       "id": "ef2924a6-d7c6-4256-98ea-20b6989b9449",
       "name": "rds_database",
       "path": "/images/project",
@@ -989,6 +1015,22 @@
       "uploadedAt": "2026-05-31T00:23:38.18"
     },
     {
+      "id": "98ca5a15-4b39-4b40-9a1f-268c8134abe0",
+      "name": "workflow-03",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
+    },
+    {
+      "id": "bdfa13f5-5b78-4ed3-a2af-287a2109ba6c",
+      "name": "phase04-rg",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
+    },
+    {
       "id": "fd36b223-b351-41bb-9157-29bdaadd267f",
       "name": "hopwards-hidden-bridges",
       "path": "/images/project",
@@ -1011,6 +1053,22 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "de553c32-4f4d-4181-8390-2e637276e973",
+      "name": "playwritght-test-report",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
+    },
+    {
+      "id": "82daa7fe-fe89-4783-a1aa-31810d7e5443",
+      "name": "MyResume_Phase04_Doc",
+      "path": "documents/projects",
+      "extension": "pdf",
+      "type": "application/pdf",
+      "uploadedAt": "2026-06-13T18:59:34.827"
     },
     {
       "id": "e00e177f-43e3-476f-985b-3221fcaecd95",
@@ -1045,6 +1103,14 @@
       "uploadedAt": "2026-05-19T00:00:00"
     },
     {
+      "id": "17531c78-e582-442d-b1de-424884ffc0d0",
+      "name": "workflow-01",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
+    },
+    {
       "id": "04faf0ed-5f75-4fd2-a17b-42fa76759a40",
       "name": "nginx-cloud-init",
       "path": "/images/project",
@@ -1061,12 +1127,28 @@
       "uploadedAt": "2026-05-21T01:01:40.027"
     },
     {
+      "id": "3e011edb-badc-4eef-a8d4-4668c3720f7c",
+      "name": "slow-server-response",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
+    },
+    {
       "id": "b9fc73b3-952e-440a-8a2b-471d33a210e9",
       "name": "MyResume_Phase01_Doc",
       "path": "documents/projects",
       "extension": "pdf",
       "type": "application/pdf",
       "uploadedAt": "2026-05-24T01:27:44.393"
+    },
+    {
+      "id": "2c3b2e65-9ead-4435-8b4d-4c13f3849cab",
+      "name": "workflow-05",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
     },
     {
       "id": "67c0ed62-2b84-4a2a-bef8-4e5ab676155f",
@@ -1181,6 +1263,14 @@
       "uploadedAt": "2026-06-02T20:23:06.8"
     },
     {
+      "id": "eb888341-0c64-4937-896b-684b4854fdcc",
+      "name": "phase04-architecture",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
+    },
+    {
       "id": "35a58930-c7d7-409e-811f-6a9325c8e677",
       "name": "architecture",
       "path": "/images/project",
@@ -1253,12 +1343,28 @@
       "uploadedAt": "2026-05-24T01:27:40.12"
     },
     {
+      "id": "26e2e349-0b08-4d20-9e83-76200a8b903c",
+      "name": "playwright-test-ui",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
+    },
+    {
       "id": "6b0310b8-4520-44b8-b665-7b321f8f77c5",
       "name": "batchserver_security_group",
       "path": "/images/project",
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-20T20:58:14.14"
+    },
+    {
+      "id": "d318e0b0-f2c1-490a-9dbb-7b780918595c",
+      "name": "deployment",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
     },
     {
       "id": "6f578277-e394-4ab5-9879-7c98ddc4ffba",
@@ -1275,6 +1381,14 @@
       "extension": "pdf",
       "type": "application/pdf",
       "uploadedAt": "2026-06-05T23:57:08.543"
+    },
+    {
+      "id": "36185b58-45cf-48a8-87d5-81b1da7b987a",
+      "name": "swa-github",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
     },
     {
       "id": "8da1a00e-e669-400f-a563-8278b40ee070",
@@ -1445,12 +1559,28 @@
       "uploadedAt": "2026-05-24T01:27:40.12"
     },
     {
+      "id": "51961577-3e8e-49b4-b96a-c9e4480c9954",
+      "name": "sample-playwright-test-code",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
+    },
+    {
       "id": "589a09a8-df4c-4a0b-9f1a-ca86fc5aac22",
       "name": "myresume-api-service-running",
       "path": "/images/project",
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "6838ac54-2089-4fad-802e-cab825d1aada",
+      "name": "terraform-main",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
     },
     {
       "id": "696e55e3-427f-43a7-b1c5-cb9d849f3190",
@@ -1483,6 +1613,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "3419c5ba-d172-467d-bf84-d0df2cb8e6a2",
+      "name": "playwright-codegen",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
     },
     {
       "id": "156a4bbd-ca0a-4585-ae39-d2bb4498617b",
@@ -1565,6 +1703,14 @@
       "uploadedAt": "2026-06-05T21:24:30.947"
     },
     {
+      "id": "aaf2655c-2aed-4d8b-a144-e59b0b5c20b7",
+      "name": "workflow-04",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
+    },
+    {
       "id": "301e6c13-bbdf-4309-a81d-ebb7cf65f44c",
       "name": "hopwards-checkpoint",
       "path": "/images/project",
@@ -1579,6 +1725,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "1171b54f-7ae2-4348-b2ac-f29089e6c2de",
+      "name": "github-action",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-13T18:59:32.317"
     },
     {
       "id": "35af5afe-7558-44b0-bf06-f4ad2a40337f",
@@ -2026,6 +2180,86 @@
       "imageID": "b9bc2592-35eb-41af-a105-52e90f310f21",
       "projectID": 5,
       "imageSet": "NONE"
+    },
+    {
+      "imageID": "eb888341-0c64-4937-896b-684b4854fdcc",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "3e011edb-badc-4eef-a8d4-4668c3720f7c",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "6838ac54-2089-4fad-802e-cab825d1aada",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "bdfa13f5-5b78-4ed3-a2af-287a2109ba6c",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "36185b58-45cf-48a8-87d5-81b1da7b987a",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "1171b54f-7ae2-4348-b2ac-f29089e6c2de",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "3419c5ba-d172-467d-bf84-d0df2cb8e6a2",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "51961577-3e8e-49b4-b96a-c9e4480c9954",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "26e2e349-0b08-4d20-9e83-76200a8b903c",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "17531c78-e582-442d-b1de-424884ffc0d0",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "1ee6d18d-2da8-4290-8974-193ef81f6313",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "98ca5a15-4b39-4b40-9a1f-268c8134abe0",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "aaf2655c-2aed-4d8b-a144-e59b0b5c20b7",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "2c3b2e65-9ead-4435-8b4d-4c13f3849cab",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "de553c32-4f4d-4181-8390-2e637276e973",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "d318e0b0-f2c1-490a-9dbb-7b780918595c",
+      "projectID": 2,
+      "imageSet": "Phase 4: Optimisation & Automation"
     }
   ]
 }

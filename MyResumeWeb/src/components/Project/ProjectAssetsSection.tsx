@@ -25,7 +25,15 @@ function ProjectAssetsSection({
         <Col xs={12} lg={5} className="d-flex">
             <Card className="flex-fill">
                 <Card.Body>
-                    <Card.Title as="h5">Images & Documents</Card.Title>
+                    <Card.Title as="h5">
+                        {imageBlobIDs?.length && projectFileIDs?.length
+                            ? "Images & Documents"
+                            : imageBlobIDs?.length && !projectFileIDs?.length
+                            ? "Images"
+                            : !imageBlobIDs?.length && projectFileIDs?.length
+                            ? "Documents"
+                            : null}
+                    </Card.Title>
 
                     <div className="d-flex flex-column gap-4 mb-3">
                         {Object.entries(
