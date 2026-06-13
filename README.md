@@ -59,6 +59,11 @@ The core objective of this project is to move beyond "ClickOps" and embrace auto
 
 ---
 
+## Project Playlist
+* **Playlist:** [https://www.youtube.com/playlist?list=PLnVOBIP2EzKACb19qYpuVlLwz6iGDsFmW]
+
+---
+
 ## Author
 
 **Faliq**  
