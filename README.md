@@ -1,6 +1,6 @@
 # MyResume: A Cloud-Native Evolution Journey
 
-**MyResume** is an applied learning project designed to showcase the architectural evolution of a modern application—transitioning from traditional virtualized infrastructure to a fully optimised, serverless cloud ecosystem.
+**MyResume** is an applied learning project designed to showcase the architectural evolution of a modern application-transitioning from traditional virtualized infrastructure to a fully optimised, serverless cloud ecosystem.
 
 This repository tracks the transformation of a personal portfolio site across four distinct architectural phases, demonstrating expertise in cloud migration, Infrastructure as Code (IaC), and modern DevOps practices.
 
@@ -21,7 +21,7 @@ The core objective of this project is to move beyond "ClickOps" and embrace auto
 
 ## Technical Stack
 
-* **Frontend:** React, TypeScript
+* **Frontend:** React, TypeScript, Azure Static Web App (Phases 3-4)
 * **Backend:** C# .NET Core WebAPI (Phases 1-2), Azure Functions (Phase 3)
 * **Database:** SQL (Phases 1-2), Azure Cosmos DB NoSQL (Phase 3)
 * **Infrastructure:** Terraform
