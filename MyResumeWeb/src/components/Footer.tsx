@@ -12,12 +12,7 @@ const Footer: React.FC<FooterProps> = ({ portfolio }) => {
     <footer className="footer">
       <div className="footer-content">
         <p className="mb-2">
-            © {new Date().getFullYear()} {portfolio.information?.name}. 
-            <span className="ms-2">
-                <a href="https://github.com/your-repo/blob/main/LICENSE" className="text-muted text-decoration-none">
-                    Licensed under MIT
-                </a>
-            </span>
+            © {new Date().getFullYear()} {portfolio.information?.name}
         </p>
         
         <div className="d-flex justify-content-center gap-4 mb-3">
