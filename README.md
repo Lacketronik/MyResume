@@ -14,7 +14,7 @@ The core objective of this project is to move beyond "ClickOps" and embrace auto
 | :--- | :--- | :--- |
 | **Phase 1** | Traditional Virtualized Stack | Manual Configuration ("ClickOps") |
 | **Phase 2** | Virtualized Stack | Infrastructure as Code (Terraform) |
-| **Phase 3** | Serverless Architecture |
+| **Phase 3** | Serverless Architecture | Manual Setup |
 | **Phase 4** | Serverless Architecture | Fully Automated (Terraform + CI/CD) |
 
 ---
@@ -63,6 +63,6 @@ The core objective of this project is to move beyond "ClickOps" and embrace auto
 
 **Faliq**  
 
-* **LinkedIn:** [www.linkedin.com/in/m-faliq-b-alhakim/]
+* **LinkedIn:** [linkedin.com/in/m-faliq-b-alhakim/]
 * **Portfolio:** [faliqdoescoding.com]
 * **GitHub:** [github.com/Lacketronik]
