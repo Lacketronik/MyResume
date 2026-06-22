@@ -68,6 +68,6 @@ The core objective of this project is to move beyond "ClickOps" and embrace auto
 
 **Faliq**  
 
-* **LinkedIn:** [linkedin.com/in/m-faliq-b-alhakim/]
-* **Portfolio:** [faliqdoescoding.com]
-* **GitHub:** [github.com/Lacketronik]
+* **LinkedIn:** [https://linkedin.com/in/m-faliq-b-alhakim/]
+* **Portfolio:** [https://faliqdoescoding.com]
+* **GitHub:** [https://github.com/Lacketronik]
