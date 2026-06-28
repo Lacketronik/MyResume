@@ -132,7 +132,7 @@ function ProjectVideoSection({ videos }: ProjectVideoSectionProps) {
                             <div style={{ width: "100%" }}>
                                 {buildYouTubeEmbedUrl(videos[0]) ? (
                                     <iframe
-                                        title="YouTube video"
+                                        title={`YouTube video ${getYouTubeVideoId(videos[0])}`}
                                         src={buildYouTubeEmbedUrl(videos[0]) ?? undefined}
                                         width="100%"
                                         height="360"
