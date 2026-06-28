@@ -92,6 +92,26 @@ const TECHNOLOGY_STYLES: Record<string, TechnologyStyle> = {
         borderColor: "rgba(224, 43, 43, 0.42)",     
         color: "#ffebee",                            
     },
+    powershell: {
+        backgroundColor: "rgba(1, 36, 86, 0.35)",   
+        borderColor: "rgba(0, 120, 215, 0.5)",      
+        color: "#e1f5fe",                          
+    },
+    github: {
+        backgroundColor: "rgba(240, 246, 252, 0.1)", 
+        borderColor: "rgba(240, 246, 252, 0.35)",   
+        color: "#f0f6fc",                           
+    },
+    gitlab: {
+        backgroundColor: "rgba(252, 109, 38, 0.15)", 
+        borderColor: "rgba(252, 109, 38, 0.42)",    
+        color: "#fff3e0",                           
+    },
+    "ci/cd": {
+        backgroundColor: "rgba(0, 230, 118, 0.14)",  
+        borderColor: "rgba(0, 230, 118, 0.4)",     
+        color: "#e8f5e9",                            
+    },
     // ---------------------
     default: {
         backgroundColor: "rgba(148, 163, 184, 0.16)",

@@ -55,7 +55,7 @@ function Introduction({ information, files }: { information: InformationProps; f
   return (
     <div className="Introduction">
       <Card className="shadow-sm bg-dark text-light intro-card">
-        <Card.Body className="p-4 p-xl-5">
+        <Card.Body className="p-4 p-xl-3">
           <div className="intro-avatar-wrap mb-4 mx-auto">
             <img
               src={profileImageSrc ?? fallbackProfileImage}
@@ -104,7 +104,7 @@ function Introduction({ information, files }: { information: InformationProps; f
           </div>
 
           {information.introduction.map((paragraph, index) => (
-            <Card.Text className="text-secondary small lh-base mb-2 text-start" key={index}>
+            <Card.Text className="text-secondary lh-base mb-2 text-start" style={{ fontSize: '0.825rem' }} key={index}>
               {paragraph}
             </Card.Text>
           ))}

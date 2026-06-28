@@ -6,10 +6,10 @@
     "resumeFileID": "69532ed9-0286-43cb-91cb-3fe69d99753c",
     "profileImageID": "3f4a3c07-7986-455c-936b-44b4b0fe75a2",
     "introduction": [
-      "Hello! I'm Faliq, and I build for the web. I get genuinely excited about clean architecture and code, and everything that happens from the first line of code to the final deployment.",
+      "Hello! I'm Faliq, and I build for the web, and I get genuinely excited about clean architecture and code.",
       "I'm also really leaning into cloud computing. I enjoy configuring and managing cloud infrastructure to build scalable and reliable solutions.",
-      "As a game developer, I enjoy level designing and custom engine data serialization. I am passionate about crafting immersive, deliberately designed environments that guide the player naturally, backed by a strong technical foundation in building robust data systems and internal developer tools.",
-      "Please find my contact details in my LinkedIn profile if you wish to connect. Let's build something together!"
+      "As a game developer, I design levels and serialise data. I'm passionate about crafting immersive environments that guide the player naturally.",
+      "My contact details are available on LinkedIn. Let's build something together!"
     ],
     "role": [
       "Full-Stack Developer",
@@ -835,6 +835,69 @@
         "OpenGL"
       ],
       "demos": []
+    },
+    {
+      "name": "Azure-Status - Daily Infrastructure Reporting",
+      "githubUrl": "https://github.com/Lacketronik/Azure-Status",
+      "projectDate": "2026-06-20T00:00:00",
+      "descriptions": [
+        {
+          "description": "An automated, serverless DevOps pipeline designed to track live Azure resource consumption, verify web availability and generate visual health reports delivered straight to Slack.",
+          "type": "paragraph"
+        },
+        {
+          "description": "By combining cloud infrastructure APIs, headless browser automation, and multi-platform CI/CD scheduling, this project eliminates the visibility gap in daily infrastructure monitoring.",
+          "type": "paragraph"
+        },
+        {
+          "description": "Real-Time Cost Auditing: Programmatically queries the Azure Consumption REST API using the Azure CLI to aggregate and round Pay-As-You-Go (PAYG) costs, mapping expenditures directly to resource names.",
+          "type": "bullet"
+        },
+        {
+          "description": "Automated Visual Health Checks: Leverages a headless Chromium browser (shot-scraper and playwright) to snap high-resolution, full-page screenshots of live web applications.",
+          "type": "bullet"
+        },
+        {
+          "description": "Dynamic Image Watermarking: Processes raw screenshots via Python's Pillow library, dynamically applying a semi-transparent canvas overlay that burns the target URL and an accurate Singapore Standard Time (SGT) timestamp onto the image asset.",
+          "type": "bullet"
+        },
+        {
+          "description": "Cross-Platform Pipeline Synchronization: Solves GitHub Actions' native cron scheduling reliability issues by utilizing GitLab CI/CD pipeline schedules as a highly reliable external remote trigger, utilising GitHub's REST API (repository_dispatch) to securely awaken the target runner.",
+          "type": "bullet"
+        },
+        {
+          "description": "Rich Block Kit Slack Alerts: Structures complex multi-dimensional data arrays into clean, scannable Slack markdown and image layout objects, routing the automated report via secure incoming webhooks immediately following a validated git branch push.",
+          "type": "bullet"
+        }
+      ],
+      "videoLinks": [
+        "https://youtu.be/VKW6Tg94_V4"
+      ],
+      "imageBlobIDs": [
+        "1FDCE016-03D3-4BFE-BD3B-E38E61F8DC13",
+        "B4E4DEBF-B24D-4696-BB8A-E34498176F4F",
+        "992C5321-C235-4801-A4CF-A380B365FA20",
+        "52684295-55DD-4FA2-BFE7-A1547430A23A",
+        "331C9FAD-C669-4D92-B6E2-0DF03EDBF67E",
+        "194377CB-CF21-44B3-8F2B-11988D458685",
+        "4679981E-C37C-4EA3-9ED9-D26D849A60E5",
+        "74AA9FC5-CED6-490A-AC2E-2DB5A53706E7",
+        "E01CC8B0-A07F-4DF9-941F-9F29AA0138C8",
+        "FDAB9C8D-E971-412C-A415-AEEB13E6F78C",
+        "B5CCDE7D-F0C1-49E6-9C28-8E3D72B2D1E8",
+        "BEB89E5E-DFFE-45E0-BB2B-7ECCB3CAC5AD"
+      ],
+      "projectFileIDs": [
+        "69DA7B2D-549C-4220-832F-481D710DB0CD"
+      ],
+      "technologies": [
+        "Azure",
+        "PowerShell",
+        "GitHub",
+        "GitLab",
+        "CI/CD"
+      ],
+      "demos": []
     }
   ],
   "files": [
@@ -911,12 +974,28 @@
       "uploadedAt": "2026-06-02T20:23:06.8"
     },
     {
+      "id": "331c9fad-c669-4d92-b6e2-0df03edbf67e",
+      "name": "construct-slack-block",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-23T19:24:04.84"
+    },
+    {
       "id": "4ee0e5a3-988e-41a1-bee4-0f85fed4c57b",
       "name": "vnet-myresume-web-prod",
       "path": "/images/project",
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "194377cb-cf21-44b3-8f2b-11988d458685",
+      "name": "payload",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-23T19:24:04.84"
     },
     {
       "id": "38d3704e-8094-4a99-b83b-1261de36a337",
@@ -1055,6 +1134,14 @@
       "uploadedAt": "2026-05-20T20:58:14.14"
     },
     {
+      "id": "74aa9fc5-ced6-490a-ac2e-2db5a53706e7",
+      "name": "github-action-last-steps",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-23T19:24:04.84"
+    },
+    {
       "id": "de553c32-4f4d-4181-8390-2e637276e973",
       "name": "playwritght-test-report",
       "path": "/images/project",
@@ -1141,6 +1228,14 @@
       "extension": "pdf",
       "type": "application/pdf",
       "uploadedAt": "2026-05-24T01:27:44.393"
+    },
+    {
+      "id": "69da7b2d-549c-4220-832f-481d710db0cd",
+      "name": "Azure-Status_Doc",
+      "path": "documents/projects",
+      "extension": "pdf",
+      "type": "application/pdf",
+      "uploadedAt": "2026-06-23T19:24:09.037"
     },
     {
       "id": "2c3b2e65-9ead-4435-8b4d-4c13f3849cab",
@@ -1375,6 +1470,14 @@
       "uploadedAt": "2026-05-20T20:58:14.14"
     },
     {
+      "id": "beb89e5e-dffe-45e0-bb2b-7eccb3cac5ad",
+      "name": "slack-report-02",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-23T19:24:04.84"
+    },
+    {
       "id": "c9bae589-ccf8-4ba0-a954-7ef8cc96344b",
       "name": "DrivingSim_Doc",
       "path": "documents/projects",
@@ -1431,6 +1534,14 @@
       "uploadedAt": "2026-06-05T23:08:12.673"
     },
     {
+      "id": "b5ccde7d-f0c1-49e6-9c28-8e3d72b2d1e8",
+      "name": "slack-report-01",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-23T19:24:04.84"
+    },
+    {
       "id": "7d6a2bd5-3931-49f8-bc6e-95a4d755f7bd",
       "name": "drivingsim-04",
       "path": "/images/project",
@@ -1445,6 +1556,30 @@
       "extension": "pdf",
       "type": "application/pdf",
       "uploadedAt": "2026-06-07T19:36:31.54"
+    },
+    {
+      "id": "e01cc8b0-a07f-4df9-941f-9f29aa0138c8",
+      "name": "gitlab-cron-script",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-23T19:24:04.84"
+    },
+    {
+      "id": "52684295-55dd-4fa2-bfe7-a1547430a23a",
+      "name": "construct-tables",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-23T19:24:04.84"
+    },
+    {
+      "id": "992c5321-c235-4801-a4cf-a380b365fa20",
+      "name": "screenshot-live-webapp",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-23T19:24:04.84"
     },
     {
       "id": "86f25559-ba72-4e80-8893-a8aab5f87e69",
@@ -1477,6 +1612,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "fdab9c8d-e971-412c-a415-aeeb13e6f78c",
+      "name": "gitlab-pipeline-job",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-23T19:24:04.84"
     },
     {
       "id": "72699900-0d58-4f76-93d3-b05c6ec0311b",
@@ -1623,6 +1766,14 @@
       "uploadedAt": "2026-06-13T18:59:32.317"
     },
     {
+      "id": "4679981e-c37c-4ea3-9ed9-d26d849a60e5",
+      "name": "github-action",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-23T19:24:04.84"
+    },
+    {
       "id": "156a4bbd-ca0a-4585-ae39-d2bb4498617b",
       "name": "Singapourcast",
       "path": "/images/project",
@@ -1693,6 +1844,22 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "b4e4debf-b24d-4696-bb8a-e34498176f4f",
+      "name": "get-swa-info",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-23T19:24:04.84"
+    },
+    {
+      "id": "1fdce016-03d3-4bfe-bd3b-e38e61f8dc13",
+      "name": "get-billing-info",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-06-23T19:24:04.84"
     },
     {
       "id": "a56638cc-ba27-4ee8-ad5b-e4bbf2b0a8a4",
@@ -2260,6 +2427,66 @@
       "imageID": "d318e0b0-f2c1-490a-9dbb-7b780918595c",
       "projectID": 2,
       "imageSet": "Phase 4: Optimisation & Automation"
+    },
+    {
+      "imageID": "1fdce016-03d3-4bfe-bd3b-e38e61f8dc13",
+      "projectID": 11,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "b4e4debf-b24d-4696-bb8a-e34498176f4f",
+      "projectID": 11,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "992c5321-c235-4801-a4cf-a380b365fa20",
+      "projectID": 11,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "52684295-55dd-4fa2-bfe7-a1547430a23a",
+      "projectID": 11,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "331c9fad-c669-4d92-b6e2-0df03edbf67e",
+      "projectID": 11,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "194377cb-cf21-44b3-8f2b-11988d458685",
+      "projectID": 11,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "4679981e-c37c-4ea3-9ed9-d26d849a60e5",
+      "projectID": 11,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "74aa9fc5-ced6-490a-ac2e-2db5a53706e7",
+      "projectID": 11,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "e01cc8b0-a07f-4df9-941f-9f29aa0138c8",
+      "projectID": 11,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "fdab9c8d-e971-412c-a415-aeeb13e6f78c",
+      "projectID": 11,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "b5ccde7d-f0c1-49e6-9c28-8e3d72b2d1e8",
+      "projectID": 11,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "beb89e5e-dffe-45e0-bb2b-7eccb3cac5ad",
+      "projectID": 11,
+      "imageSet": "NONE"
     }
   ]
 }
