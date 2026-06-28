@@ -7,7 +7,7 @@ test.describe('MyResume Project Accordion', () => {
     console.log('Navigated to localhost.');
     
     console.log('Starting project card test setup.');
-    const projectBtn = page.getByRole('button', { name: 'MyResume - Modern Cloud-native Portfolio' });
+    const projectBtn = page.getByRole('button', { name: 'Azure Status - Daily Infrastructure Reporting' });
     await projectBtn.click();
     await expect(page.getByText('Description').first()).toBeVisible();
     console.log('Project button clicked & main accordion expanded.');
