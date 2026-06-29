@@ -15,17 +15,17 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem 20px;
-  box-sizing: border-box; /* CRITICAL: Includes padding in the width calculation */
+  box-sizing: border-box;
 }
 
 .header-tabs {
   display: flex;
-  gap: 10px; /* Reduced gap for smaller screens */
-  border-top: 1px solid var(--border);
-  padding-top: 1rem;
+  gap: 10px;
+  /* border-top: 1px solid var(--border); */
+  /* padding-top: 0.25rem; */
   width: 100%;
   justify-content: center;
-  flex-wrap: wrap; /* Allows tabs to wrap to a second line instead of scrolling */
+  flex-wrap: wrap;
 }
 
 .header-tabs button {
@@ -45,13 +45,12 @@
 
 .header-branding {
   display: flex;
-  flex-direction: column; /* This stacks Name and Role */
-  align-items: center;    /* Centers them horizontally */
-  gap: 5px;               /* Adds a little space between Name and Role */
-  margin-bottom: 1rem;    /* Adds space before the tabs start */
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 1rem;
 }
 
-/* Optional: Make the role look distinct from the name */
 .header-role {
   color: #888;
   font-size: 1rem;

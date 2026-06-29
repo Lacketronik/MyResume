@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import type { ProjectProps } from "../../types/ProjectProps";
 import type { FileProps } from "../../types/FileProps";
 import type { ImageProps } from "../../types/ImageProps";
-import { Accordion, Card } from "react-bootstrap";
+import { Accordion, Button, Card } from "react-bootstrap";
 import ProjectPdfDetailsModal, { type ProjectPdfDetailsModalFile } from "../Project/ProjectPdfDetailsModal.tsx";
 import ProjectAccordionHeader from "../Project/ProjectAccordionHeader.tsx";
 import ProjectVideoSection from "../Project/ProjectVideoSection.tsx";
@@ -116,17 +116,17 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
     const renderProjectContent = (proj: ProjectProps) => {
         const hasAssets = (proj.imageBlobIDs && proj.imageBlobIDs?.length > 0) || (proj.projectFileIDs && proj.projectFileIDs?.length > 0);
         return (
-            <Card.Body>
+            <Card.Body style={{ background: "rgba(17, 24, 39, 0.45)" }}>
                 {proj.projectFileIDs && proj.projectFileIDs.length > 0 && (
                     <div className="d-flex justify-content-center mb-3">
-                        <button
-                            type="button"
-                            className="btn btn-warning fw-semibold px-3 py-2 shadow-sm"
+                        <Button
+                            className="profile-btn"
                             style={{ minWidth: "150px" }}
+                            size="sm"
                             onClick={() => openPdfDetails(proj.name, proj.projectFileIDs ?? [])}
                         >
                             More Details
-                        </button>
+                        </Button>
                     </div>
                 )}
 
@@ -205,8 +205,8 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
                 {sortedProjects.map((proj) => (
                     <Card
                         key={proj.name}
-                        className="mx-auto mb-4 shadow-sm"
-                        style={{ width: '90%', borderLeft: '5px solid #FFA500' }}
+                        className="mx-auto mb-4"
+                        style={{ width: '90%', border: 'none', borderRadius: '0.75rem', overflow: 'hidden' }}
                     >
                         <Card.Header className="p-0 border-0 bg-transparent">
                             <ProjectAccordionHeader

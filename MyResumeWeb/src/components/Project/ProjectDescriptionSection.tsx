@@ -35,9 +35,11 @@ function ProjectDescriptionSection({ descriptions, githubUrl }: ProjectDescripti
 
     return (
         // <Col xs={12} lg={7} className="d-flex">
-            <Card className="flex-fill h-100">
-                <Card.Body>
-                    <Card.Title as="h5">Description</Card.Title>
+            <Card className="flex-fill h-100" style={{ border: 'none' }}>
+                <Card.Body style={{ background: "rgba(17, 24, 39, 0.45)" }}>
+                    <Card.Title as="h5" className="mb-3 d-inline-block pb-1" style={{ borderBottom: "3px solid var(--accent)" }}>
+                        Description
+                    </Card.Title>
                     <div className="text-start text-muted small">
                         {descriptions.map((descriptionItem, index) => {
                             if (descriptionItem.type === "bullet") {
@@ -58,7 +60,7 @@ function ProjectDescriptionSection({ descriptions, githubUrl }: ProjectDescripti
 
                     {githubUrl && (
                         <div className="mt-3">
-                            <Button variant="outline-secondary" href={githubUrl} target="_blank" rel="noopener noreferrer">
+                            <Button className="profile-btn" size="sm" href={githubUrl} target="_blank" rel="noopener noreferrer">
                                 View on GitHub
                             </Button>
                         </div>
