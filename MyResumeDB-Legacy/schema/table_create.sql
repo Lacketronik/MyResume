@@ -30,6 +30,14 @@ CREATE TABLE introductions (
 	FOREIGN KEY (information_id) REFERENCES informations (information_id)
 )
 
+CREATE TABLE emails (
+	email_id INT IDENTITY(1,1) NOT NULL,
+	information_id INT NOT NULL,
+	email_address VARCHAR(255) NOT NULL UNIQUE,
+	PRIMARY KEY (email_id),
+	FOREIGN KEY (information_id) REFERENCES informations (information_id)
+)
+
 CREATE TABLE roles (
 	role_id INT IDENTITY(1,1) NOT NULL,
 	information_id INT NOT NULL,

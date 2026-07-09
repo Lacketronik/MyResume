@@ -11,6 +11,8 @@ const createEmptyPortfolio = (): PortfolioProps => ({
   information: {
     name: "",
     linkedin: "",
+    github: "",
+    email: [],
     introduction: [],
     role: [],
   },

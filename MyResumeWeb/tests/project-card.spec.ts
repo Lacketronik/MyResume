@@ -9,7 +9,7 @@ test.describe('MyResume Project Accordion', () => {
     console.log('Starting project card test setup.');
     const projectBtn = page.getByRole('button', { name: 'Azure-Status - Daily Infrastructure Reporting' });
     await projectBtn.click();
-    await expect(page.getByText('Description').first()).toBeVisible();
+    await expect(page.getByText('Description').nth(1)).toBeVisible();
     console.log('Project button clicked & main accordion expanded.');
   });
 

@@ -1,15 +1,17 @@
+import "../styles/MainPage.css";
 import Introduction from "../components/MainPage/Introduction";
 import Experience from "../components/MainPage/Experience";
 import Education from "../components/MainPage/Education";
 import Certification from "../components/MainPage/Certification";
+import Contact from "../components/MainPage/Contact";
 import Project from "../components/MainPage/Project";
-import PersistentAlert from "../components/MainPage/Banner";
+// import PersistentAlert from "../components/MainPage/Banner";
 import type { PortfolioProps } from "../types/PortfolioProps";
 
 function MainPage({ portfolio, activeTab }: { portfolio: PortfolioProps, activeTab: string }) {
   return (
     <div className="MainPage">
-      <PersistentAlert />
+      {/* <PersistentAlert /> */}
       <div className="main-page-layout">
         <aside className="profile-sidebar">
           <Introduction information={portfolio.information} files={portfolio.files} />
@@ -21,6 +23,7 @@ function MainPage({ portfolio, activeTab }: { portfolio: PortfolioProps, activeT
             {activeTab === "experience" && <Experience experiences={portfolio.experiences} />}
             {activeTab === "education" && <Education educations={portfolio.educations} />}
             {activeTab === "certification" && <Certification certs={portfolio.certifications} />}
+            {activeTab === "contact" && <Contact information={portfolio.information} />}
           </div>
         </section>
       </div>

@@ -112,6 +112,21 @@ const TECHNOLOGY_STYLES: Record<string, TechnologyStyle> = {
         borderColor: "rgba(0, 230, 118, 0.4)",     
         color: "#e8f5e9",                            
     },
+    slack: {
+        backgroundColor: "rgba(74, 21, 75, 0.22)",  
+        borderColor: "rgba(224, 30, 90, 0.45)",    
+        color: "#fbe4ec",                       
+    },
+    pipedream: {
+        backgroundColor: "rgba(0, 163, 255, 0.15)", 
+        borderColor: "rgba(0, 163, 255, 0.42)",   
+        color: "#e1f5fe",                            
+    },
+    notion: {
+        backgroundColor: "rgba(255, 255, 255, 0.08)",
+        borderColor: "rgba(255, 255, 255, 0.35)",  
+        color: "#ffffff",                          
+    },
     // ---------------------
     default: {
         backgroundColor: "rgba(148, 163, 184, 0.16)",

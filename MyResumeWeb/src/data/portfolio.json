@@ -5,11 +5,14 @@
     "github": "https://github.com/Lacketronik",
     "resumeFileID": "69532ed9-0286-43cb-91cb-3fe69d99753c",
     "profileImageID": "3f4a3c07-7986-455c-936b-44b4b0fe75a2",
+    "email": [
+      "contact@faliqdoescoding.com"
+    ],
     "introduction": [
       "Hello! I'm Faliq, and I build for the web, and I get genuinely excited about clean architecture and code.",
       "I'm also really leaning into cloud computing. I enjoy configuring and managing cloud infrastructure to build scalable and reliable solutions.",
       "As a game developer, I design levels and serialise data. I'm passionate about crafting immersive environments that guide the player naturally.",
-      "My contact details are available on LinkedIn. Let's build something together!"
+      "My contact details are available in the Contact tab. Let's build something together!"
     ],
     "role": [
       "Full-Stack Developer",
@@ -49,6 +52,17 @@
         "Resolved technical tickets to maintain high client satisfaction rate through efficient debugging in .NET and SQL",
         "Developed and deployed feature changes that aligns with client’s requests and improving application performance against demanding traffic",
         "Strengthened application security by resolving critical vulnerabilities identified in VAPT assessments, hardening application to ensure full compliance with industry data protection standards"
+      ]
+    },
+    {
+      "company": "Singapore Armed Forces (SAF)",
+      "position": "Maintenance Specialist (3rd Sergeant)",
+      "startDate": "2018-12-01T00:00:00",
+      "endDate": "2020-08-01T00:00:00",
+      "responsibilities": [
+        "Performed preventive maintenance for heavy vehicles to ensure ~100% operational readiness at all times",
+        "Selected for and completed the Specialist Course, promoted to 3rd Sergeant. Responsible for leading small teams and manage repair workflows, always ensuring strict adherence to safety and standard operating procedures (SOPs)",
+        "Diagnosed complex automotive failures and implemented effective fixes following systematic problem-solving skills"
       ]
     }
   ],
@@ -895,7 +909,37 @@
         "PowerShell",
         "GitHub",
         "GitLab",
-        "CI/CD"
+        "CI/CD",
+        "Slack"
+      ],
+      "demos": []
+    },
+    {
+      "name": "Digital Garden - Thoughts Feed",
+      "githubUrl": "",
+      "projectDate": "2026-07-05T00:00:00",
+      "descriptions": [
+        {
+          "description": "An automated content pipeline that transforms casual Slack entries into a structured, public-facing digital garden. This project utilises a serverless architecture to handle media processing, cross-service synchronization and automated data archiving to ensure a seamless flow from raw thought to web-ready content.",
+          "type": "paragraph"
+        }
+      ],
+      "videoLinks": [
+        "/videos/project/831DC578-9DD0-464C-B1AE-1435549C8310_garden-image.webm",
+        "/videos/project/E774AFCB-8F91-4486-A565-9BFE6B053E04_garden-text-only.webm"
+      ],
+      "imageBlobIDs": [
+        "FE985D76-3DB2-4562-8343-77C8D20DBC97",
+        "9ED246EA-CBB8-4B32-AA7F-202D2865D112",
+        "1274C618-DDE3-444A-866D-C821230AB200",
+        "696D24D2-321D-4831-AF45-3DA36FC5F7DF",
+        "11D8C22C-3741-4746-A776-6F41F4855AFF"
+      ],
+      "projectFileIDs": [],
+      "technologies": [
+        "Slack",
+        "Pipedream",
+        "Notion"
       ],
       "demos": []
     }
@@ -1014,6 +1058,14 @@
       "uploadedAt": "2026-06-05T23:08:12.673"
     },
     {
+      "id": "831dc578-9dd0-464c-b1ae-1435549c8310",
+      "name": "garden-image",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-07-09T23:56:02.553"
+    },
+    {
       "id": "0a1cb2cb-d502-4c3a-8e4a-1463ada551cc",
       "name": "portfolio-controller",
       "path": "/images/project",
@@ -1060,6 +1112,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-06-13T18:59:32.317"
+    },
+    {
+      "id": "9ed246ea-cbb8-4b32-aa7f-202d2865d112",
+      "name": "slack-notion-pipedream-workflow",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-07-09T23:56:02.553"
     },
     {
       "id": "ef2924a6-d7c6-4256-98ea-20b6989b9449",
@@ -1180,6 +1240,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-31T00:23:38.18"
+    },
+    {
+      "id": "696d24d2-321d-4831-af45-3da36fc5f7df",
+      "name": "notion-active-db",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-07-09T23:56:02.553"
     },
     {
       "id": "69532ed9-0286-43cb-91cb-3fe69d99753c",
@@ -1398,6 +1466,14 @@
       "uploadedAt": "2026-05-31T00:23:38.18"
     },
     {
+      "id": "11d8c22c-3741-4746-a776-6f41f4855aff",
+      "name": "notion-archive-db",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-07-09T23:56:02.553"
+    },
+    {
       "id": "0fd78896-e78c-4f37-afc3-6fe3f49a4567",
       "name": "nginx-conf-file",
       "path": "/images/project",
@@ -1444,6 +1520,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-06-13T18:59:32.317"
+    },
+    {
+      "id": "fe985d76-3db2-4562-8343-77c8d20dbc97",
+      "name": "send-slack-message",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-07-09T23:56:02.553"
     },
     {
       "id": "6b0310b8-4520-44b8-b665-7b321f8f77c5",
@@ -1548,6 +1632,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-06-05T23:57:08.537"
+    },
+    {
+      "id": "e774afcb-8f91-4486-a565-9bfe6b053e04",
+      "name": "garden-text-only",
+      "path": "/videos/project",
+      "extension": "webm",
+      "type": "video/webm",
+      "uploadedAt": "2026-07-09T23:56:02.553"
     },
     {
       "id": "77bad90b-b732-4eca-a371-9d685756fd22",
@@ -1700,6 +1792,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-24T01:27:40.12"
+    },
+    {
+      "id": "1274c618-dde3-444a-866d-c821230ab200",
+      "name": "archive-build-json-workflow",
+      "path": "/images/project",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-07-09T23:56:02.553"
     },
     {
       "id": "51961577-3e8e-49b4-b96a-c9e4480c9954",
@@ -2486,6 +2586,31 @@
     {
       "imageID": "beb89e5e-dffe-45e0-bb2b-7eccb3cac5ad",
       "projectID": 11,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "fe985d76-3db2-4562-8343-77c8d20dbc97",
+      "projectID": 12,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "9ed246ea-cbb8-4b32-aa7f-202d2865d112",
+      "projectID": 12,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "1274c618-dde3-444a-866d-c821230ab200",
+      "projectID": 12,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "696d24d2-321d-4831-af45-3da36fc5f7df",
+      "projectID": 12,
+      "imageSet": "NONE"
+    },
+    {
+      "imageID": "11d8c22c-3741-4746-a776-6f41f4855aff",
+      "projectID": 12,
       "imageSet": "NONE"
     }
   ]

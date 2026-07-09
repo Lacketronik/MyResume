@@ -9,7 +9,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ portfolio, activeTab, setActiveTab }) => {
-  const tabs = ["projects", "experience", "education", "certification"];
+  const tabs = ["projects", "experience", "education", "certification", "contact"];
 
   return (
     <header className="header">

@@ -1,3 +1,4 @@
+import "../../styles/Project.css";
 import { useMemo, useState } from "react";
 import type { ProjectProps } from "../../types/ProjectProps";
 import type { FileProps } from "../../types/FileProps";
@@ -158,7 +159,7 @@ function Project({ projects, files, imageDetails }: { projects: ProjectProps[]; 
 
     return (
         <>
-            <Dropdown>
+            <Dropdown style={{width: '250px', marginRight: 'auto', marginLeft: 'auto'}}>
                 <Dropdown.Toggle variant="secondary">
                     {selectedTag ?? "All Tags"}
                 </Dropdown.Toggle>

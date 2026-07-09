@@ -29,4 +29,27 @@ test.describe('Navigation Tabs', () => {
     await expect(page.getByText('Azure').first()).toBeVisible();
     console.log('Projects tab tested successfully.');
   });
+
+  test('Test Contact Tab', async ({ page }) => {
+    await page.getByRole('button', { name: 'Contact' }).click();
+    await expect(page.getByText('Email').first()).toBeVisible();
+
+    const [linkedInPage] = await Promise.all([
+      page.waitForEvent('popup'),
+      page.getByRole('button', { name: 'LinkedIn Profile' }).click()
+    ]);
+    await expect(linkedInPage).toHaveURL(/linkedin\.com/);
+    await linkedInPage.close();
+    console.log('LinkedIn link verified.');
+    console.log('Contact tab tested successfully.');
+
+    const [gitHubPage] = await Promise.all([
+      page.waitForEvent('popup'),
+      page.getByRole('button', { name: 'GitHub Profile' }).click()
+    ]);
+    await expect(gitHubPage).toHaveURL(/github\.com/);
+    await gitHubPage.close();
+    console.log('GitHub link verified.');
+  });
+  
 });
