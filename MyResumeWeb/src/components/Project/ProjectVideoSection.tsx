@@ -53,9 +53,11 @@ function ProjectVideoSection({ videos }: ProjectVideoSectionProps) {
     return (
         <Row className="g-3 mb-3">
             <Col xs={12}>
-                <Card className="shadow-sm">
-                    <Card.Body className="p-3">
-                        <Card.Title as="h5" className="mb-3">Video</Card.Title>
+                <Card style ={{ border: "none" }}>
+                    <Card.Body className="p-3" style={{ background: "rgba(17, 24, 39, 0.45)" }}>
+                        <Card.Title as="h5" className="mb-3 d-inline-block pb-1" style={{ borderBottom: "3px solid var(--accent)" }}>
+                            Video
+                        </Card.Title>
                         {videos.length > 1 ? (
                             <div className="row g-3">
                                 {videos.map((link, videoIndex) => {
@@ -132,7 +134,7 @@ function ProjectVideoSection({ videos }: ProjectVideoSectionProps) {
                             <div style={{ width: "100%" }}>
                                 {buildYouTubeEmbedUrl(videos[0]) ? (
                                     <iframe
-                                        title="YouTube video"
+                                        title={`YouTube video ${getYouTubeVideoId(videos[0])}`}
                                         src={buildYouTubeEmbedUrl(videos[0]) ?? undefined}
                                         width="100%"
                                         height="360"

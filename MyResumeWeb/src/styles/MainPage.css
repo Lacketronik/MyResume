@@ -1,0 +1,38 @@
+.main-page-layout {
+  display: grid;
+  grid-template-columns: minmax(400px, 500px) minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 15px 30px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #1a1a1a;
+}
+
+.profile-sidebar {
+  width: 100%;
+  position: sticky;
+  top: 210px;
+}
+
+.main-content-panel {
+  min-width: 0;
+}
+
+.tab-content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .main-page-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 28px 16px;
+  }
+
+  .profile-sidebar {
+    position: static;
+  }
+}

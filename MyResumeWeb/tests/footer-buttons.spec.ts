@@ -9,7 +9,7 @@ test.describe('Footer Navigation', () => {
   test('Test Footer Links', async ({ page }) => {
   const footerLinks = page.getByRole('contentinfo').getByRole('link');
 
-  const firstLink = footerLinks.nth(1);
+  const firstLink = footerLinks.nth(0);
   const isFirstNewTab = await firstLink.getAttribute('target') === '_blank';
 
   if (isFirstNewTab) {
@@ -23,7 +23,7 @@ test.describe('Footer Navigation', () => {
   }
   console.log('First footer link verified.');
 
-  const secondLink = footerLinks.nth(2);
+  const secondLink = footerLinks.nth(1);
   const isSecondNewTab = await secondLink.getAttribute('target') === '_blank';
 
   if (isSecondNewTab) {

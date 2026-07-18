@@ -23,9 +23,9 @@ function ProjectAssetsSection({
     }
     return (
         <Col xs={12} lg={5} className="d-flex">
-            <Card className="flex-fill">
-                <Card.Body>
-                    <Card.Title as="h5">
+            <Card className="flex-fill" style= {{ border: "none" }}>
+                <Card.Body style={{ background: "rgba(17, 24, 39, 0.45)" }}>
+                    <Card.Title as="h5" className="mb-3 d-inline-block pb-1" style={{ borderBottom: "3px solid var(--accent)" }}>
                         {imageBlobIDs?.length && projectFileIDs?.length
                             ? "Images & Documents"
                             : imageBlobIDs?.length && !projectFileIDs?.length
@@ -79,7 +79,7 @@ function ProjectAssetsSection({
                                     <Button
                                         key={id}
                                         as="a"
-                                        variant="primary"
+                                        className="profile-btn"
                                         size="sm"
                                         href={fileSrc || undefined}
                                         download={meta ? `${meta}.pdf` : undefined}

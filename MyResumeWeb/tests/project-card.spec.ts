@@ -7,9 +7,9 @@ test.describe('MyResume Project Accordion', () => {
     console.log('Navigated to localhost.');
     
     console.log('Starting project card test setup.');
-    const projectBtn = page.getByRole('button', { name: 'MyResume - Modern Cloud-native Portfolio' });
+    const projectBtn = page.getByRole('button', { name: 'Azure-Status - Daily Infrastructure Reporting' });
     await projectBtn.click();
-    await expect(page.getByText('Description').first()).toBeVisible();
+    await expect(page.getByText('Description').nth(1)).toBeVisible();
     console.log('Project button clicked & main accordion expanded.');
   });
 
@@ -28,14 +28,14 @@ test.describe('MyResume Project Accordion', () => {
   });
 
   test('Test Project Card Functionality - YouTube Iframe', async ({ page }) => {
-    const videoFrame = page.frameLocator('iframe[title="YouTube video UXQjgVNc6oU"]');
+    const videoFrame = page.frameLocator('iframe[title="YouTube video VKW6Tg94_V4"]');
     await expect(videoFrame.locator('body')).toBeVisible();
     await expect(videoFrame.getByRole('button', { name: /play video/i })).toBeVisible();
     console.log('YouTube iframe loaded successfully.');
   });
 
   test ('Test Project Card Functionality - Document Download', async ({ page }) => {
-    const downloadBtn = page.getByRole('button', { name: 'Download MyResume_Phase01_Doc' });
+    const downloadBtn = page.getByRole('button', { name: 'Download Azure-Status_Doc' });
     await expect(downloadBtn).toBeVisible();
     const downloadPromise = page.waitForEvent('download');
     await downloadBtn.click();
@@ -56,7 +56,7 @@ test.describe('MyResume Project Accordion', () => {
 
   test('Test Project Card Functionality - Image Gallery', async ({ page }) => {
     await page.getByRole('button', {
-      name: 'nat-myresume-egress nat-'
+      name: 'get-billing-info'
     }).click();
     const dialog = page.getByRole('dialog');
     await expect(dialog).toBeVisible({ timeout: 10000 });

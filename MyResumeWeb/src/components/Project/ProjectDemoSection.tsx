@@ -24,10 +24,14 @@ function ProjectDemoSection({ demos, isActive = true }: ProjectDemoSectionProps)
     return (
         <Row className="g-3 mb-3 justify-content-center">
             <Col xs={12}>
-                <Card className="shadow-sm">
-                    <Card.Body className="p-0">
+                <Card style={{ border: "none" }}>
+                    <Card.Body className="p-0" style={{ background: "rgba(17, 24, 39, 0.45)" }}>
                         <div className="p-3 pb-0">
-                            <Card.Title as="h5" className="mb-0">Demo <br></br> Click into game to play, Press 'ESC' and click 'Close Demo' to end.</Card.Title>
+                            <Card.Title as="h5" className="mb-1 d-inline-block pb-1" style={{ borderBottom: "3px solid var(--accent)"}}>
+                                Demo
+                            </Card.Title>
+                            <br />
+                            <span className="text-muted small ms-2">Click into game to play, Press 'ESC' and click 'Close Demo' to end</span>
                         </div>
                         
                         <div className="row g-0 p-3 justify-content-center">

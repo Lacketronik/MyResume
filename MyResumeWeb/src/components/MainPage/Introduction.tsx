@@ -1,3 +1,4 @@
+import "../../styles/Introduction.css";
 import type { InformationProps } from "../../types/InformationProps";
 import type { FileProps } from "../../types/FileProps";
 import { useMemo } from "react";
@@ -51,12 +52,12 @@ function Introduction({ information, files }: { information: InformationProps; f
         return undefined;
       })()
     : undefined;
-  
+
   return (
     <div className="Introduction">
-      <Card className="shadow-sm bg-dark text-light intro-card">
-        <Card.Body className="p-4 p-xl-5">
-          <div className="intro-avatar-wrap mb-4 mx-auto">
+      <Card style={{ border: "none", borderRadius:"0.75rem", overflow:'hidden' }}>
+        <Card.Body className="p-4 p-xl-3" style={{ background: "rgba(17, 24, 39, 0.45)" }}>
+          <div className="intro-avatar-wrap mb-3 mx-auto">
             <img
               src={profileImageSrc ?? fallbackProfileImage}
               alt={information.name}
@@ -64,22 +65,29 @@ function Introduction({ information, files }: { information: InformationProps; f
             />
           </div>
 
-          <div className="d-flex flex-wrap gap-2 justify-content-center mb-4">
-            {information.linkedin && (
-              <Button className="profile-btn" variant="outline-primary" href={information.linkedin} target="_blank" rel="noopener noreferrer" size="sm">
+          <div className="intro-bio">
+            {information.introduction.map((paragraph, index) => (
+              <Card.Text className="intro-bio-text text-muted" key={index}>
+                {paragraph}
+              </Card.Text>
+            ))}
+          </div>
+
+          <div className="d-flex flex-wrap gap-2 justify-content-center mb-1">
+            {/* {information.linkedin && (
+              <Button className="profile-btn" href={information.linkedin} target="_blank" rel="noopener noreferrer" size="sm">
                 LinkedIn Profile
               </Button>
             )}
             {information.github && (
-              <Button className="profile-btn" variant="outline-secondary" href={information.github} target="_blank" rel="noopener noreferrer" size="sm">
+              <Button className="profile-btn" href={information.github} target="_blank" rel="noopener noreferrer" size="sm">
                 GitHub Profile
               </Button>
-            )}
+            )} */}
             {resumeFileID && (
               <Button
                 className="profile-btn"
                 as="a"
-                variant="outline-success"
                 size="sm"
                 href={resumeFileSrc}
                 disabled={!resumeFileSrc}
@@ -92,7 +100,6 @@ function Introduction({ information, files }: { information: InformationProps; f
               <Button
                 className="profile-btn"
                 as="a"
-                variant="outline-light"
                 size="sm"
                 href={resumeFileSrc}
                 target="_blank"
@@ -102,12 +109,6 @@ function Introduction({ information, files }: { information: InformationProps; f
               </Button>
             )}
           </div>
-
-          {information.introduction.map((paragraph, index) => (
-            <Card.Text className="text-secondary small lh-base mb-2 text-start" key={index}>
-              {paragraph}
-            </Card.Text>
-          ))}
         </Card.Body>
       </Card>
 
