@@ -38,25 +38,25 @@ jobs:
         run: npm ci
         working-directory: ./MyResumeWeb
 
-      #- name: Install Playwright Browsers
-      #  run: npx playwright install --with-deps
-      #  working-directory: ./MyResumeWeb
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+        working-directory: ./MyResumeWeb
 
-      #- name: Start Vite
-      #  working-directory: ./MyResumeWeb
-      #  run: npm run dev &
+      - name: Start Vite
+        working-directory: ./MyResumeWeb
+        run: npm run dev &
 
-      #- name: Run Playwright Tests
-      #  run: npx playwright test
-      #  working-directory: ./MyResumeWeb
+      - name: Run Playwright Tests
+        run: npx playwright test
+        working-directory: ./MyResumeWeb
 
-      #- name: Upload Playwright Report
-      #  if: always()
-      #  uses: actions/upload-artifact@v4
-      #  with:
-      #    name: playwright-report
-      #    path: MyResumeWeb/playwright-report
-      #    retention-days: 30
+      - name: Upload Playwright Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: MyResumeWeb/playwright-report
+          retention-days: 30
 
       - name: Build Application
         run: npm run build
