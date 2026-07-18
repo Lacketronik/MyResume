@@ -52,7 +52,9 @@ CREATE TABLE experiences (
 	position VARCHAR(255) NOT NULL,
 	start_date DATETIME NOT NULL,
 	end_date DATETIME NULL,
-	PRIMARY KEY (experience_id)
+	icon_file_id UNIQUEIDENTIFIER NULL,
+	PRIMARY KEY (experience_id),
+	FOREIGN KEY (icon_file_id) REFERENCES files (file_id)
 )
 
 CREATE TABLE responsibilities (
@@ -68,7 +70,9 @@ CREATE TABLE educations (
 	institution VARCHAR(255) NOT NULL,
 	degree VARCHAR(255) NOT NULL,
 	graduation_date DATETIME NULL,
-	PRIMARY KEY (education_id)
+	icon_file_id UNIQUEIDENTIFIER NULL,
+	PRIMARY KEY (education_id),
+	FOREIGN KEY (icon_file_id) REFERENCES files (file_id)
 )
 
 CREATE TABLE certifications (

@@ -52,7 +52,7 @@ function ProjectVideoSection({ videos }: ProjectVideoSectionProps) {
 
     return (
         <Row className="g-3 mb-3">
-            <Col xs={12}>
+            <Col xs={12} style={{ textAlign: "center" }}>
                 <Card style ={{ border: "none" }}>
                     <Card.Body className="p-3" style={{ background: "rgba(17, 24, 39, 0.45)" }}>
                         <Card.Title as="h5" className="mb-3 d-inline-block pb-1" style={{ borderBottom: "3px solid var(--accent)" }}>

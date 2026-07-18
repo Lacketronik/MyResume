@@ -35,7 +35,7 @@ function ProjectDescriptionSection({ descriptions, githubUrl }: ProjectDescripti
 
     return (
         // <Col xs={12} lg={7} className="d-flex">
-            <Card className="flex-fill h-100" style={{ border: 'none' }}>
+            <Card className="flex-fill h-100" style={{ border: 'none', textAlign: 'center' }}>
                 <Card.Body style={{ background: "rgba(17, 24, 39, 0.45)" }}>
                     <Card.Title as="h5" className="mb-3 d-inline-block pb-1" style={{ borderBottom: "3px solid var(--accent)" }}>
                         Description

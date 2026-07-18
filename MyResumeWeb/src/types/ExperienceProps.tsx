@@ -4,4 +4,5 @@ export interface ExperienceProps {
     startDate: Date
     endDate?: Date
     responsibilities: string[]
+    iconFilePath: string
 }
