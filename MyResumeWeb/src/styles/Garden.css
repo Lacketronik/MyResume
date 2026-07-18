@@ -19,7 +19,7 @@
   border-radius: 0.75rem;
   border: none;
   background: var(--garden-card-bg);
-  color: var(--text-h);
+  color: var(--garden-text);
   font-weight: 600;
 }
 
@@ -45,7 +45,7 @@
   margin: 1rem 1rem 0.25rem 1rem;
   font-size: clamp(1rem, 3vw, 1.75rem);
   line-height: 1.1;
-  color: var(--text-h);
+  color: var(--garden-text);
   overflow-wrap: break-word;
   word-break: normal;
 }
@@ -53,7 +53,7 @@
 .garden-summary {
   margin: 0 1rem 1rem 1rem;
   max-width: 38rem;
-  color: var(--text);
+  color: var(--garden-text);
   text-align: left;
   overflow-wrap: break-word;
   word-break: normal;
@@ -98,7 +98,7 @@
 
 .garden-placeholder-label {
   margin: 0;
-  color: var(--text-h);
+  color: var(--garden-text);
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -107,14 +107,14 @@
 
 .garden-placeholder-title {
   margin: 0;
-  color: var(--text-h);
+  color: var(--garden-text);
   font-size: 1.4rem;
   line-height: 1.15;
 }
 
 .garden-placeholder-copy {
   margin: 0;
-  color: var(--text-h);
+  color: var(--garden-text);
   line-height: 1.65;
 }
 
@@ -213,7 +213,7 @@
 
 .garden-image-modal-content {
   background: var(--garden-card-bg);
-  color: var(--text-h);
+  color: var(--garden-text);
   border: none;
   height: 75svh;
   display: flex;
@@ -245,7 +245,7 @@
 }
 
 .garden-post-notes {
-  color: var(--text-h);
+  color: var(--garden-text);
   line-height: 1.65;
   white-space: pre-wrap;
   margin: 0;
@@ -262,7 +262,7 @@
 
 .garden-empty--error {
   border-style: solid;
-  color: var(--text-h);
+  color: var(--garden-text);
 }
 
 @media (max-width: 768px) {
