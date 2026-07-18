@@ -29,7 +29,8 @@
         "Developed and optimised autonomous behaviours for NAO robot using Python and Choregraphe, focusing on social robotics applications for concierge and entertainment",
         "Designed and deployed web-based control interfaces using HTML, CSS and JavaScript to allow users to interact with NAO",
         "Delivered live demonstrations to clients to validate requirements and provided immediate technical consultations to address inquiries"
-      ]
+      ],
+      "iconFilePath": "/icons/work/66185C0E-3657-43EE-8FC7-E6D4EEE6CD05_SoftBank-Telecom-Singapore.webp"
     },
     {
       "company": "Accenture",
@@ -41,7 +42,8 @@
         "Managed cloud infrastructure setup on Microsoft Azure, implemented Server Hardening and network isolation protocols to ensure secure environment for sensitive data",
         "Developed & Deployed automation scripts with PowerShell and Azure DevOps Pipelines to streamline deployments and tasks across servers and MS SQL databases",
         "Established monitoring and maintenance using ManageEngine Applications Manager, maintaining 24/7 system stability and high availability"
-      ]
+      ],
+      "iconFilePath": "/icons/work/0C5B299F-E402-45CD-B2A1-99853AAEA578_Accenture.webp"
     },
     {
       "company": "Total eBiz Solutions",
@@ -52,30 +54,34 @@
         "Resolved technical tickets to maintain high client satisfaction rate through efficient debugging in .NET and SQL",
         "Developed and deployed feature changes that aligns with client’s requests and improving application performance against demanding traffic",
         "Strengthened application security by resolving critical vulnerabilities identified in VAPT assessments, hardening application to ensure full compliance with industry data protection standards"
-      ]
+      ],
+      "iconFilePath": "/icons/work/6563DF9F-38BC-4F73-862C-326E9E994EC5_Total-eBiz-Solutions.webp"
     },
     {
       "company": "Singapore Armed Forces (SAF)",
-      "position": "Maintenance Specialist (3rd Sergeant)",
+      "position": "Maintenance Specialist",
       "startDate": "2018-12-01T00:00:00",
       "endDate": "2020-08-01T00:00:00",
       "responsibilities": [
         "Performed preventive maintenance for heavy vehicles to ensure ~100% operational readiness at all times",
         "Selected for and completed the Specialist Course, promoted to 3rd Sergeant. Responsible for leading small teams and manage repair workflows, always ensuring strict adherence to safety and standard operating procedures (SOPs)",
         "Diagnosed complex automotive failures and implemented effective fixes following systematic problem-solving skills"
-      ]
+      ],
+      "iconFilePath": "/icons/work/152C9AEB-BBFF-43D5-90C0-CCE8632E980A_SAF.webp"
     }
   ],
   "educations": [
     {
       "institution": "Temasek Polytechnic",
       "degree": "Diploma in Computer Engineering",
-      "graduationDate": "2018-04-01T00:00:00"
+      "graduationDate": "2018-04-01T00:00:00",
+      "iconFilePath": "/icons/school/5EA47BA5-B0D6-447A-AC83-44C7298CE24E_Temasek-Polytechnic.webp"
     },
     {
       "institution": "Singapore Institute of Technology & Digipen Institute of Technology",
       "degree": "Bachelor's of Science in Computer Science in Interactive Media & Game Development",
-      "graduationDate": "2026-10-01T00:00:00"
+      "graduationDate": "2026-10-01T00:00:00",
+      "iconFilePath": "/icons/school/749601F7-A93F-4269-8479-D72AAB37B9E4_SIT.webp"
     }
   ],
   "certifications": [
@@ -1226,6 +1232,14 @@
       "uploadedAt": "2026-06-08T00:13:04.85"
     },
     {
+      "id": "6563df9f-38bc-4f73-862c-326e9e994ec5",
+      "name": "Total-eBiz-Solutions",
+      "path": "/icons/work",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-07-18T23:24:10.707"
+    },
+    {
       "id": "f5aaeab4-decc-447e-99a0-32ad931bf680",
       "name": "rds_security_group",
       "path": "/images/project",
@@ -1280,6 +1294,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-05-21T01:01:40.027"
+    },
+    {
+      "id": "5ea47ba5-b0d6-447a-ac83-44c7298ce24e",
+      "name": "Temasek-Polytechnic",
+      "path": "/icons/school",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-07-18T23:29:19.83"
     },
     {
       "id": "3e011edb-badc-4eef-a8d4-4668c3720f7c",
@@ -1634,6 +1656,14 @@
       "uploadedAt": "2026-06-05T23:57:08.537"
     },
     {
+      "id": "0c5b299f-e402-45cd-b2a1-99853aaea578",
+      "name": "Accenture",
+      "path": "/icons/work",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-07-18T23:21:44.96"
+    },
+    {
       "id": "e774afcb-8f91-4486-a565-9bfe6b053e04",
       "name": "garden-text-only",
       "path": "/videos/project",
@@ -1850,6 +1880,14 @@
       "uploadedAt": "2026-05-24T01:27:40.12"
     },
     {
+      "id": "152c9aeb-bbff-43d5-90c0-cce8632e980a",
+      "name": "SAF",
+      "path": "/icons/work",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-07-18T23:25:22.5"
+    },
+    {
       "id": "35fb45ad-be73-47ff-806c-d0dd058c9185",
       "name": "myresume-api-service",
       "path": "/images/project",
@@ -1914,6 +1952,14 @@
       "uploadedAt": "2026-05-31T00:23:38.18"
     },
     {
+      "id": "749601f7-a93f-4269-8479-d72aab37b9e4",
+      "name": "SIT",
+      "path": "/icons/school",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-07-18T23:30:04.823"
+    },
+    {
       "id": "62ef9dd1-9bc5-4fc5-8c25-d86742b1c73e",
       "name": "mssql-service-running",
       "path": "/images/project",
@@ -1976,6 +2022,14 @@
       "extension": "webp",
       "type": "image/webp",
       "uploadedAt": "2026-06-13T18:59:32.317"
+    },
+    {
+      "id": "66185c0e-3657-43ee-8fc7-e6d4eee6cd05",
+      "name": "SoftBank-Telecom-Singapore",
+      "path": "/icons/work",
+      "extension": "webp",
+      "type": "image/webp",
+      "uploadedAt": "2026-07-18T23:18:40.963"
     },
     {
       "id": "301e6c13-bbdf-4309-a81d-ebb7cf65f44c",

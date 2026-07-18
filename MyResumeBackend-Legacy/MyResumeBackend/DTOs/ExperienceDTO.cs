@@ -28,5 +28,6 @@ namespace MyResumeBackend.DTOs
                 return list.ToArray();
             }
         }
+        public string iconFilePath { get; set; }
     }
 }

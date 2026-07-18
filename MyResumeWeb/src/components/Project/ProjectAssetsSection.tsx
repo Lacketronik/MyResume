@@ -22,7 +22,7 @@ function ProjectAssetsSection({
         return null;
     }
     return (
-        <Col xs={12} lg={5} className="d-flex">
+        <Col xs={12} lg={5} className="d-flex" style={{ textAlign: "center", justifyContent: "center" }}>
             <Card className="flex-fill" style= {{ border: "none" }}>
                 <Card.Body style={{ background: "rgba(17, 24, 39, 0.45)" }}>
                     <Card.Title as="h5" className="mb-3 d-inline-block pb-1" style={{ borderBottom: "3px solid var(--accent)" }}>
