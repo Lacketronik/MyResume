@@ -1,5 +1,4 @@
 import type { CertificationProps } from "../../types/CertificationProps";
-import { Card } from "react-bootstrap";
 import { formatDate } from "../../helpers/dates";
 import { Button } from "react-bootstrap";
 import "../../styles/Certification.css";
