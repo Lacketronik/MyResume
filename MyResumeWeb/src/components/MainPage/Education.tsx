@@ -1,6 +1,14 @@
 import type { EducationProps } from "../../types/EducationProps";
-import { Card } from "react-bootstrap";
 import { formatDate } from "../../helpers/dates";
+import "../../styles/Education.css";
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
+function EducationIcon({ iconFilePath }: { iconFilePath: string }) {
+    return (
+        <img src={iconFilePath} alt="Education Icon" style={{ width: '100%', height: '100%', borderRadius: '50%' }} />
+    );
+}
 
 function Education({ educations }: { educations: EducationProps[] }) {
     const sorted = [...educations].sort((a, b) => {
@@ -12,22 +20,20 @@ function Education({ educations }: { educations: EducationProps[] }) {
     return (
         <div className="education-section">
             {sorted.map((edu, index) => (
-                <Card style={{ width: '90%', border: 'none', borderRadius: '0.75rem', overflow: 'hidden' }} key={index} className="mx-auto mb-3">
-                    <Card.Body style={{ background: "rgba(17, 24, 39, 0.45)" }}>
-                        <Card.Title style={{ fontSize: '1.25rem', marginBottom: '1.5rem' }}>{edu.degree}</Card.Title>
-                        <Card.Text as="div" className="text-start">
-                            <div className="mb-2">
-                                <strong className="text-primary me-2" style={{ fontSize: '1.25rem' }}>Institution:</strong>
-                                <span className="text-muted" style={{ fontSize: '1.1rem' }}>{edu.institution}</span>
-                            </div>
-
-                            <div className="mb-2">
-                                <strong className="text-primary me-2" style={{ fontSize: '1.25rem' }}>Graduation Date:</strong>
-                                <span className="text-muted" style={{ fontSize: '1.1rem' }}>{formatDate(edu.graduationDate)}</span>
-                            </div>
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
+                <VerticalTimeline key={index} layout="2-columns" lineColor="#ff9900" animate={true}>
+                    <VerticalTimelineElement
+                        className="vertical-timeline-element--education"
+                        contentStyle={{ background: 'rgba(27, 36, 55, 0.725)', borderRadius: '0.75rem', color: '#fff', boxShadow: '0 0 0 0px' }}
+                        contentArrowStyle={{ borderRight: '7px solid  rgba(27, 36, 55, 0.725)' }}
+                        date={formatDate(edu.graduationDate)}
+                        iconStyle={{ background: '#ff990000', color: '#fff', boxShadow: '0 0 0 4px #ff9900' }}
+                        icon={ <EducationIcon iconFilePath={edu.iconFilePath} /> }
+                        position={index % 2 === 0 ? 'left' : 'right'}
+                    >
+                        <h4 className="vertical-timeline-element-title" style={{ marginBottom: '0.5rem' }}>{edu.degree}</h4>
+                        <h5 className="vertical-timeline-element-subtitle text-primary">{edu.institution}</h5>
+                    </VerticalTimelineElement>
+                </VerticalTimeline>
             ))}
         </div>
     );

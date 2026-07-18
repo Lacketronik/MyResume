@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import '../../styles/Garden.css';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 interface GardenEntry {
   name: string;
@@ -58,7 +60,7 @@ export default function DigitalGarden() {
   if (loading) {
     return (
       <div className="garden-shell garden-shell--loading">
-        <div className="garden-loading">Cultivating your garden...</div>
+        <div className="garden-loading">Cultivating the garden...</div>
       </div>
     );
   }
@@ -86,28 +88,32 @@ export default function DigitalGarden() {
           ) : feedItems.length === 0 ? (
             <div className="garden-empty">No posts yet. Check back soon.</div>
           ) : (
-            feedItems.map((item) => (
-              <article key={item.key} className="garden-post" role="article">
-                <div className="garden-post-header">
-                  <time className="garden-post-date" dateTime={item.date}>
-                    {item.formattedDate}
-                  </time>
-                </div>
-
-                <p className="garden-post-notes">{item.notes}</p>
-
-                {item.imageUrl && item.imageUrl !== 'undefined' && (
-                  <button
-                    type="button"
-                    className="garden-post-imageButton"
-                    onClick={() => setActiveImage(item)}
-                    aria-label={`Open full size image for ${item.name}`}
-                  >
-                    <img className="garden-post-image" src={item.imageUrl} alt={item.name} loading="lazy" />
-                  </button>
-                )}
-              </article>
-            ))
+            <VerticalTimeline layout="1-column" lineColor="#ff9900" animate={true}>
+              {feedItems.map((item) => (
+                <VerticalTimelineElement
+                  key={item.key}
+                  className="vertical-timeline-element--garden"
+                  contentStyle={{ background: 'rgba(27, 36, 55, 0.725)', borderRadius: '0.75rem', color: '#fff', boxShadow: '0 0 0 0px' }}
+                  contentArrowStyle={{ borderRight: '7px solid rgba(27, 36, 55, 0.725)' }}
+                  date={item.formattedDate}
+                  iconStyle={{ background: '#ff9900', color: '#fff', boxShadow: '0 0 0 3px #ff9900' }}
+                >
+                  <p className="garden-post-notes" style={{ textAlign: 'left', marginBottom: '0.5rem' }}>
+                    {item.notes}
+                  </p>
+                  {item.imageUrl && item.imageUrl !== 'undefined' && (
+                    <button
+                      type="button"
+                      className="garden-post-imageButton"
+                      onClick={() => setActiveImage(item)}
+                      aria-label={`Open full size image for ${item.name}`}
+                    >
+                      <img className="garden-post-image" src={item.imageUrl} alt={item.name} loading="lazy" />
+                    </button>
+                  )}
+                </VerticalTimelineElement>
+              ))}
+            </VerticalTimeline>
           )}
         </div>
       </div>

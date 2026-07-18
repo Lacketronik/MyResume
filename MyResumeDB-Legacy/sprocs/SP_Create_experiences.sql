@@ -20,7 +20,12 @@ BEGIN
             FROM dbo.responsibilities r 
             WHERE r.experience_id = e.experience_id
             FOR JSON PATH
-        ) AS rawResponsibilities
+        ) AS rawResponsibilities,
+        (
+            SELECT CONCAT(f.file_path, '/', f.file_id, '_', f.file_name, '.', f.file_extension)
+            FROM dbo.files f
+            WHERE f.file_id = e.icon_file_id
+        ) AS iconFilePath
     FROM dbo.experiences e;
 END;
 GO

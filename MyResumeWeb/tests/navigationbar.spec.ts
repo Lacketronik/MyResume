@@ -8,13 +8,13 @@ test.describe('Navigation Tabs', () => {
 
   test('Test Experience Tab', async ({ page }) => {
     await page.getByRole('button', { name: 'Experience' }).click();
-    await expect(page.getByText('Responsibilities').first()).toBeVisible();
+    await expect(page.getByText('Full Stack Developer').first()).toBeVisible();
     console.log('Experience tab tested successfully.');
   });
 
   test('Test Education Tab', async ({ page }) => {
     await page.getByRole('button', { name: 'Education' }).click();
-    await expect(page.getByText('Institution').first()).toBeVisible();
+    await expect(page.getByText('Bachelor').first()).toBeVisible();
     console.log('Education tab tested successfully.');
   });
 

@@ -1,0 +1,23 @@
+.experience-section {
+  height: 100%;
+  min-height: 0;
+  max-height: min(85vh, 41.5em);
+  width: 100%;
+  gap: 1.5rem;
+  overflow-y: scroll;
+}
+
+.experience-section::-webkit-scrollbar {
+  width: 10px;
+}
+
+.experience-section::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.experience-section::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(255, 153, 0, 0.35);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}

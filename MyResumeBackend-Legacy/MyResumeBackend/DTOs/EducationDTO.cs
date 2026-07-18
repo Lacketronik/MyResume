@@ -5,5 +5,6 @@
         public string institution { get; set; }
         public string degree { get; set; }
         public DateTime graduationDate { get; set; }
+        public string iconFilePath { get; set; }
     }
 }

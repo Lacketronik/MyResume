@@ -12,9 +12,13 @@ function Contact({ information }: { information: InformationProps }) {
         {emailAddress && (
           <Card className="contact-card">
             <Card.Body className="contact-card-body">
-              <Card.Subtitle className="contact-card-label">Email</Card.Subtitle>
-              <Card.Text className="contact-card-value text-muted">{emailAddress}</Card.Text>
-              <Button className="profile-btn" as="a" href={`mailto:${emailAddress}`} size="sm">
+              <Card.Subtitle className="contact-card-label" style={{ textAlign: "center" }}>
+                Email
+              </Card.Subtitle>
+              <Card.Text className="contact-card-value text-muted" style={{ textAlign: "center" }}>
+                {emailAddress}
+              </Card.Text>
+              <Button className="profile-btn" as="a" href={`mailto:${emailAddress}`} size="sm" style={{ textAlign: "center" }}>
                 Send Email
               </Button>
             </Card.Body>
@@ -24,9 +28,13 @@ function Contact({ information }: { information: InformationProps }) {
         {information.linkedin && (
           <Card className="contact-card">
             <Card.Body className="contact-card-body">
-              <Card.Subtitle className="contact-card-label">LinkedIn</Card.Subtitle>
-              <Card.Text className="contact-card-value text-muted">Connect with me on LinkedIn</Card.Text>
-              <Button className="profile-btn" as="a" href={information.linkedin} target="_blank" rel="noopener noreferrer" size="sm">
+              <Card.Subtitle className="contact-card-label" style={{ textAlign: "center" }}>
+                LinkedIn
+              </Card.Subtitle>
+              <Card.Text className="contact-card-value text-muted" style={{ textAlign: "center" }}>
+                Connect with me on LinkedIn
+              </Card.Text>
+              <Button className="profile-btn" as="a" href={information.linkedin} target="_blank" rel="noopener noreferrer" size="sm" style={{ textAlign: "center" }}>
                 LinkedIn Profile
               </Button>
             </Card.Body>
@@ -36,9 +44,13 @@ function Contact({ information }: { information: InformationProps }) {
         {information.github && (
           <Card className="contact-card">
             <Card.Body className="contact-card-body">
-              <Card.Subtitle className="contact-card-label">GitHub</Card.Subtitle>
-              <Card.Text className="contact-card-value text-muted">View my public projects</Card.Text>
-              <Button className="profile-btn" as="a" href={information.github} target="_blank" rel="noopener noreferrer" size="sm">
+              <Card.Subtitle className="contact-card-label" style={{ textAlign: "center" }}>
+                GitHub
+              </Card.Subtitle>
+              <Card.Text className="contact-card-value text-muted" style={{ textAlign: "center" }}>
+                View my public projects
+              </Card.Text>
+              <Button className="profile-btn" as="a" href={information.github} target="_blank" rel="noopener noreferrer" size="sm" style={{ textAlign: "center" }}>
                 GitHub Profile
               </Button>
             </Card.Body>
