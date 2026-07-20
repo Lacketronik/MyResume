@@ -2,8 +2,9 @@ import { Card, Button } from "react-bootstrap";
 import type { InformationProps } from "../../types/InformationProps";
 import "../../styles/Contact.css";
 import DigitalGarden from "../Contact/Garden";
+import type { ActivityStatusProp } from "../../types/ActivityStatusProp";
 
-function Contact({ information }: { information: InformationProps }) {
+function Contact({ information, activityStatus, isLoading, hasError }: { information: InformationProps; activityStatus: ActivityStatusProp[]; isLoading: boolean; hasError: boolean }) {
   const emailAddress = information.email[0];
 
   return (
@@ -58,7 +59,11 @@ function Contact({ information }: { information: InformationProps }) {
         )}
       </div>
       <div>
-        <DigitalGarden />
+        <DigitalGarden 
+          activityStatus={activityStatus} 
+          isLoading={isLoading} 
+          hasError={hasError}  
+        />
       </div>
     </div>
     

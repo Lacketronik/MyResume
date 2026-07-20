@@ -8,10 +8,9 @@ import 'react-vertical-timeline-component/style.min.css';
 function Certification({ certs }: { certs: CertificationProps[] }) {
     return (
         <div className="certification-section">
-            {certs.map((cert) => (
-                <VerticalTimeline layout="1-column" lineColor="#ff9900" animate={true}>
+            {certs.map((cert, index) => (
+                <VerticalTimeline key={index} layout="1-column" lineColor="#ff9900" animate={true}>
                     <VerticalTimelineElement
-                        key={cert.id}
                         className="vertical-timeline-element--certification"
                         contentStyle={{ background: 'rgba(27, 36, 55, 0.725)', borderRadius: '0.75rem', color: '#fff', boxShadow: '0 0 0 0px' }}
                         contentArrowStyle={{ borderRight: '7px solid rgba(27, 36, 55, 0.725)' }}

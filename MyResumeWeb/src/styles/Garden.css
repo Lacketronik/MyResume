@@ -42,16 +42,16 @@
 }
 
 .garden-title {
-  margin: 1rem 1rem 0.25rem 1rem;
+  margin: 1rem 1rem 0.5rem 1rem;
   font-size: clamp(1rem, 3vw, 1.75rem);
-  line-height: 1.1;
+  line-height: 1;
   color: var(--garden-text);
   overflow-wrap: break-word;
   word-break: normal;
 }
 
 .garden-summary {
-  margin: 0 1rem 1rem 1rem;
+  margin: 0 1rem 0.5rem 1rem;
   max-width: 38rem;
   color: var(--garden-text);
   text-align: left;

@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Modal, Spinner, Placeholder } from 'react-bootstrap';
 import '../../styles/Garden.css';
+import ActivityStatus from './ActivityStatus';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import type { ActivityStatusProp } from '../../types/ActivityStatusProp';
 
 interface GardenEntry {
   name: string;
@@ -13,7 +15,7 @@ interface GardenEntry {
 
 const GARDEN_URL = 'https://raw.githubusercontent.com/Lacketronik/Digital-Garden/main/public/digital_garden.json';
 
-export default function DigitalGarden() {
+export default function DigitalGarden({ activityStatus, isLoading, hasError }: { activityStatus: ActivityStatusProp[]; isLoading: boolean; hasError: boolean }) {
   const [items, setItems] = useState<GardenEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -70,15 +72,37 @@ export default function DigitalGarden() {
       <div className="garden-layout">
         <aside className="garden-placeholder" aria-label="Garden sidebar placeholder">
           <div className="garden-placeholder-intro">
-            <p className="garden-title">WHAT'S GOIN ON IN MY NOGGIN...</p>
-            <p className="garden-summary">A scrollable timeline of thoughts, images and experiments.</p>
+            <p className="fw-bold garden-title">WHAT'S GOIN ON IN MY NOGGIN...</p>
+            <p className="garden-summary text-muted">A scrollable timeline of thoughts and experiments.</p>
           </div>
 
-          <div className="garden-placeholder-copyBlock">
-            <p className="garden-title">CURRENT FOCUS</p>
-            <p className="garden-summary">Experimenting with side projects</p>
-            <p className="garden-title">STATUS</p>
-            <p className="garden-summary">Open to Work / Collaboration</p>
+          <div className="garden-placeholder-copyBlock mt-3">
+            {isLoading && (
+              <div className="d-flex flex-column gap-2 text-muted small">
+                <div className="d-flex align-items-center gap-2 mb-2">
+                  <Spinner animation="border" size="sm" variant="secondary" />
+                  <span className="text-italic text-opacity-75">Waking server (cold start)...</span>
+                </div>
+                <div className="placeholder-glow">
+                  <Placeholder xs={5} className="bg-secondary rounded mb-1" style={{ height: '14px' }} /><br />
+                  <Placeholder xs={8} className="bg-secondary opacity-50 rounded" style={{ height: '12px' }} />
+                </div>
+                <div className="placeholder-glow mt-2">
+                  <Placeholder xs={4} className="bg-secondary rounded mb-1" style={{ height: '14px' }} /><br />
+                  <Placeholder xs={6} className="bg-secondary opacity-50 rounded" style={{ height: '12px' }} />
+                </div>
+              </div>
+            )}
+
+            {!isLoading && hasError && (
+              <p className="garden-summary text-warning small text-italic">
+                Live stats temporarily offline.
+              </p>
+            )}
+
+            {!isLoading && !hasError && activityStatus.length > 0 && (
+              <ActivityStatus ActivityStatusProps={activityStatus} />
+            )}
           </div>
         </aside>
 

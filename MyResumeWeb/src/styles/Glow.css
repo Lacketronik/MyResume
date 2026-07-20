@@ -1,0 +1,16 @@
+.permanent-glow-emoji {
+  display: inline-block;
+  user-select: none;
+  animation: neonPulse 2s infinite ease-in-out alternate;
+}
+
+@keyframes neonPulse {
+  0% {
+    filter: drop-shadow(0 0 2.5px #39FF14) drop-shadow(0 0 5px #00FF00) brightness(1);
+    transform: scale(1);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #39FF14) drop-shadow(0 0 10px #00FF00) brightness(1.3);
+    transform: scale(1);
+  }
+}
